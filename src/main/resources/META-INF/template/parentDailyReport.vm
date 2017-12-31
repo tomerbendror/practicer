@@ -1,0 +1,84 @@
+#* @vtlvariable name="childsPractices" type="java.util.List<com.practice.job.StatisticsJob.ChildPractices>" *#
+#* @vtlvariable name="baseUrl" type="java.lang.String" *#
+#* @vtlvariable name="title" type="java.lang.String" *#
+#* @vtlvariable name="PracticerUtils" type="com.practice.util.PracticerUtils" *#
+#* @vtlvariable name="lang" type="com.practice.type.Language" *#
+#* @vtlvariable name="parent" type="com.practice.model.ParentUser" *#
+#* @vtlvariable name="timeFormat" type="java.text.SimpleDateFormat" *#
+
+#define ( $mainTitle )
+שלום ${parent.getDisplayName()}, להלן דו''ח תרגול יומי
+#end
+
+#set( $columnStyle = "border-bottom: 1px solid #b0b0b0;" )
+#set( $headerColumnStyle = "background-color: #efefef;font-weight: bold" )
+
+#define( $content )
+
+    #foreach ($childPractices in $childsPractices)
+        <div style="background-color: #fff;padding: 10px;">
+            <span style="font-size: 20px;color: #0c568a;font-weight: bold;">$childPractices.getChildDisplayName()</span><br>
+        </div>
+
+        <table style="direction: rtl;width: 100%;background-color: #fff;border-spacing: 0;padding: 0 10px 10px 10px;margin-bottom: 10px;">
+            <thead>
+                <td style="$headerColumnStyle;text-align: right;padding-right: 10px">
+                    <span>שם התרגיל</span>
+                </td>
+                <td style="$headerColumnStyle">
+                    <span>ציון</span>
+                </td>
+                <td style="$headerColumnStyle">
+                    <span>זמן</span>
+                </td>
+                <td style="$headerColumnStyle">
+                    <span>מספר השאלות</span>
+                </td>
+                <td style="$headerColumnStyle">
+                    <span>שעת התרגול</span>
+                </td>
+            </thead>
+
+            #if ($childPractices.practices.size() > 0)
+                #foreach ($practiceResult in $childPractices.practices)
+                    <tr>
+                        <td style="${columnStyle};color: #0c568a;text-align: right;padding-right: 10px">
+                            <span>$practiceResult.getPractice().getName()</span>
+                        </td>
+
+                        #set( $scoreStyle = "" )
+                        #if ($practiceResult.getScore() < 80)
+                            #set( $scoreStyle = "color: red;" )
+                        #end
+                        <td style="${columnStyle}${scoreStyle}">
+                            <span>$practiceResult.getScore()</span>
+                        </td>
+
+                        <td style="${columnStyle}">
+                            <span>$PracticerUtils.secondsToString($practiceResult.getTimeSecond(), $lang)</span>
+                        </td>
+                        <td style="${columnStyle}">
+                            <span>$practiceResult.getQuestionResults().size()</span>
+                        </td>
+                        <td style="${columnStyle}">
+                            <span>$timeFormat.format($practiceResult.getCreatedTime())</span>
+                        </td>
+                    </tr>
+                #end
+            #else
+                <tr>
+                    <td colspan="5" style="$columnStyle;text-align: right;padding-right: 10px">
+                        <span>אין נתונים להצגה</span>
+                    </td>
+                </tr>
+            #end
+        </table>
+    #end
+<hr>
+
+<span style="font-size: 17px;">
+        <a href='${baseUrl}' target="_blank"><strong>Practicer</strong></a> הינו אתר חינמי המאפשר לימוד ותרגול בצורה יחודית, מהנה ובטוחה עבור ילדכם, התרגילים ממוקדים בצרכי ילדכם ונכתבים ע"י חברכם לקבוצה.
+    </span><br/>
+#end
+
+#parse("./simpleMessageTemplate.vm")

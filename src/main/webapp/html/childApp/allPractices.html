@@ -1,0 +1,31 @@
+<div class="practices-list-container child-all-practices">
+    <md-list class="practices-by-group no-padding">
+        <div ng-repeat="groupPractices in groupIdToPracticesMap">
+            <md-subheader class="md-primary">{{ ::groupPractices[0].groupName ? groupPractices[0].groupName : "תרגילים מההורים שלי"}}</md-subheader>
+            <md-list-item class="md-3-line" ng-repeat="practice in groupPractices">
+                <div class="list-icon translation" ng-if="practice.questionsType == 'TRANSLATION' " style="outline: none" data-ng-click="navigateTo('/practice/' + practice.id)" >
+                    <ng-md-icon icon="translate"></ng-md-icon>
+                </div>
+                <div class="list-icon disctation" ng-if="practice.questionsType == 'DICTATION' " style="outline: none" data-ng-click="navigateTo('/practice/' + practice.id)" >
+                    <ng-md-icon icon="edit"></ng-md-icon>
+                </div>
+                <div class="list-icon math" ng-if="practice.questionsType == 'MATH' " style="outline: none" data-ng-click="navigateTo('/practice/' + practice.id)" >
+                    <ng-md-icon icon="functions"></ng-md-icon>
+                </div>
+
+                <div class="md-list-item-text" style="outline: none" data-ng-click="navigateTo('/practice/' + practice.id)">
+                    <span>{{::practice.name}}</span>
+                    <h4>{{::practice.description}}</h4>
+
+                    <p>{{::practice.questionsTypeStr}}</p>
+                </div>
+                <!--<md-divider ng-if="!$last"></md-divider>-->
+                <div class="md-secondary" ng-show="practice.displayAsDictationBtn">
+                    <md-button data-ng-click="navigateTo('/practice/' + practice.id, false, {dictation: true});$event.stopPropagation()" class="md-raised md-primary">תרגול כהכתבה</md-button>
+                </div>
+                <md-checkbox class="md-secondary" hide></md-checkbox> <!-- just for click effect -->
+                <md-divider></md-divider>
+            </md-list-item>
+        </div>
+    </md-list>
+</div>

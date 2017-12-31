@@ -1,0 +1,538 @@
+/* line 1, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw-chart {
+  position: relative;
+}
+
+/* line 4, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: rgba(26, 36, 47, 0.1);
+  bottom: 0;
+  width: 1px;
+  transition: opacity 0.25s linear;
+}
+
+/* line 14, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail.inactive {
+  opacity: 0;
+}
+
+/* line 17, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .item.active {
+  opacity: 1;
+}
+
+/* line 20, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .x_label {
+  font-family: Arial, sans-serif;
+  border-radius: 3px;
+  padding: 6px;
+  opacity: 0.5;
+  border: 1px solid #e7edf2;
+  font-size: 12px;
+  position: absolute;
+  background: #fff;
+  white-space: nowrap;
+}
+
+/* line 31, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .x_label.left {
+  left: 0;
+}
+
+/* line 34, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .x_label.right {
+  right: 0;
+}
+
+/* line 37, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .item {
+  position: absolute;
+  z-index: 2;
+  border-radius: 3px;
+  padding: 0.25em;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  background: rgba(26, 36, 47, 0.4);
+  color: #fff;
+  border: 1px solid rgba(26, 36, 47, 0.4);
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: -1em;
+  white-space: nowrap;
+}
+
+/* line 53, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .item.left {
+  left: 0;
+}
+
+/* line 56, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .item.right {
+  right: 0;
+}
+
+/* line 59, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .item.active {
+  opacity: 1;
+  background: rgba(26, 36, 47, 0.8);
+}
+
+/* line 63, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .item:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  border: 5px solid transparent;
+}
+
+/* line 73, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .item.left:after {
+  top: 1em;
+  left: -5px;
+  margin-top: -5px;
+  border-right-color: rgba(26, 36, 47, 0.8);
+  border-left-width: 0;
+}
+
+/* line 80, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .item.right:after {
+  top: 1em;
+  right: -5px;
+  margin-top: -5px;
+  border-left-color: rgba(26, 36, 47, 0.8);
+  border-right-width: 0;
+}
+
+/* line 87, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .dot {
+  width: 4px;
+  height: 4px;
+  margin-left: -3px;
+  margin-top: -3.5px;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 0 2px rgba(26, 36, 47, 0.6);
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  background: #fff;
+  border-width: 2px;
+  border-style: solid;
+  display: none;
+  background-clip: padding-box;
+}
+
+/* line 103, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .detail .dot.active {
+  display: block;
+}
+
+/* graph */
+
+/* line 108, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph {
+  position: relative;
+}
+
+/* line 111, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph svg {
+  display: block;
+  overflow: hidden;
+}
+
+/* ticks */
+
+/* line 118, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .x_tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0px;
+  border-left: 1px dotted rgba(26, 36, 47, 0.2);
+  pointer-events: none;
+}
+
+/* line 126, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .x_tick .title {
+  position: absolute;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  opacity: 0.5;
+  white-space: nowrap;
+  margin-left: 3px;
+  bottom: 1px;
+}
+
+/* annotations */
+
+/* line 138, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_annotation_timeline {
+  height: 1px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* line 144, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_annotation_timeline .annotation {
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  margin-left: -2px;
+  top: -3px;
+  border-radius: 5px;
+  background-color: rgba(26, 36, 47, 0.25);
+}
+
+/* line 153, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .annotation_line {
+  position: absolute;
+  top: 0;
+  bottom: -6px;
+  width: 0px;
+  border-left: 2px solid rgba(26, 36, 47, 0.3);
+  display: none;
+}
+
+/* line 161, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .annotation_line.active {
+  display: block;
+}
+
+/* line 165, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .annotation_range {
+  background: rgba(26, 36, 47, 0.1);
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: -6px;
+}
+
+/* line 172, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .annotation_range.active {
+  display: block;
+}
+
+/* line 175, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .annotation_range.active.offscreen {
+  display: none;
+}
+
+/* line 179, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_annotation_timeline .annotation .content {
+  background: #fff;
+  color: #3e5771;
+  opacity: 0.9;
+  padding: 5px 5px;
+  border-radius: 3px;
+  border: 1px solid #e7edf2;
+  position: relative;
+  z-index: 20;
+  font-size: 12px;
+  padding: 6px 8px 8px;
+  top: 18px;
+  left: -11px;
+  width: 160px;
+  display: none;
+  cursor: pointer;
+}
+
+/* line 197, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_annotation_timeline .annotation .content:before {
+  content: "\25b2";
+  position: absolute;
+  top: -11px;
+  color: #fff;
+  text-shadow: 0 -1px 1px rgba(26, 36, 47, 0.6);
+}
+
+/* line 205, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_annotation_timeline .annotation.active,
+.rickshaw_annotation_timeline .annotation:hover {
+  background-color: rgba(26, 36, 47, 0.8);
+  cursor: none;
+}
+
+/* line 209, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_annotation_timeline .annotation .content:hover {
+  z-index: 50;
+}
+
+/* line 212, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_annotation_timeline .annotation.active .content {
+  display: block;
+}
+
+/* line 215, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_annotation_timeline .annotation:hover .content {
+  display: block;
+  z-index: 50;
+}
+
+/* line 220, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .y_axis,
+.rickshaw_graph .x_axis_d3 {
+  fill: none;
+}
+
+/* line 224, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .y_ticks .tick line,
+.rickshaw_graph .x_ticks_d3 .tick {
+  stroke: rgba(26, 36, 47, 0.16);
+  stroke-width: 2px;
+  shape-rendering: crisp-edges;
+  pointer-events: none;
+}
+
+/* line 231, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .y_grid .tick,
+.rickshaw_graph .x_grid_d3 .tick {
+  z-index: -1;
+  stroke: rgba(26, 36, 47, 0.2);
+  stroke-width: 1px;
+  stroke-dasharray: 1 1;
+}
+
+/* line 237, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .y_grid .tick[data-y-value="0"] {
+  stroke-dasharray: 1 0;
+}
+
+/* line 241, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .y_grid path,
+.rickshaw_graph .x_grid_d3 path {
+  fill: none;
+  stroke: none;
+}
+
+/* line 246, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .y_ticks path,
+.rickshaw_graph .x_ticks_d3 path {
+  fill: none;
+  stroke: #95a5a6;
+}
+
+/* line 251, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .y_ticks text,
+.rickshaw_graph .x_ticks_d3 text {
+  opacity: 0.5;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* line 257, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .x_tick.glow .title,
+.rickshaw_graph .y_ticks.glow text {
+  fill: #1a242f;
+  color: #1a242f;
+  text-shadow: -1px 1px 0 rgba(255, 255, 255, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.1), 1px 1px 0 rgba(255, 255, 255, 0.1), 0px 1px 0 rgba(255, 255, 255, 0.1), 0px -1px 0 rgba(255, 255, 255, 0.1), 1px 0px 0 rgba(255, 255, 255, 0.1), -1px 0px 0 rgba(255, 255, 255, 0.1), -1px -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* line 271, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_graph .x_tick.inverse .title,
+.rickshaw_graph .y_ticks.inverse text {
+  fill: #fff;
+  color: #fff;
+  text-shadow: -1px 1px 0 rgba(26, 36, 47, 0.8), 1px -1px 0 rgba(26, 36, 47, 0.8), 1px 1px 0 rgba(26, 36, 47, 0.8), 0px 1px 0 rgba(26, 36, 47, 0.8), 0px -1px 0 rgba(26, 36, 47, 0.8), 1px 0px 0 rgba(26, 36, 47, 0.8), -1px 0px 0 rgba(26, 36, 47, 0.8), -1px -1px 0 rgba(26, 36, 47, 0.8);
+}
+
+/* line 284, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.legend-container {
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 287, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.legend-container.right {
+  right: 0;
+}
+
+/* line 290, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.legend-container.top {
+  top: 0;
+  bottom: auto;
+}
+
+/* line 295, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.legend-line {
+  display: inline-block;
+  margin: 0 0 0 30px;
+}
+
+/* line 299, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.legend-swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px 0 0;
+}
+
+/* line 305, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.legend-label {
+  display: inline-block;
+}
+
+/* line 308, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend {
+  font-family: Arial;
+  font-size: 12px;
+  color: #3e5771;
+  background: #fbfcfc;
+  display: inline-block;
+  padding: 12px 5px;
+  position: relative;
+}
+
+/* line 317, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend:hover {
+  z-index: 10;
+}
+
+/* line 320, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend .swatch {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(26, 36, 47, 0.4);
+}
+
+/* line 325, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend .line {
+  clear: both;
+  line-height: 140%;
+  padding-right: 15px;
+}
+
+/* line 330, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend .line .swatch {
+  display: inline-block;
+  margin-right: 3px;
+  border-radius: 2px;
+}
+
+/* line 335, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend .label {
+  margin: 0;
+  white-space: nowrap;
+  display: inline;
+  font-size: inherit;
+  background-color: transparent;
+  color: inherit;
+  font-weight: normal;
+  line-height: normal;
+  padding: 0px;
+  text-shadow: none;
+}
+
+/* line 347, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend .action:hover {
+  opacity: 0.6;
+}
+
+/* line 350, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend .action {
+  margin-right: 0.2em;
+  font-size: 10px;
+  opacity: 0.2;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* line 357, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend .line.disabled {
+  opacity: 0.4;
+}
+
+/* line 360, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* line 367, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend li {
+  padding: 0 0 0 2px;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+/* line 372, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+
+/* line 376, ../../app/styles/scss/dependencies/_rickshaw.scss */
+
+.rickshaw_legend li:active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}

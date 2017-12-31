@@ -1,0 +1,479 @@
+/* SELECTBOXIT */
+
+/*
+ * jquery.selectBoxIt.css 3.8.1
+ * Author: @gregfranko
+ */
+
+/*
+  Common CSS Properties
+  ---------------------
+  These properties will be applied to any themes that you use
+*/
+
+/* SelectBoxIt container */
+
+/* line 14, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container {
+  position: relative;
+  display: block;
+  vertical-align: top;
+}
+
+/* Styles that apply to all SelectBoxIt elements */
+
+/* line 20, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container * {
+  /* Prevents text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  white-space: nowrap;
+}
+
+/* Button */
+
+/* line 28, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container .selectboxit {
+  position: relative;
+  margin: 0;
+  display: block;
+  width: 100% !important;
+  /* Width of the dropdown button */
+  min-height: 34px;
+  padding: 6px 44px 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* line 39, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit.selectboxit-open:not(.selectboxit-above) {
+  border-bottom: 0 !important;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 43, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit.selectboxit-open.selectboxit-above {
+  border-top: 0 !important;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* Height and Vertical Alignment of Text */
+
+/* line 48, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container span,
+.selectboxit-container .selectboxit-options a {
+  /* height: 30px; Height of the drop down
+  line-height: 30px; Vertically positions the drop down text */
+  display: block;
+}
+
+/* Focus pseudo selector */
+
+/* line 54, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container .selectboxit:focus {
+  outline: 0;
+}
+
+/* Disabled Mouse Interaction */
+
+/* line 58, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit.selectboxit-disabled,
+.selectboxit-options .selectboxit-disabled {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  cursor: default;
+}
+
+/* Button Text */
+
+/* line 64, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-text {
+  display: block;
+  max-width: 100% !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 69, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit .selectboxit-option-icon-container {
+  margin-left: 5px;
+}
+
+/* Options List */
+
+/* line 73, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container .selectboxit-options {
+  width: 100% !important;
+  /* Minimum Width of the dropdown list box options */
+  max-height: 300px !important;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  cursor: pointer;
+  display: none;
+  z-index: 9998;
+  text-align: left;
+  border-radius: 4px;
+}
+
+/* line 89, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container .selectboxit-options:not(.selectboxit-above) {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 92, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container .selectboxit-options.selectboxit-above {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Individual options */
+
+/* line 96, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option .selectboxit-option-anchor {
+  padding: 3px 10px;
+}
+
+/* Individual Option Hover Action */
+
+/* line 100, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option .selectboxit-option-anchor:hover {
+  text-decoration: none;
+}
+
+/* Individual Option Optgroup Header */
+
+/* line 104, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option,
+.selectboxit-optgroup-header {
+  position: relative;
+  text-indent: 5px;
+  /* Horizontal Positioning of the select box option text */
+  margin: 0;
+  list-style-type: none;
+}
+
+/* The first Drop Down option */
+
+/* line 111, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option-first {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* The first Drop Down option optgroup */
+
+/* line 115, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-optgroup-header + .selectboxit-option-first {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* The last Drop Down option */
+
+/* line 119, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option-last {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* Drop Down optgroup headers */
+
+/* line 123, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-optgroup-header {
+  font-weight: bold;
+}
+
+/* Drop Down optgroup header hover psuedo class */
+
+/* line 127, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-optgroup-header:hover {
+  cursor: default;
+}
+
+/* Drop Down down arrow container */
+
+/* line 131, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-arrow-container {
+  /* Positions the down arrow */
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  border-left: 1px solid #e7edf2;
+}
+
+/* Drop Down down arrow */
+
+/* line 141, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+  /* Horizontally centers the down arrow */
+  margin: 0 auto;
+  position: absolute;
+  top: 6px;
+  right: 20px;
+}
+
+/* line 149, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow.fa,
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow.glyphicon {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  left: 11px;
+  top: 8px;
+}
+
+/* line 159, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow.glyphicon {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+}
+
+/* Drop Down down arrow for jQueryUI and jQuery Mobile */
+
+/* line 168, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow.ui-icon {
+  top: 30%;
+}
+
+/* Drop Down individual option icon positioning */
+
+/* line 172, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option-icon-container {
+  float: left;
+}
+
+/* line 175, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-container .selectboxit-option-icon {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 42px;
+  width: 20px;
+  text-align: center;
+}
+
+/* line 183, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option-icon.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-image: none !important;
+}
+
+/* line 193, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option-icon.glyphicon {
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-image: none !important;
+  margin-top: 2px;
+}
+
+/* line 204, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option-icon.selectboxit-default-icon.glyphicon {
+  margin-top: 6px;
+}
+
+/* Drop Down individual option icon positioning */
+
+/* line 209, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-option-icon-url {
+  position: absolute;
+  top: 0;
+  right: 42px;
+  width: 18px;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  float: left;
+}
+
+/* line 220, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-rendering {
+  display: inline-block !important;
+  *display: inline !important;
+  zoom: 1 !important;
+  visibility: visible !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+/* jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
+
+/* line 231, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.jqueryui .ui-icon {
+  background-color: inherit;
+}
+
+/* Another jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
+
+/* line 235, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.jqueryui .ui-icon-triangle-1-s {
+  background-position: -64px -16px;
+}
+
+/*
+  Default Theme
+  -------------
+  Note: Feel free to remove all of the CSS underneath this line if you are not using the default theme
+*/
+
+/* line 244, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-btn {
+  background-color: white;
+  border: 1px solid #e7edf2;
+}
+
+/* line 250, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-btn.selectboxit-enabled:hover,
+.selectboxit-btn.selectboxit-enabled:focus,
+.selectboxit-btn.selectboxit-enabled:active {
+  border-color: #c6d3e0;
+}
+
+/* line 254, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-btn.selectboxit-enabled:hover,
+.selectboxit-btn.selectboxit-enabled:focus {
+  text-decoration: none;
+}
+
+/* line 257, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-default-arrow {
+  width: 0;
+}
+
+/* line 260, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-default-arrow:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f0dc";
+  transition: all 0.3s ease;
+}
+
+/* line 270, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-list {
+  background-color: white;
+  border: 1px solid #c6d3e0;
+}
+
+/* line 275, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-list .selectboxit-option-anchor {
+  font-size: 14px;
+  color: #3e5771;
+}
+
+/* line 279, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+  color: white;
+  background-color: #20638f;
+}
+
+/* line 283, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {
+  color: #a1aab0;
+}
+
+/* line 289, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.wrapkit-content-rtl .selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+  right: auto;
+}
+
+/* line 292, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.wrapkit-content-rtl .selectboxit .selectboxit-arrow-container .selectboxit-arrow.selectboxit-default-arrow {
+  left: 20px;
+}
+
+/* line 296, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.wrapkit-content-rtl .selectboxit-option .selectboxit-option-anchor {
+  text-align: right;
+}
+
+/* line 299, ../../app/styles/scss/dependencies/_selectboxit.scss */
+
+.wrapkit-content-rtl .selectboxit-container .selectboxit-option-icon {
+  right: auto;
+  left: 12px;
+}

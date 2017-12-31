@@ -1,0 +1,24 @@
+<div style="padding: 15px 22.5px;">
+    <div class="row">
+        <div class="groups-control-panel">
+            <div class="control-buttons">
+                <button id="add-math-btn" data-ng-click="addPractice('MATH')" type="button" class="btn btn-greentur btn-sm" >
+                    <i class="fa fa-plus"></i> תרגול חשבון
+                </button>
+                <button id="add-translation-btn" data-ng-click="addPractice('TRANSLATION')" type="button" class="btn btn-greentur btn-sm" >
+                    <i class="fa fa-plus"></i> תרגום מילים
+                </button>
+                <button id="add-dictation-btn" data-ng-click="addPractice('DICTATION')" type="button" class="btn btn-greentur btn-sm" >
+                    <i class="fa fa-plus"></i> הכתבה
+                </button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- all the groups -->
+        <div id="all-practices-container">
+            <div x-practice-info-panel id="practice-info-panel-{{practice.id}}" data-ng-repeat="practice in practices | orderBy: 'createdTimeMillis' : true" practice="practice"></div>
+            <div data-ng-show="practices.length == 0" style="padding-right: 10px"><i class="fa fa-info-circle"></i> לא מוגדרים תרגילים, ניתן ליצור תרגילים חדשים או להצטרף לקבוצות קיימות ולהנות מתרגילים שיצרו חברכם לקבוצה</div>
+        </div>
+    </div><!-- /.row -->
+</div>

@@ -1,0 +1,344 @@
+/*!
+ * Stylesheet for the Date Range Picker, for use with Bootstrap 3.x
+ *
+ * Copyright 2013 Dan Grossman ( http://www.dangrossman.info )
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Built for http://www.improvely.com
+ */
+
+/* line 11, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker.dropdown-menu {
+  max-width: none;
+  z-index: 1070;
+}
+
+/* line 16, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker.opensleft .ranges,
+.daterangepicker.opensleft .calendar {
+  float: left;
+  margin: 4px;
+}
+
+/* line 21, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker.opensright .ranges,
+.daterangepicker.opensright .calendar {
+  float: right;
+  margin: 4px;
+}
+
+/* line 26, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .ranges {
+  width: 160px;
+  text-align: left;
+}
+
+/* line 31, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .ranges .range_inputs > div {
+  float: left;
+}
+
+/* line 35, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .ranges .range_inputs > div:nth-child(2) {
+  padding-left: 11px;
+}
+
+/* line 39, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .calendar {
+  display: none;
+  max-width: 270px;
+}
+
+/* line 44, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker.show-calendar .calendar {
+  display: block;
+}
+
+/* line 48, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .calendar.single .calendar-date {
+  border: none;
+}
+
+/* line 52, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .calendar th,
+.daterangepicker .calendar td {
+  white-space: nowrap;
+  text-align: center;
+  min-width: 32px;
+}
+
+/* line 59, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .daterangepicker_start_input label,
+.daterangepicker .daterangepicker_end_input label {
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 2px;
+  text-shadow: #fff 1px 1px 0px;
+  text-transform: uppercase;
+  width: 74px;
+}
+
+/* line 71, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .ranges input {
+  font-size: 11px;
+}
+
+/* line 75, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .ranges .input-mini {
+  background-color: #f5f7f7;
+  border: 1px solid #e7edf2;
+  border-radius: 4px;
+  display: block;
+  font-size: 11px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  margin: 0 0 10px 0;
+  padding: 0 6px;
+  width: 74px;
+}
+
+/* line 89, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .ranges ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 95, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .ranges li {
+  font-size: 13px;
+  background: #fbfcfc;
+  border: 1px solid #e7edf2;
+  color: #20638f;
+  padding: 3px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* line 106, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .ranges li.active,
+.daterangepicker .ranges li:hover {
+  background: #20638f;
+  border: 1px solid #20638f;
+  color: #fff;
+}
+
+/* line 112, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .calendar-date {
+  border: 1px solid #e7edf2;
+  padding: 4px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* line 119, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker .calendar-time {
+  text-align: center;
+  margin: 8px auto 0 auto;
+  line-height: 30px;
+}
+
+/* line 125, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker {
+  position: absolute;
+  background: white;
+  top: 100px;
+  left: 20px;
+  padding: 4px;
+  margin-top: 1px;
+  border-radius: 4px;
+}
+
+/* line 135, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker.opensleft:before {
+  position: absolute;
+  top: -7px;
+  right: 9px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #e7edf2;
+  border-left: 7px solid transparent;
+  content: '';
+}
+
+/* line 146, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker.opensleft:after {
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-left: 6px solid transparent;
+  content: '';
+}
+
+/* line 157, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker.opensright:before {
+  position: absolute;
+  top: -7px;
+  left: 9px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #e7edf2;
+  border-left: 7px solid transparent;
+  content: '';
+}
+
+/* line 168, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker.opensright:after {
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-left: 6px solid transparent;
+  content: '';
+}
+
+/* line 179, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker table {
+  width: 100%;
+  margin: 0;
+}
+
+/* line 184, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker td,
+.daterangepicker th {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* line 194, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker td.off,
+.daterangepicker td.disabled {
+  color: #a1aab0;
+}
+
+/* line 199, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+  background: #ecf0f1;
+}
+
+/* line 203, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker td.in-range {
+  background: #e7f2fa;
+  color: #55a5d9;
+  border-radius: 0;
+}
+
+/* line 209, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker td.in-range:hover {
+  background: #e7f2fa;
+  color: #55a5d9;
+}
+
+/* line 215, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #20638f;
+  border-color: #20638f;
+  color: #fff;
+}
+
+/* line 221, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker td.week,
+.daterangepicker th.week {
+  font-size: 80%;
+  color: #a1aab0;
+}
+
+/* line 226, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker select.monthselect,
+.daterangepicker select.yearselect {
+  font-size: 12px;
+  padding: 1px;
+  height: auto;
+  margin: 0;
+  cursor: default;
+}
+
+/* line 234, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker select.monthselect {
+  margin-right: 2%;
+  width: 56%;
+}
+
+/* line 239, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker select.yearselect {
+  width: 40%;
+}
+
+/* line 243, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker select.hourselect,
+.daterangepicker select.minuteselect,
+.daterangepicker select.ampmselect {
+  width: 50px;
+  margin-bottom: 0;
+}
+
+/* line 248, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker_start_input {
+  float: left;
+}
+
+/* line 252, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker_end_input {
+  float: left;
+  padding-left: 11px;
+}
+
+/* line 257, ../../app/styles/scss/dependencies/_daterangepicker.scss */
+
+.daterangepicker th.month {
+  width: auto;
+}

@@ -1,0 +1,8 @@
+
+Your application 'practicer' is now available.
+
+  URL:        http://practicer-practicer.rhcloud.com/
+  SSH to:     543a5960500446b95f00078a@practicer-practicer.rhcloud.com
+  Git remote: ssh://543a5960500446b95f00078a@practicer-practicer.rhcloud.com/~/g
+it/practicer.git/
+  Cloned to:  C:/Users/tomer/practicer

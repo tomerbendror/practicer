@@ -1,0 +1,53 @@
+/* line 1, ../../app/styles/scss/pages/_invoice.scss */
+
+.invoice-wrapper {
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #e7edf2;
+  border-radius: 4px;
+}
+
+/* line 10, ../../app/styles/scss/pages/_invoice.scss */
+
+.invoice-header,
+.invoice-details,
+.invoice-lines {
+  margin-bottom: 40px;
+}
+
+/* line 14, ../../app/styles/scss/pages/_invoice.scss */
+
+.invoice-brand {
+  display: block;
+}
+
+/* line 17, ../../app/styles/scss/pages/_invoice.scss */
+
+.invoice-id {
+  color: #a1aab0;
+  font-size: 18px;
+  line-height: 1.33;
+  vertical-align: middle;
+}
+
+/* line 25, ../../app/styles/scss/pages/_invoice.scss */
+
+.invoice-details dt + dd {
+  margin-bottom: 10px;
+}
+
+/* line 29, ../../app/styles/scss/pages/_invoice.scss */
+
+.invoice-notes {
+  padding: 15px;
+  border: 1px dashed #e7edf2;
+  border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  /* line 38, ../../app/styles/scss/pages/_invoice.scss */
+
+  .invoice-details .text-right {
+    text-align: left !important;
+  }
+}

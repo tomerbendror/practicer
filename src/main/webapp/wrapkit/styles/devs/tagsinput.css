@@ -1,0 +1,97 @@
+/* TAGS INPUT */
+
+/* line 2, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+div.tagsinput {
+  border: 1px solid #e7edf2;
+  background: white;
+  width: 100%;
+  min-height: 34px;
+  height: auto;
+  overflow-y: auto;
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: border-color ease-in-out 0.15s;
+}
+
+/* line 14, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+div.tagsinput.focus {
+  border-color: #c6d3e0;
+}
+
+/* line 19, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+div.tagsinput span.tag {
+  display: block;
+  float: left;
+  text-decoration: none;
+  background: #c6d3e0;
+  color: #3e5771;
+  margin: 2px 6px 3px 0;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* line 30, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+div.tagsinput span.tag:first-child {
+  margin-left: 6px;
+}
+
+/* line 35, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+.wrapkit-content-rtl div.tagsinput span.tag:first-child {
+  margin-left: 0;
+}
+
+/* line 40, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+div.tagsinput span.tag a {
+  font-weight: 700;
+  color: #3e5771;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* line 46, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+div.tagsinput input {
+  width: 80px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  outline: 0;
+  margin: 2px 6px 0 0;
+  padding-left: 6px;
+}
+
+/* line 55, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+div.tagsinput div {
+  display: block;
+  float: left;
+}
+
+/* line 59, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+.tags_clear {
+  clear: both;
+  width: 100%;
+  height: 0;
+}
+
+/* line 64, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+.not_valid {
+  background-color: #fef7ec !important;
+  color: #e08e0b !important;
+}
+
+/* line 71, ../../app/styles/scss/dependencies/_tagsinput.scss */
+
+.wrapkit-content-rtl div.tagsinput span.tag,
+.wrapkit-content-rtl div.tagsinput div {
+  float: right;
+}

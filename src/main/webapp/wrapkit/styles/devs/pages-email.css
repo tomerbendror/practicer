@@ -1,0 +1,723 @@
+/* line 4, ../../app/styles/scss/pages/_email.scss */
+
+.email-wrapper {
+  position: relative;
+}
+
+/* line 15, ../../app/styles/scss/bootstrap/mixins/_clearfix.scss */
+
+.email-wrapper:before,
+.email-wrapper:after {
+  content: " ";
+  display: table;
+}
+
+/* line 19, ../../app/styles/scss/bootstrap/mixins/_clearfix.scss */
+
+.email-wrapper:after {
+  clear: both;
+}
+
+/* line 12, ../../app/styles/scss/pages/_email.scss */
+
+.email-compose {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #e7edf2;
+  border-radius: 4px;
+}
+
+/* line 22, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists {
+  position: relative;
+  margin: -15px -22.5px;
+  width: 360px;
+  border-right: 1px solid #e7edf2;
+  border-bottom: 1px solid #e7edf2;
+  z-index: 1;
+}
+
+/* line 30, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists > .email-form {
+  padding: 15px;
+  background-color: #fbfcfc;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 36, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists > .email-toolbar {
+  padding: 0 4px;
+  background-color: #fff;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 41, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists > .email-toolbar .dropdown {
+  display: inline-block;
+}
+
+/* line 44, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists > .email-toolbar .email-btn {
+  display: inline-block;
+  background-color: #fff;
+  padding: 6px 12px;
+  color: #3e5771;
+  text-decoration: none;
+  border: none;
+  border-right: 1px solid #e7edf2;
+  box-shadow: none;
+  outline: 0;
+}
+
+/* line 55, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists > .email-toolbar .email-btn.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+}
+
+/* line 63, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists > .email-toolbar .email-btn > .nice-checkbox,
+.email-lists > .email-toolbar .email-btn > .nice-radio {
+  display: inline-block;
+  margin: 0;
+  left: 3px;
+  min-height: 18px;
+}
+
+/* line 69, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists > .email-toolbar .email-btn > .nice-checkbox > label,
+.email-lists > .email-toolbar .email-btn > .nice-radio > label {
+  position: static !important;
+}
+
+/* line 71, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists > .email-toolbar .email-btn > .nice-checkbox > label:before,
+.email-lists > .email-toolbar .email-btn > .nice-radio > label:before {
+  top: 0;
+}
+
+/* line 79, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-group {
+  position: relative;
+  padding-left: 1px;
+  height: 1280px;
+  max-height: 1280px;
+  background-color: #fff;
+  overflow: auto;
+}
+
+/* line 88, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-item {
+  display: block;
+  position: relative;
+  padding: 15px 15px 15px 45px;
+  background-color: #fff;
+  border-bottom: 1px solid #e7edf2;
+  border-left: 3px solid transparent;
+  color: #3e5771;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 100, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-item.active,
+.email-lists .email-item:hover {
+  border-left-color: #2980b9;
+}
+
+/* line 103, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-item.selected {
+  background-color: #fef7ec !important;
+}
+
+/* line 111, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-sender > .pull-left,
+.email-lists .email-subject > .pull-left,
+.email-lists .email-content > .pull-left {
+  margin-left: -30px;
+}
+
+/* line 115, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-sender .nice-checkbox,
+.email-lists .email-sender .nice-radio,
+.email-lists .email-subject .nice-checkbox,
+.email-lists .email-subject .nice-radio,
+.email-lists .email-content .nice-checkbox,
+.email-lists .email-content .nice-radio {
+  display: inline-block;
+  margin: 0;
+}
+
+/* line 119, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-sender .nice-checkbox > label,
+.email-lists .email-sender .nice-radio > label,
+.email-lists .email-subject .nice-checkbox > label,
+.email-lists .email-subject .nice-radio > label,
+.email-lists .email-content .nice-checkbox > label,
+.email-lists .email-content .nice-radio > label {
+  position: static !important;
+}
+
+/* line 121, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-sender .nice-checkbox > label:before,
+.email-lists .email-sender .nice-radio > label:before,
+.email-lists .email-subject .nice-checkbox > label:before,
+.email-lists .email-subject .nice-radio > label:before,
+.email-lists .email-content .nice-checkbox > label:before,
+.email-lists .email-content .nice-radio > label:before {
+  top: 0;
+}
+
+/* line 127, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-sender > p {
+  margin-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 131, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-subject > p {
+  margin-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 135, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-attach {
+  font-size: 12px;
+  line-height: 1.42857;
+  color: #a1aab0;
+  text-decoration: none;
+  margin: 0 5px !important;
+}
+
+/* line 142, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-time {
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+/* line 147, ../../app/styles/scss/pages/_email.scss */
+
+.email-lists .email-item.unread {
+  font-weight: bold;
+  background-color: #fbfcfc;
+}
+
+/* line 153, ../../app/styles/scss/pages/_email.scss */
+
+.email-star,
+.ep-star {
+  display: inline-block;
+  padding: 0;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #a1aab0;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* line 169, ../../app/styles/scss/pages/_email.scss */
+
+.email-star:before,
+.ep-star:before {
+  content: '\f006';
+}
+
+/* line 172, ../../app/styles/scss/pages/_email.scss */
+
+.email-star:hover,
+.ep-star:hover {
+  color: #869198;
+}
+
+/* line 178, ../../app/styles/scss/pages/_email.scss */
+
+.email-item.stared .email-star,
+.email-item.stared .ep-star {
+  color: #c87f0a;
+}
+
+/* line 180, ../../app/styles/scss/pages/_email.scss */
+
+.email-item.stared .email-star:before,
+.email-item.stared .ep-star:before {
+  content: '\f005';
+}
+
+/* line 183, ../../app/styles/scss/pages/_email.scss */
+
+.email-item.stared .email-star:hover,
+.email-item.stared .ep-star:hover {
+  color: #f39c12;
+}
+
+/* line 192, ../../app/styles/scss/pages/_email.scss */
+
+.email-preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 360px;
+}
+
+/* line 199, ../../app/styles/scss/pages/_email.scss */
+
+.ep-header {
+  padding: 15px;
+  background-color: #fbfcfc;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 204, ../../app/styles/scss/pages/_email.scss */
+
+.ep-header > .ep-title {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 34px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 217, ../../app/styles/scss/pages/_email.scss */
+
+.ep-star {
+  line-height: 34px;
+  margin: 0 5px;
+}
+
+/* line 221, ../../app/styles/scss/pages/_email.scss */
+
+.ep-star:hover {
+  text-decoration: none;
+}
+
+/* line 226, ../../app/styles/scss/pages/_email.scss */
+
+.ep-star.half,
+.ep-star.stared {
+  color: #c87f0a;
+}
+
+/* line 228, ../../app/styles/scss/pages/_email.scss */
+
+.ep-star.half:before,
+.ep-star.stared:before {
+  content: '\f005';
+}
+
+/* line 231, ../../app/styles/scss/pages/_email.scss */
+
+.ep-star.half:hover,
+.ep-star.stared:hover {
+  color: #f39c12;
+}
+
+/* line 236, ../../app/styles/scss/pages/_email.scss */
+
+.ep-star.half:before {
+  content: '\f123';
+}
+
+/* line 241, ../../app/styles/scss/pages/_email.scss */
+
+.ep-actions {
+  color: #a1aab0;
+}
+
+/* line 245, ../../app/styles/scss/pages/_email.scss */
+
+.ep-actions > .fa,
+.ep-actions > .glyphicon {
+  position: relative;
+  top: 5px;
+}
+
+/* line 253, ../../app/styles/scss/pages/_email.scss */
+
+.ep-actions:hover,
+.ep-actions:focus,
+.ep-actions.open,
+.ep-actions.active {
+  text-decoration: none;
+}
+
+/* line 255, ../../app/styles/scss/pages/_email.scss */
+
+.ep-actions:hover .kit-avatar,
+.ep-actions:focus .kit-avatar,
+.ep-actions.open .kit-avatar,
+.ep-actions.active .kit-avatar {
+  border-color: #b6c6d7;
+}
+
+/* line 260, ../../app/styles/scss/pages/_email.scss */
+
+.ep-time {
+  margin-left: 15px;
+  line-height: 1.42857;
+  color: #a1aab0;
+  font-size: 12px;
+}
+
+/* line 266, ../../app/styles/scss/pages/_email.scss */
+
+.ep-lists {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  overflow: auto;
+}
+
+/* line 275, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item {
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e7edf2;
+}
+
+/* line 283, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-collapse {
+  margin-bottom: 0;
+}
+
+/* line 286, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-collapse + .ep-item-collapse {
+  margin-top: -1px;
+}
+
+/* line 289, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-collapse + .ep-item:not(.ep-item-collapse) {
+  margin-top: 10px;
+}
+
+/* line 293, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-header {
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e7edf2;
+  cursor: pointer;
+}
+
+/* line 15, ../../app/styles/scss/bootstrap/mixins/_clearfix.scss */
+
+.ep-item-header:before,
+.ep-item-header:after {
+  content: " ";
+  display: table;
+}
+
+/* line 19, ../../app/styles/scss/bootstrap/mixins/_clearfix.scss */
+
+.ep-item-header:after {
+  clear: both;
+}
+
+/* line 300, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-sender {
+  margin: 0;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 308, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-sender > small {
+  display: block;
+  font-size: 12px;
+}
+
+/* line 313, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-sender .ep-content-snipped {
+  display: none;
+  padding: 0 10px;
+  color: #a1aab0;
+  font-weight: normal;
+}
+
+/* line 321, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-content {
+  position: relative;
+  display: block;
+}
+
+/* line 327, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-collapse .ep-item-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* line 332, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-collapse .ep-content-snipped {
+  display: inline-block;
+}
+
+/* line 335, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-collapse .ep-item-content {
+  display: none;
+}
+
+/* line 339, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-collapse:last-child {
+  margin-bottom: 10px;
+}
+
+/* line 343, ../../app/styles/scss/pages/_email.scss */
+
+.ep-item-collapse + .ep-form {
+  margin-top: 10px;
+}
+
+/* line 348, ../../app/styles/scss/pages/_email.scss */
+
+.ep-form {
+  position: relative;
+  min-height: 34px;
+}
+
+/* line 351, ../../app/styles/scss/pages/_email.scss */
+
+.ep-form:not(.mode-edit) {
+  cursor: pointer;
+}
+
+/* line 355, ../../app/styles/scss/pages/_email.scss */
+
+.ep-form .ep-form-heading {
+  position: relative;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 359, ../../app/styles/scss/pages/_email.scss */
+
+.ep-form .ep-form-heading .form-group {
+  margin: 10px 15px;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 364, ../../app/styles/scss/pages/_email.scss */
+
+.ep-form .ep-form-heading .input-group,
+.ep-form .ep-form-heading .input-group.focus {
+  border: none !important;
+  border-radius: 0;
+}
+
+/* line 368, ../../app/styles/scss/pages/_email.scss */
+
+.ep-form .ep-form-heading .form-control {
+  border-width: 0 0 1px;
+  border-radius: 0;
+}
+
+/* line 373, ../../app/styles/scss/pages/_email.scss */
+
+.ep-form .ep-form-placeholder {
+  color: #a1aab0;
+}
+
+/* line 376, ../../app/styles/scss/pages/_email.scss */
+
+.ep-form .panel {
+  border-radius: 0;
+}
+
+/* line 381, ../../app/styles/scss/pages/_email.scss */
+
+.back-to-email-lists {
+  float: left;
+  color: #a1aab0;
+  text-decoration: none;
+  line-height: 34px;
+  padding: 0 5px;
+}
+
+/* line 391, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-lists {
+  border-right: none;
+  border-left: 1px solid #e7edf2;
+}
+
+/* line 395, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-lists .email-group {
+  padding-left: 0;
+  padding-right: 1px;
+}
+
+/* line 399, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-lists .email-toolbar .email-btn {
+  border-right: none;
+  border-left: 1px solid #e7edf2;
+}
+
+/* line 404, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-lists .email-toolbar .email-btn > .nice-checkbox,
+.wrapkit-content-rtl .email-lists .email-toolbar .email-btn > .nice-radio {
+  left: 6px;
+}
+
+/* line 408, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-lists .email-item {
+  padding-right: 45px;
+  padding-left: 15px;
+}
+
+/* line 415, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-lists .email-sender > .pull-left,
+.wrapkit-content-rtl .email-lists .email-subject > .pull-left,
+.wrapkit-content-rtl .email-lists .email-content > .pull-left {
+  margin-left: 0;
+}
+
+/* line 418, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-lists .email-sender > .pull-right,
+.wrapkit-content-rtl .email-lists .email-subject > .pull-right,
+.wrapkit-content-rtl .email-lists .email-content > .pull-right {
+  margin-right: -30px;
+}
+
+/* line 422, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-lists .email-sender .nice-checkbox,
+.wrapkit-content-rtl .email-lists .email-sender .nice-radio,
+.wrapkit-content-rtl .email-lists .email-subject .nice-checkbox,
+.wrapkit-content-rtl .email-lists .email-subject .nice-radio,
+.wrapkit-content-rtl .email-lists .email-content .nice-checkbox,
+.wrapkit-content-rtl .email-lists .email-content .nice-radio {
+  left: 6px;
+}
+
+/* line 430, ../../app/styles/scss/pages/_email.scss */
+
+.wrapkit-content-rtl .email-preview {
+  right: 360px;
+  left: 0;
+}
+
+@media (max-width: 1199px) {
+  /* line 438, ../../app/styles/scss/pages/_email.scss */
+
+  .email-wrapper {
+    padding: 0 !important;
+    min-height: 1280px;
+  }
+
+  /* line 443, ../../app/styles/scss/pages/_email.scss */
+
+  .email-compose {
+    margin: 15px 22.5px;
+  }
+
+  /* line 447, ../../app/styles/scss/pages/_email.scss */
+
+  .email-lists {
+    display: none;
+    margin: 0;
+    width: 100%;
+    border-right: none !important;
+    border-left: none !important;
+  }
+
+  /* line 455, ../../app/styles/scss/pages/_email.scss */
+
+  .email-preview {
+    display: none;
+    right: 0 !important;
+    left: 0 !important;
+  }
+
+  /* line 462, ../../app/styles/scss/pages/_email.scss */
+
+  .email-lists.active,
+  .email-preview.active {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 469, ../../app/styles/scss/pages/_email.scss */
+
+  .email-wrapper {
+    padding: 0 !important;
+  }
+
+  /* line 472, ../../app/styles/scss/pages/_email.scss */
+
+  .email-lists {
+    margin: 0;
+  }
+
+  /* line 475, ../../app/styles/scss/pages/_email.scss */
+
+  .email-lists .email-group {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+}

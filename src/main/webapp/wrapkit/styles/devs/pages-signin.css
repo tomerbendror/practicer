@@ -1,0 +1,39 @@
+/* line 1, ../../app/styles/scss/pages/_signin.scss */
+
+.signin-wrapper {
+  position: relative;
+  margin: 60px auto 5px;
+  padding: 20px;
+  width: 420px;
+  background-color: #fff;
+}
+
+/* line 8, ../../app/styles/scss/pages/_signin.scss */
+
+.signin-wrapper .signin-brand {
+  margin: 20px 0 40px;
+  text-align: center;
+  font-size: 34px;
+}
+
+/* line 14, ../../app/styles/scss/pages/_signin.scss */
+
+.signin-alt {
+  margin-bottom: 20px;
+}
+
+/* line 18, ../../app/styles/scss/pages/_signin.scss */
+
+.signin-cr {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #ecf0f1;
+}
+
+@media (max-width: 768px) {
+  /* line 25, ../../app/styles/scss/pages/_signin.scss */
+
+  .signin-wrapper {
+    width: 90%;
+  }
+}

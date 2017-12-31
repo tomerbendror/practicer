@@ -1,0 +1,51 @@
+<div class="panel panel-default question-panel  editable-panel {{viewMode ? 'view-mode' : ''}}">
+    <div class="mobile panel-heading" style="cursor: pointer">
+
+        <!-- for edit permissions -->
+        <ul data-ng-show="$parent.userHasEditPermissions" class="panel-actions single-question-actions">
+            <li data-ng-hide="$parent.practiceViewMode"><a data-ng-click="deleteQuestion()" title="מחק שאלה"><i class="fa fa-times"></i></a></li>
+            <li data-ng-hide="$parent.practiceViewMode" sv-handle style="cursor: move"><a title="שנה מיקום בגרירה" style="cursor: move"><i class="fa fa-arrows-v"></i></a></li>
+            <li data-ng-hide="$parent.practiceViewMode"><a title="עריכה" data-ng-click="editQuestion()"><i class="fa fa-edit"></i></a></li>
+            <li><a data-ng-click="toggleCollapse()" title="פתח/סגור"><i class="fa fa-chevron-down"></i></a></li>
+        </ul>
+
+        <!-- for view only permissions   -->
+        <ul data-ng-show="!$parent.userHasEditPermissions" class="panel-actions single-question-actions">
+            <li><a data-ng-click="toggleCollapse()" title="פתח/סגור"><i class="fa fa-chevron-down"></i></a></li>
+            <li sv-handle style="display: none"></li>
+        </ul>
+
+        <div>
+            <h3 class="panel-title" data-ng-click="toggleCollapse()">
+                <span dir="auto">{{question.questionStr}}</span>
+            </h3>
+        </div>
+    </div><!-- /.panel-heading -->
+
+    <div style="display: none;" class="panel-body">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-3 control-label" >שאלה</label>
+                <div class="col-sm-7 input-group input-with-audio-container">
+                    <label class="form-control ng-pristine ng-untouched ng-valid" ng-style="questionTextlStyle">{{question.questionStr}}</label>
+                    <audio-btn data-ng-show="displayTTSButton" src="{{::question.ttsUrl}}" async="true"></audio-btn>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label data-ng-show="!isSingleAnswer" class="col-sm-3 control-label" >תשובות</label>
+                <label data-ng-show="isSingleAnswer" class="col-sm-3 control-label" >תשובה</label>
+                <div class="col-sm-7">
+                    <label dir="auto" class="form-control">{{answersAsStr}}</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">רמז</label>
+                <div class="col-sm-7">
+                    <label dir="auto" class="form-control ng-pristine ng-untouched ng-valid">{{question.hint}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

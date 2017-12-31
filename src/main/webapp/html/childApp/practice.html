@@ -1,0 +1,203 @@
+<div class='practice-full-screen hidden' ng-class="{ 'hidden': !displayMainDiv}">
+    <md-button ng-click="onBack()" aria-label="Back" class="round-btn svg-rotate-180-for-rtl back-button">
+        <ng-md-icon icon="arrow_back"></ng-md-icon>
+    </md-button>
+
+    <!-- The prepare panel before the questions begins -->
+    <div layout="column" class="prepare-screen-container" data-ng-show="state == 'PREPARING'">
+        <div flex>
+            <div style="position: fixed;left: 0;right: 0;top: 0;bottom: 0;">
+                <svg viewBox="50 0 512 512" preserveAspectRatio="xMidYMid meet" class="style-scope iron-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope iron-icon">
+                    <g transform="matrix( 1, 0, 0, 1, 0,0) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_0_FILL" class="style-scope iron-icon">
+                                <path fill="#FFFFFF" d="M357.1,322.1l0.1-0.2h-0.4C357,321.9,357,322,357.1,322.1 M310,344.6h-0.1l-2.3,30.9v0.2l49.3-53.5v-0.4
+          h-45.2l-1.6,22.4V344.6z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -35.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_1_FILL" class="style-scope iron-icon">
+                                <path fill="#E0E0E0" d="M392.4,397.3v0.1h0.4V208H335l-0.2,0.4l-1.8,5h-78.3l-0.3-0.8H252l-1.8-4.6h-61.9v243.2h154.9V451
+          l2.3-30.9h0.1v-0.4l1.7-22.4H392.4 M358.9,280.9c1.1,0.8,1.7,1.7,1.7,2.8v89.1c0,1-0.6,2-1.7,2.8c-1.2,0.8-2.6,1.2-4.2,1.2H227.2
+          c-1.6,0-3.1-0.6-4.3-1.8c-1.2-1.2-1.8-2.6-1.8-4.3c0-0.5,0-0.8,0.1-1.1l-0.1-0.7v-89.1c0-0.5,0.2-1.1,0.5-1.6
+          c-0.3-0.5-0.4-1.3-0.4-2.4c0-1.6,0.6-3,1.7-4.1c1.1-1.1,2.5-1.7,4.1-1.7h128.4c1.6,0,3,0.6,4.2,1.7c1.1,1.1,1.7,2.5,1.7,4.1
+          c0,1.6-0.6,3-1.7,4.2c-0.2,0.2-0.5,0.4-0.9,0.7L358.9,280.9 M348.7,283.7c0-0.7,0.2-1.4,0.8-2H232.9v82.9h115.9V283.7z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -35.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_2_FILL" class="style-scope iron-icon">
+                                <path fill="#929292" d="M359.5,271.7c-1.1-1.1-2.5-1.7-4.2-1.7H227c-1.6,0-3,0.5-4.1,1.7c-1.1,1.1-1.7,2.5-1.7,4.1
+          c0,0.8,0.2,1.6,0.5,2.4c-0.3,0.6-0.5,1.1-0.5,1.7V369c0,0.3,0,0.6,0.1,0.7l-0.1,1.1c0,1.7,0.6,3.2,1.8,4.3
+          c1.2,1.2,2.6,1.8,4.3,1.8h127.4c1.6,0,3-0.4,4.2-1.2c1.1-0.8,1.7-1.7,1.7-2.8v-89.1c0-1.1-0.6-2.1-1.7-2.8c0,0-0.1-0.1-0.2-0.2
+          l0.9-0.7c1.1-1.1,1.7-2.5,1.7-4.2C361.2,274.4,360.7,273,359.5,271.7 M349.4,281.8c-0.5,0.6-0.7,1.2-0.7,2v80.9H232.9v-82.8
+          H349.4 M239.9,181.4l0.1,0.5l12,30.8h78.2l11.4-31.3c0-1-0.2-1.9-0.5-2.7H240.4C240.1,179.3,239.9,180.2,239.9,181.4z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -35.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_3_FILL" class="style-scope iron-icon">
+                                <path fill="#CCCCCC" d="M245.4,176.2c-2.6,0-4.3,0.8-5.2,2.5h100.9c-0.7-1.7-2.5-2.5-5.2-2.5H245.4z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -35.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_4_FILL" class="style-scope iron-icon">
+                                <path fill="#C9C9C9" d="M254.4,212.7l0.3,0.8h78.4l1.8-5l0.2-0.4H332V208l-1.8,4.7H254.4z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -35.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_5_FILL" class="style-scope iron-icon">
+                                <path fill="#AF5846" d="M344.4,182.3V182h-3l-9.4,26.2h3L344.4,182.3 M392.9,405.2h-0.1c-0.1,0.2-0.2,0.3-0.4,0.5
+          c-0.5,0.5-0.7,0.8-0.8,0.9c-1.8,1.9-3.9,4.4-6.4,7.4c-7.6,9.4-14.2,17.9-19.9,25.5c-3.5,4.5-6.9,8.6-10.3,12.3h37.9V405.2z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, 0,0) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_6_FILL" class="style-scope iron-icon">
+                                <path fill="#A15846" d="M357.6,325.7c-0.1-2.6-0.2-3.9-0.3-3.9l-50.4,54l12.9,0c2.6-2.6,15.3-18,38-46.2
+          C357.8,328.3,357.7,327,357.6,325.7z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, 0,0) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_0_MEMBER_0_MEMBER_0_MEMBER_7_FILL" class="style-scope iron-icon">
+                                <path fill="#C16447" d="M380.7,137.7h0.1c0-8.7-3.1-16.1-9.3-22.3c-6.2-6.2-13.7-9.3-22.3-9.3l-40.4,0.1v0.3l-9.4,25.8h57.9
+          v189.4l-0.3,0.3l0.3,0.5V376l-49.6-0.2l-155-0.2V132.3h61.9l-10.2-26.2h-40.9c-8.7,0-16.1,3.1-22.3,9.3
+          c-6.2,6.2-9.3,13.6-9.3,22.3v229c0,8.7,3.1,16.1,9.3,22.2c6.2,6.2,13.6,9.3,22.3,9.3h185.7c2.8,0,5.5-0.3,8-0.9
+          c2.1-0.6,4.3-1.4,6.4-2.4c3.1-1.6,5.7-3.6,7.9-5.9c1.9-1.9,3.5-4,4.9-6.2c1.2-2.2,2.1-3.9,2.5-5.3c1.2-3.3,1.8-6.9,1.8-10.7
+          V137.7z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, 0,0) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_1_MEMBER_0_MEMBER_0_MEMBER_0_FILL" class="style-scope iron-icon">
+                                <path fill="#333333" d="M218.8,250.8l-8.1,14.1l23,13.8c15.3,9,23,13.2,23,12.6c0.3-5.2,7.2-18.7,20.8-40.5
+          c6.5-10.6,13.3-20.9,20.4-31.1c-1.7-1.7-4.4-4.2-8.1-7.4c-5.5-4.9-8.5-7.1-9-6.8c-5.3,3.5-12.2,15-20.8,34.4
+          c-4.5,10.2-8.2,19.6-11.2,28.1L218.8,250.8z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -27.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_2_MEMBER_0_MEMBER_0_MEMBER_0_FILL" class="style-scope iron-icon">
+                                <path d="M346.8,334.6c-5.6-4.1-10.3-8.3-14.2-12.6c-0.6,11.2-0.7,16.7-0.4,16.6c0.3-0.2,5.5-0.9,15.6-2.1c0.3,0,0.7-0.1,1.2-0.2
+          C348.4,335.7,347.6,335.1,346.8,334.6z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -27.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_2_MEMBER_0_MEMBER_0_MEMBER_1_FILL" class="style-scope iron-icon">
+                                <path fill="#FCCF95" d="M378.5,314.9c0.5-1.9,1.1-3.4,1.6-4.5l-13,8l0.4-4.2l-0.8-13h-0.4c-3,0-5.9,0.9-8.6,2.7
+          c-1.6,1.2-3,2.4-4.1,3.6l-0.4-18.1c-1.5,1.1-4.1,2.3-7.6,3.8c-2.3,1-4.3,2-5.9,2.9c0-0.2,0-0.3-0.1-0.4c-1-4.4-1.5-9.3-1.6-14.7
+          l-4.4,4.2c0.1,3.3,0.1,7.8-0.1,13.5l-1.1,23.5c4.4,4.8,9.2,9,14.2,12.7l2.2,1.6l2.9-0.3c4.7-0.6,15.3-1.8,32-3.7
+          c0.1-0.1,0.6-0.4,1.5-0.9c-0.1-1.4-0.3-2.5-0.5-3.2c-0.2,0.4-0.7,0.6-1.2,0.6c-0.4,0-0.9-0.1-1.4-0.3l-1.6-0.2
+          c-0.6,0-1.2,0.1-1.8,0.4l-2.9-1.2C376.5,323.4,377.4,319.2,378.5,314.9z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -27.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_2_MEMBER_0_MEMBER_0_MEMBER_2_FILL" class="style-scope iron-icon">
+                                <path fill="#F7B725" d="M478.7,207.5c-6.9-8.2-13.9-16-21.1-23.4c-3.4-3.6-6.4-7-9-10L338.1,280.8c0.1,5.4,0.6,10.3,1.6,14.7
+          l0.1,0.4c1.4-0.9,3.4-1.9,5.9-2.9c3.3-1.4,5.8-2.6,7.6-3.8l0.4,18.1c1.3-1.4,2.7-2.6,4.1-3.6c2.6-1.8,5.5-2.7,8.6-2.7h0.4l0.8,13
+          l-0.4,4.2l13-8c-0.7,1.4-1.3,2.9-1.6,4.5c-0.9,3.6-1.8,7.9-2.6,12.8l2.9,1.2c0.6-0.3,1.2-0.4,1.7-0.4c0.5,0.1,1,0.2,1.6,0.3
+          c0.4,0.2,0.9,0.3,1.4,0.3c0.5,0,0.9-0.2,1.3-0.6l0.5,3.2c2.3-1.6,6.3-5.1,12.2-10.6c11.3-10.5,31.6-30.6,61-60.2
+          c4.1-4.1,16.1-16.2,35.9-36.4c0-0.3,0.2-0.5,0.6-0.6C488.9,218.7,483.5,213.3,478.7,207.5z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -27.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_2_MEMBER_0_MEMBER_0_MEMBER_3_FILL" class="style-scope iron-icon">
+                                <path fill="#EFF9FF" d="M461.5,161.6l-0.3,0.2l-12.6,12.1c3.6,4.3,6.6,7.6,9,10c7.2,7.4,14.2,15.2,21.1,23.4
+          c5,6,10.5,11.4,16.4,16.1l11.1-11.4c0.4-0.2,0.8-0.6,1.2-1.1c-3.8-4.9-7.1-9-9.9-12.3c-6.7-7.8-13.8-15.3-21.2-22.5
+          c-4.1-3.9-8.8-8.9-14.2-15.1L461.5,161.6z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g transform="matrix( 1, 0, 0, 1, -27.5,-75.65) " class="style-scope iron-icon">
+                        <g class="style-scope iron-icon">
+                            <g id="Layer0_2_MEMBER_0_MEMBER_0_MEMBER_4_FILL" class="style-scope iron-icon">
+                                <path fill="#E77165" d="M477.9,145.8L462,161.3c4.1,4.9,8.9,9.9,14.3,15.1c7,6.7,14.1,14.2,21.2,22.5c3.4,4,6.7,8.1,9.9,12.3
+          l4.7-4.9c0.1-0.1,5.4-5.6,15.7-16.3c0.2-2.3-0.7-4.9-2.8-7.6l-4.8-5.4c-1.2-2.5-3.3-5.7-6.4-9.7c-6-7.4-13.1-13.3-21.3-17.6
+          c-6.5-3.5-10.5-5.2-12-5.2C479.7,144.5,478.9,144.9,477.9,145.8z" class="style-scope iron-icon"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g></svg>
+            </div>
+        </div>
+        <div class="prepare-screen-caption-div">
+            <div style="font-size: 22px;"  ng-bind="caption"></div>
+            <md-button ng-click="startPracticeClicked()" ng-class="{ 'hidden': !displayStartFab}" class="hidden start-practice-fab md-fab md-fab-bottom-left md-primary svg-rotate-180-for-rtl">
+                <ng-md-icon icon="play_arrow"></ng-md-icon>
+            </md-button>
+        </div>
+    </div>
+
+    <!-- The questions panel -->
+    <div layout="column" flex class="prepare-screen-container">
+        <div id="questionsPanel" class="questions-panel" flex style="">
+            <div class="card" ng-class="{ 'enter': state == 'PRACTICE'}">
+                <div class="question-card">
+                    <div class="toolbar-tools top"></div>
+                    <div layout="row" flex>
+                        <md-button ng-if="displayReplayBtn" ng-click="replayTTS()" class="round-btn practice-helper-btn">
+                            <md-tooltip ng-if="!$root.isMobileOrTablet">השמע שוב את המילה</md-tooltip>
+                            <ng-md-icon icon="volume_up"></ng-md-icon>
+                        </md-button>
+                        <div ng-if="!displayReplayBtn" style="width: 40px"></div> <!-- placeholder to help center the text input -->
+                        <div flex ng-class="{ 'num-font': practice.questionsType == 'MATH'}" class="question" ng-style="questionStyle" ng-bind="currentQuestionStr"></div>
+                        <md-button ng-click="showMeTheAnswer()" class="round-btn practice-helper-btn">
+                            <md-tooltip ng-if="!$root.isMobileOrTablet">גלה לי את התשובה</md-tooltip>
+                            <ng-md-icon icon="wb_incandescent"></ng-md-icon>
+                        </md-button>
+
+                    </div>
+                    <div class="toolbar-tools bottom" style="position: relative;"></div>
+                </div>
+                <div id="quizzesContent" class="quizzes-content" flex style="background-color: #fff;transform-origin: 0px 0px 0px; border-radius: 0;">
+                    <div class="text-answer">
+                        <md-input-container ng-show="practice.questionsType=='MATH' && !isChrome" md-no-float flex>
+                            <input type="number" id="answer-number-input" ng-keyup="answerSubmit($event)" ng-model="userNumberAnswer" placeholder="תשובה"
+                                   class="num-font" style="direction: ltr;width: 100%;">
+                        </md-input-container>
+                        <md-input-container ng-show="practice.questionsType=='MATH' && isChrome" md-no-float flex>
+                            <input id="chrome-answer-number-input" ng-keyup="answerSubmit($event)" ng-model="userNumberAnswer" placeholder="תשובה"
+                                   class="num-font" style="direction: ltr;width: 100%;">
+                        </md-input-container>
+
+                        <md-input-container ng-show="practice.questionsType!='MATH'" md-no-float flex>
+                            <input id="answer-text-input" ng-keyup="answerSubmit($event)" ng-model="userAnswer" placeholder="תשובה">
+                        </md-input-container>
+                    </div>
+                    <audio id="tts-audio" data-ng-src="{{audioSrc}}" style="display: none;"></audio>
+                </div>
+            </div>
+        </div>
+
+        <div layout="column" class="practice-status-bar" ng-show="state == 'PRACTICE'">
+            <md-progress-linear md-mode="determinate" value="{{progressValue}}" class="rotate-180-for-rtl"></md-progress-linear>
+            <div layout="row" flex class="info-section">
+                <md-icon class="user-avatar" md-svg-icon="{{::userAvatar}}"></md-icon>
+                <div class="practice-info" flex layout="column">
+                    <div class="title font-medium"><strong ng-bind="practice.name"></strong></div>
+                    <div class="progress num-font">{{::questionsInPractice}} / {{currentQuestionNum}}</div>
+                </div>
+                <div class="pts num-font">{{practiceScoreDisplay}}</div>
+            </div>
+        </div>
+    </div>
+</div>

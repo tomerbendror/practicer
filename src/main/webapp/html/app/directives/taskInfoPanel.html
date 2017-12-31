@@ -1,0 +1,98 @@
+<div class="col-md-12 practice-info-container">
+    <div class="panel panel-default no-bottom-margin border-radius-0 practice-panel">
+        <div class="panel-heading">
+            <ul class="panel-actions">
+                <li><a data-ng-click="toggleExpand()" title="הגדל/הקטן"><i class="fa fa-expand"></i></a></li>
+                <li><a data-ng-click="toggleCollapse()" title="הגדל/הקטן"><i class="fa fa-chevron-down"></i></a></li>
+            </ul>
+            <div style="display: inline-flex">
+                <div><img class="practice-profile-panel-img" src="/wrapkit/images/dummy/MATH.jpg" alt="profile"></div>
+                <div><h3 class="panel-title"><strong>לוח הכפל</strong><br><small>תרגול עד 5</small></h3></div>
+            </div>
+        </div>
+
+        <div class="panel-body" style="display: none;">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" >שם התרגיל</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" placeholder="שם התרגיל">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" >תאור התרגיל</label>
+                    <div class="col-sm-7">
+                        <input class="form-control" placeholder="תאור התרגיל">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" >מספר שניות מירבי לשאלה</label>
+                    <div class="col-sm-7">
+                        <label class="select select-o">
+                            <select id="basicSelect2" name="basicSelect">
+                                <option value="">ללא הגבלה</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="5">6</option>
+                                <option value="5">7</option>
+                                <option value="5">8</option>
+                                <option value="5">9</option>
+                                <option value="5">10</option>
+                                <option value="5">11</option>
+                                <option value="5">12</option>
+                                <option value="5">13</option>
+                                <option value="5">14</option>
+                                <option value="5">15</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" >מספר טעויות אפשרי לשאלה</label>
+                    <div class="col-sm-7">
+                        <label class="select select-o">
+                            <select name="basicSelect1">
+                                <option value="">ללא הגבלה</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="useRandomOrder" class="col-xs-4 col-sm-3 control-label" >הצגת השאלות בסדר אקראי</label>
+                    <div class="col-sm-1">
+                        <input type="checkbox" id="useRandomOrder" checked="checked">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="enableTellMeTheAnswer" class="col-xs-4 col-sm-3 control-label" >הצג כפתור לגילוי התשובה</label>
+                    <div class="col-sm-1">
+                        <input type="checkbox" id="enableTellMeTheAnswer" checked="checked">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row padding-7" >
+                <div class="col-xs-12 pull-right">
+                    <div class="form-group no-mrg-btm">
+                        <button data-ng-click="cancelEditGroup()" class="btn btn-default btn-sm">בטל</button>
+                        <button data-ng-click="updateGroup()" data-ng-disabled="!updateGroupBtnEnable" class="btn btn-greentur btn-sm">עדכן</button>
+                    </div><!-- /.form-group -->
+                </div><!-- /.row -->
+            </div>
+        </div><!-- .panel -->
+    </div>
+</div>

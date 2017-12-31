@@ -1,0 +1,7 @@
+.md-subheader-wrapper:not(.md-sticky-no-effect)[sticky-state=active] {
+    margin: 0 8px 0 0 !important;
+}
+
+.md-subheader-wrapper .md-subheader .md-subheader-content {
+    padding-right: 17px;
+}

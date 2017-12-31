@@ -1,0 +1,24 @@
+<div class="modal-content question-modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">{{::title}}</h4>
+    </div>
+
+    <div class="modal-body form-horizontal">
+        <div id="edit-question-error-panel" class="alert alert-danger" ng-show="errorMsg != ''">
+            <p><strong>{{errorMsg}}</strong></p>
+        </div>
+
+        <div class="form-group">
+            <label style="text-align:right" class="col-sm-12 control-label"> נא להזין שם לתרגיל החדש:</label>
+            <br><br>
+            <div class="col-sm-7">
+                <input data-ng-model="newPracticeName" focus-me type="text" class="form-control" placeholder="שם התרגיל">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="cancel()">ביטול</button>
+        <busy-button data-ng-click="done()" class="btn btn-primary" show-loading="{{inProcess}}" caption="אישור" busy-caption="מעתיק"></busy-button>
+    </div>
+</div>

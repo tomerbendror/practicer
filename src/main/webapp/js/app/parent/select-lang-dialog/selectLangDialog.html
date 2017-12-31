@@ -1,0 +1,25 @@
+<div class="modal-content question-modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">{{::title}}</h4>
+    </div>
+
+    <div class="modal-body form-horizontal">
+        <div class="form-group">
+            <label style="text-align:right" class="col-sm-12 control-label">לחלק מהשאלות לא היה ניתן לקבוע את שפת ההקראה, יש לבחור שפת הקראה באופן ידני:</label>
+            <br><br>
+            <div class="col-sm-7">
+                <label class="select select-o">
+                    <select data-ng-model="lang">
+                        <option value="HE">עברית</option>
+                        <option value="EN">אנגלית</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="cancel()">ביטול</button>
+        <button class="btn btn-primary" ng-click="done()"><i class="fa fa-check"></i> בחירה</button>
+    </div>
+</div>

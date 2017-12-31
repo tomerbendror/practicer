@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="ttsEngine" class="com.practice.tts.NeoSpeechTTSEngine"/>-->
+    <!--<bean id="ttsEngine" class="com.practice.tts.GoogleTTSEngine"/>-->
+
+    <bean id="englishTtsEngine" class="com.practice.tts.ISpeechTrialTTSEngine"/>
+    <bean id="hebrewTtsEngine" class="com.practice.tts.AlmaReaderTTSEngine"/>
+
+    <bean id="ttsEnginesMapping" class="com.practice.tts.TtsEnginesMapping">
+        <property name="ttsEnginesMap">
+            <map>
+                <entry key="HE" value-ref="hebrewTtsEngine"/>
+                <entry key="EN" value-ref="englishTtsEngine"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>

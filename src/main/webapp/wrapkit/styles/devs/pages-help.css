@@ -1,0 +1,60 @@
+/* line 1, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper {
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #e7edf2;
+  border-radius: 4px;
+}
+
+/* line 7, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper a:hover {
+  text-decoration: none;
+}
+
+/* line 11, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper .topic-title {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+
+/* line 15, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper .topic-resume {
+  color: #a1aab0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* line 20, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper .topic-resume a {
+  color: #a1aab0;
+}
+
+/* line 22, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper .topic-resume a:hover {
+  color: #78848c;
+}
+
+/* line 28, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper .topic-lists {
+  margin-bottom: 40px;
+}
+
+/* line 31, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper .topic-lists > li {
+  padding: 6px 0;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 35, ../../app/styles/scss/pages/_help.scss */
+
+.help-wrapper .topic-lists > li:last-child {
+  border-bottom: none;
+}

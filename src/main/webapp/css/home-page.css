@@ -1,0 +1,95 @@
+@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);
+
+body, tags-input .tags .tag-item, tags-input .tags .input, #survicate-box *, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: "Alef Hebrew",
+    “Helvetica Neue”,
+    Helvetica,
+    Arial,
+    sans-serif !important;
+}
+
+.landing-wrapper .navbar-wrapper .navbar li.active>a, .landing-wrapper .navbar-wrapper .navbar li.open>a {
+    color: #bdc3c7;
+    background-color: transparent!important;
+}
+
+.landing-wrapper .navbar-wrapper .navbar .active-alt>a {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+        float: right;
+    }
+}
+
+
+.parag {
+    font-size: 20px;
+    text-align: right;
+}
+
+.steps-p {
+    font-size: 16px;
+}
+
+.landing-wrapper .navbar-wrapper .navbar .navbar-brand {
+    font-weight: bold;
+    direction: ltr;
+    font-size: xx-large;
+}
+
+.landing-wrapper .footer a {
+    font-weight: bold;
+    direction: ltr;
+    padding-right: 15px;
+}
+
+.navbar-default .navbar-collapse {
+    font-size: large;
+}
+
+.navbar-nav {
+    margin-top: 5px;
+}
+
+.landing-wrapper .navbar-wrapper .navbar-form.navbar-right {
+    margin-top: 14px;
+}
+
+.fa.fa-play.fa-fw {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+.input-group-addon:first-child {
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.input-group .form-control:last-child {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.input-group {
+    direction: rtl;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li {
+        float: right;
+    }
+}
+
+.tomer-image-2 {
+
+}
+
+.tomer-image {
+
+}

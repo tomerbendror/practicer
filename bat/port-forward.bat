@@ -1,0 +1,1 @@
+start cmd /K "rhc port-forward -a practicer"

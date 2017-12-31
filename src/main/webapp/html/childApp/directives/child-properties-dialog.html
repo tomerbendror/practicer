@@ -1,0 +1,23 @@
+<md-dialog aria-label="child-properties" class="full-screen-dialog child-properties">
+    <h2 class="md-title md-subheader md-primary">הפרופיל שלי</h2>
+    <div layout="column">
+        <md-input-container md-no-float flex><input ng-model="userProperties.firstName" placeholder="שם פרטי"></md-input-container>
+        <md-input-container md-no-float flex><input ng-model="userProperties.lastName" placeholder="שם משפחה"></md-input-container>
+    </div>
+
+    <h2 class="md-title md-subheader md-primary">תמונת פרופיל</h2>
+    <form name="userForm">
+        <div class="avatars-container">
+            <md-icon class="user-avatar avatar-wrapper" ng-repeat="avatar in avatars" data-ng-class="avatar.selected ? 'selected' : ''"
+                     md-svg-icon="{{avatar.svg}}" data-ng-click="selectAvatar(avatars, $index)"></md-icon>
+        </div>
+    </form>
+
+    <md-button class="md-fab md-fab-bottom-left md-primary" ng-click="save()">
+        <ng-md-icon icon="done"></ng-md-icon>
+    </md-button>
+
+    <div class="md-actions" layout="row" style="direction: ltr; padding-bottom: 10px; margin-right: 10px"><span flex></span>
+        <md-button ng-click="cancel()"> בטל</md-button>
+    </div>
+</md-dialog>

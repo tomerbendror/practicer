@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="1" author="tomer">
+        <sql>
+            CREATE TABLE `user` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `EMAIL` varchar(100) DEFAULT NULL,
+            `FIRST_NAME` varchar(100) DEFAULT NULL,
+            `LAST_NAME` varchar(100) DEFAULT NULL,
+            PRIMARY KEY (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+    <changeSet id="2" author="tomer">
+        <sql>
+            CREATE TABLE `admin_user` (
+            `ID` bigint(20) NOT NULL,
+            PRIMARY KEY (`ID`),
+            KEY `FK47B136DB2D9C9351` (`ID`),
+            CONSTRAINT `admin_to_user_id_constraint` FOREIGN KEY (`ID`) REFERENCES `user` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="3" author="tomer">
+        <sql>
+            CREATE TABLE `child_user` (
+            `ID` bigint(20) NOT NULL,
+            PRIMARY KEY (`ID`),
+            KEY `FK6F735D2E2D9C9351` (`ID`),
+            CONSTRAINT `child_to_user_id_constraint` FOREIGN KEY (`ID`) REFERENCES `user` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="4" author="tomer">
+        <sql>
+            CREATE TABLE `parent_user` (
+            `ID` bigint(20) NOT NULL,
+            PRIMARY KEY (`ID`),
+            KEY `FK3C8376402D9C9351` (`ID`),
+            CONSTRAINT `FK3C8376402D9C9351` FOREIGN KEY (`ID`) REFERENCES `user` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="5" author="tomer">
+        <sql>
+            CREATE TABLE `parent_to_child` (
+            `PARENT_ID` bigint(20) NOT NULL,
+            `CHILD_ID` bigint(20) NOT NULL,
+            KEY `FK7F04A64D47DFAE9A` (`CHILD_ID`),
+            KEY `FK7F04A64DD6569290` (`PARENT_ID`),
+            CONSTRAINT `FK7F04A64D47DFAE9A` FOREIGN KEY (`CHILD_ID`) REFERENCES `child_user` (`ID`),
+            CONSTRAINT `FK7F04A64DD6569290` FOREIGN KEY (`PARENT_ID`) REFERENCES `parent_user` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="6" author="tomer">
+        <comment>add userName and password columns to user table</comment>
+        <addColumn tableName="user">
+            <column name="USER_NAME" type="varchar(100)"/>
+        </addColumn>
+        <addColumn tableName="user">
+            <column name="PASSWORD" type="varchar(100)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="7" author="tomer">
+        <addColumn tableName="user">
+            <column name="GENDER" type="varchar(20)"/>
+        </addColumn>
+        <addColumn tableName="user">
+            <column name="DOB" type="date"/>
+        </addColumn>
+        <addColumn tableName="user">
+            <column name="DESCRIPTION" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="8" author="tomer">
+        <sql>
+            CREATE TABLE `parents_group` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `NAME` varchar(100) DEFAULT NULL,
+            `DESCRIPTION` varchar(100) DEFAULT NULL,
+            `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="9" author="tomer">
+        <sql>
+            CREATE TABLE `user_to_group` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `USER_IN_GROUP_ROLE` varchar(255) NOT NULL,
+            `GROUP_ID` bigint(20) NOT NULL,
+            `PARENT_ID` bigint(20) NOT NULL,
+            `JOIN_DATE` timestamp NOT NULL,
+            PRIMARY KEY (`ID`),
+            KEY `FKACDCB9AFD6569290` (`PARENT_ID`),
+            CONSTRAINT `user_to_group__parent_fk` FOREIGN KEY (`PARENT_ID`) REFERENCES `parent_user` (`ID`),
+            CONSTRAINT `user_to_group__group_fk` FOREIGN KEY (`GROUP_ID`) REFERENCES `parents_group` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="10" author="tomer">
+        <sql>
+            CREATE TABLE `group_invitation` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `GROUP_ID` bigint(20) NOT NULL,
+            `EMAIL` varchar(255) DEFAULT NULL,
+            `INVITER_ID` bigint(20) NOT NULL,
+            `INVITE_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            PRIMARY KEY (`ID`),
+            UNIQUE KEY `group_invitation_UNIQUE` (`GROUP_ID`,`EMAIL`,`INVITER_ID`),
+            CONSTRAINT `group_invitation__group_fk` FOREIGN KEY (`GROUP_ID`) REFERENCES `parents_group` (`ID`),
+            CONSTRAINT `group_invitation__inviter_fk` FOREIGN KEY (`INVITER_ID`) REFERENCES `parent_user` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="11" author="tomer">
+        <!--the UPDATE_TIME is not using sql on update current_timestamp because openShift uses old mySql-->
+        <sql>
+            CREATE TABLE `send_email` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `FROM_ADDRESS` varchar(400) NOT NULL,
+            `TO_ADDRESS` varchar(4000) NOT NULL,
+            `CC` varchar(4000) DEFAULT NULL,
+            `BCC` varchar(4000) DEFAULT NULL,
+            `REPLY_TO` varchar(400) DEFAULT NULL,
+            `SUBJECT` text,
+            `EMAIL_TYPE` varchar(100) DEFAULT NULL,
+            `STATUS` varchar(100) NOT NULL,
+            `ERROR_DETAILS` varchar(500) DEFAULT NULL,
+            `user_id` int(11) DEFAULT NULL,
+            `CREATE_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            `UPDATE_TIME` timestamp,
+            `SEND_TIME` timestamp,
+            `RANDOM_KEY` varchar(100) DEFAULT NULL,
+            `CONTENT` blob,
+            PRIMARY KEY (`ID`),
+            KEY `idx_send_email_date` (`SEND_TIME`),
+            KEY `idx_send_email_status` (`STATUS`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="12" author="tomer">
+        <sql>
+            DROP TABLE send_email;
+
+            CREATE TABLE `send_email` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `TO_ADDRESS` varchar(4000) NOT NULL,
+            `CC` varchar(4000) DEFAULT NULL,
+            `BCC` varchar(4000) DEFAULT NULL,
+            `REPLY_TO` varchar(400) DEFAULT NULL,
+            `SUBJECT` text,
+            `EMAIL_TYPE` varchar(100) DEFAULT NULL,
+            `STATUS` varchar(100) NOT NULL,
+            `ERROR_DETAILS` varchar(500) DEFAULT NULL,
+            `user_id` int(11) DEFAULT NULL,
+            `CREATE_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            `UPDATE_TIME` timestamp NULL,
+            `SEND_TIME` timestamp NULL,
+            `RANDOM_KEY` varchar(100) DEFAULT NULL,
+            `CONTENT` blob,
+            PRIMARY KEY (`ID`),
+            KEY `idx_send_email_date` (`SEND_TIME`),
+            KEY `idx_send_email_status` (`STATUS`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+        </sql>
+    </changeSet>
+
+    <changeSet id="13" author="tomer">
+        <comment>add one more field since we able to set the fromName attribute that will be display as the sender nick name</comment>
+        <sql>
+            alter table send_email add `FROM_NAME` varchar(50) DEFAULT NULL after TO_ADDRESS;
+        </sql>
+    </changeSet>
+
+    <changeSet id="14" author="tomer">
+        <comment>change column type for ID from int to bigint</comment>
+        <sql>
+            ALTER TABLE `send_email` MODIFY `user_id` bigint(20);
+        </sql>
+    </changeSet>
+
+    <changeSet id="15" author="tomer">
+        <comment>create the PRACTICE table</comment>
+        <sql>
+            CREATE TABLE `practice` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `NAME` varchar(100) NOT NULL,
+            `DESCRIPTION` varchar(100) NOT NULL,
+            `QUESTION_TYPE` varchar(100) NOT NULL,
+            `USE_TTS` bit NOT NULL,
+            `MAX_SECONDS_FOR_QUESTION` int(11) DEFAULT NULL,
+            `MAX_MISTAKES_NUM` int(11) DEFAULT NULL,
+            `RANDOM_ORDER` bit DEFAULT NULL,
+            `CREATOR_ID` bigint(20) DEFAULT NULL,
+            `CREATE_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY (`ID`),
+            CONSTRAINT `practice_to_creator_id_constraint` FOREIGN KEY (`ID`) REFERENCES `user` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="16" author="tomer">
+        <sql>
+            CREATE TABLE `practice_to_group` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `GROUP_ID` bigint(20) NOT NULL,
+            `PRACTICE_ID` bigint(20) NOT NULL,
+            `CREATE_DATE` timestamp NOT NULL,
+            PRIMARY KEY (`ID`),
+            CONSTRAINT `practice_to_group__practice_fk` FOREIGN KEY (`PRACTICE_ID`) REFERENCES `practice` (`ID`),
+            CONSTRAINT `practice_to_group__group_fk` FOREIGN KEY (`GROUP_ID`) REFERENCES `parents_group` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="17" author="tomer">
+        <sql>
+            CREATE TABLE `question` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `PRACTICE_ID` bigint(20) NOT NULL,
+            `QUESTION_STR` varchar(255) NOT NULL,
+            `HINT` varchar(255) DEFAULT NULL,
+            `QUESTION_TYPE` varchar(100) NOT NULL,
+            PRIMARY KEY (`ID`),
+            KEY `question_practice_key` (`PRACTICE_ID`),
+            CONSTRAINT `question_practice_fk` FOREIGN KEY (`PRACTICE_ID`) REFERENCES `practice` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="18" author="tomer">
+        <sql>
+            CREATE TABLE `practice_to_child` (
+            `PRACTICE_ID` bigint(20) NOT NULL,
+            `CHILD_ID` bigint(20) NOT NULL,
+            KEY `practice_to_child_child_key` (`CHILD_ID`),
+            KEY `practice_to_child_practice_key` (`PRACTICE_ID`),
+            CONSTRAINT `practice_to_child_child_id_constraint` FOREIGN KEY (`CHILD_ID`) REFERENCES `child_user` (`ID`),
+            CONSTRAINT `practice_to_child_practice_id_constraint` FOREIGN KEY (`PRACTICE_ID`) REFERENCES `practice` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="19" author="tomer">
+        <sql>
+            CREATE TABLE `answer` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `QUESTION_ID` bigint(20) NOT NULL,
+            `ANSWER_STR` bigint(20) NOT NULL,
+            `IS_CORRECT` bit NOT NULL,
+            PRIMARY KEY (`ID`),
+            KEY `answer_question_key` (`QUESTION_ID`),
+            CONSTRAINT `answer_question_fk` FOREIGN KEY (`QUESTION_ID`) REFERENCES `question` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="20" author="tomer">
+        <comment>fix constraint reference for practice table</comment>
+        <sql>
+            ALTER TABLE `practice` DROP FOREIGN KEY practice_to_creator_id_constraint;
+        </sql>
+    </changeSet>
+
+    <changeSet id="21" author="tomer">
+        <comment>fix constraint reference for practice table</comment>
+        <sql>
+            ALTER TABLE `practice` ADD CONSTRAINT practice_to_creator_id_constraint FOREIGN KEY (`CREATOR_ID`) REFERENCES `user` (`ID`);
+        </sql>
+    </changeSet>
+
+    <changeSet id="22" author="tomer">
+        <comment>change column type</comment>
+        <sql>
+            ALTER TABLE `answer` MODIFY ANSWER_STR varchar(255) NOT NULL;
+        </sql>
+    </changeSet>
+
+    <changeSet id="23" author="tomer">
+        <comment>add column to question to represent the order within the practice</comment>
+        <sql>
+            alter table question add `ORDER_INDEX` int(11) DEFAULT 0 after QUESTION_TYPE;
+        </sql>
+    </changeSet>
+
+    <changeSet id="24" author="tomer">
+        <sql>
+            alter table practice add `QUESTIONS_PER_PRACTICE` int(11) DEFAULT 10 after MAX_MISTAKES_NUM;
+        </sql>
+    </changeSet>
+
+    <changeSet id="25" author="tomer">
+        <sql>
+            alter table user add `PROFILE_IMAGE_URL` varchar(255) DEFAULT null after DESCRIPTION;
+        </sql>
+    </changeSet>
+
+    <changeSet id="26" author="tomer">
+        <sql>
+            update user set USER_NAME=EMAIL WHERE id in (select id from parent_user);
+        </sql>
+    </changeSet>
+
+    <changeSet id="27" author="tomer">
+        <sql>
+            ALTER TABLE user_to_group ADD UNIQUE (GROUP_ID, PARENT_ID);
+        </sql>
+    </changeSet>
+
+    <changeSet id="28" author="tomer">
+        <sql>
+            ALTER TABLE group_invitation add `WAS_USED` bit(1) DEFAULT 0 after INVITATION_KEY;
+        </sql>
+    </changeSet>
+
+    <changeSet id="29" author="tomer">
+        <sql>
+            CREATE TABLE `practicer`.`tts_record` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `TEXT` VARCHAR(255) NOT NULL ,
+            `FILE_MIME_TYPE` VARCHAR(20) NOT NULL,
+            `LANGUAGE` VARCHAR(10) NOT NULL,
+            `CONTENT` MEDIUMBLOB NOT NULL,
+            PRIMARY KEY (`ID`),
+            UNIQUE KEY `text_lang_unique` (`TEXT`,`LANGUAGE`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="30" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`question` ADD COLUMN `TTS_URL` VARCHAR(500) NULL AFTER `ORDER_INDEX`;
+        </sql>
+    </changeSet>
+
+    <changeSet id="31" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`tts_record`
+            ADD COLUMN `TTS_SOURCE` VARCHAR(20) NOT NULL DEFAULT 'ISPEECH_TRIAL' AFTER `LANGUAGE`;
+        </sql>
+    </changeSet>
+
+    <changeSet id="32" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`user_to_group` RENAME TO  `practicer`.`parent_to_group` ;
+        </sql>
+    </changeSet>
+
+    <changeSet id="33" author="tomer">
+        <sql>
+            CREATE TABLE `child_to_group` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `GROUP_ID` bigint(20) NOT NULL,
+            `CHILD_ID` bigint(20) NOT NULL,
+            `JOIN_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            PRIMARY KEY (`ID`),
+            UNIQUE KEY `GROUP_ID` (`GROUP_ID`,`CHILD_ID`),
+            KEY `FKACDCB9AFD65339290` (`CHILD_ID`),
+            CONSTRAINT `child_to_group__group_fk` FOREIGN KEY (`GROUP_ID`) REFERENCES `parents_group` (`ID`),
+            CONSTRAINT `child_to_group__child_fk` FOREIGN KEY (`CHILD_ID`) REFERENCES `child_user` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="34" author="lior">
+           <sql>
+               CREATE TABLE `event` (
+                 `ID` bigint(20) NOT NULL,
+                  PRIMARY KEY (`ID`),
+                 `event_type` varchar(100) NOT NULL,
+                 `child_id` bigint(20),
+                 `parent_id` bigint(20),
+                 `group_id` bigint(20),
+                 `practice_id` bigint(20),
+                 `question_id` bigint(20),
+                 `event_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                 `value` varchar(21000)
+               ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+           </sql>
+       </changeSet>
+
+    <changeSet id="35" author="tomer">
+        <comment>set default avatars to the child according to the gender</comment>
+        <sql>
+            update user set PROFILE_IMAGE_URL='avatars:svg-1' WHERE ID in (select us_.ID from (select * from user) as us_ JOIN child_user ch on ch.ID=us_.ID WHERE GENDER in ('UNKNOWN', 'MALE'));
+            update user set PROFILE_IMAGE_URL='avatars:svg-12' WHERE ID in (select us_.ID from (select * from user) as us_ JOIN child_user ch on ch.ID=us_.ID WHERE GENDER in ('FEMALE'));
+        </sql>
+    </changeSet>
+
+    <changeSet id="36" author="tomer">
+        <sql>
+            CREATE TABLE `user_property` (
+                `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+                `PROPERTY_NAME` varchar(100) NOT NULL,
+                `VALUE_STR` varchar(255) DEFAULT NULL,
+                `PROPERTY_CLASS` varchar(100) DEFAULT NULL,
+                `USER_ID` bigint(20) DEFAULT NULL,
+                `LAST_UPDATED` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                PRIMARY KEY (`ID`),
+                UNIQUE KEY `key_user_UNIQUE` (`USER_ID`,`PROPERTY_NAME`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+        </sql>
+    </changeSet>
+
+    <changeSet id="37" author="tomer">
+        <sql>
+            CREATE TABLE `practice_result` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `SCORE` int(11) NOT NULL,
+            `CREATE_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            `PRACTICE_ID` bigint(20) NOT NULL,
+            `CHILD_ID` bigint(20) NOT NULL,
+            PRIMARY KEY (`ID`),
+            CONSTRAINT `practice_result_to_practice` FOREIGN KEY (`PRACTICE_ID`) REFERENCES `practice` (`ID`),
+            CONSTRAINT `practice_result_to_child` FOREIGN KEY (`CHILD_ID`) REFERENCES `child_user` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="38" author="tomer">
+        <sql>
+            CREATE TABLE `question_result` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `QUESTION_STR` varchar(255) NOT NULL,
+            `SUCCESS` bit NOT NULL,
+            `QUESTION_TIME_SECOND` int(11) NOT NULL,
+            `WRONG_ANSWERS_STR` varchar(255) DEFAULT NULL,
+            `PRACTICE_RESULT_ID` bigint(20) NOT NULL,
+            PRIMARY KEY (`ID`),
+            CONSTRAINT `question_result_to_practice_result` FOREIGN KEY (`PRACTICE_RESULT_ID`) REFERENCES `practice_result` (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="39" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`question_result` ADD COLUMN `QUESTION_SKIPPED` BIT(1) NOT NULL AFTER `SUCCESS`;
+        </sql>
+    </changeSet>
+
+    <changeSet id="40" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`question_result` CHANGE COLUMN `QUESTION_TIME_SECOND` `QUESTION_TIME_SECOND` FLOAT NOT NULL;
+        </sql>
+    </changeSet>
+
+    <changeSet id="41" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`question_result` ADD COLUMN `WRONG_ANSWERS_COUNT` INT NOT NULL AFTER `WRONG_ANSWERS_STR`;
+        </sql>
+    </changeSet>
+
+    <changeSet id="42" author="tomer">
+        <comment>didn't define FK for group and practice since I want to keep this data also in case group/practice were removed</comment>
+        <sql>
+            CREATE TABLE `practice_statistics_for_group` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `TIME_PERIOD` VARCHAR(20) DEFAULT NULL,
+            `PRACTICE_ID` bigint(20) NOT NULL,
+            `GROUP_ID` bigint(20) NOT NULL,
+            `AVG_SCORE` int(11) NOT NULL,
+            `AVG_TIME_SECOND` int(11) NOT NULL,
+            `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="43" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`practice_result` ADD COLUMN `TIME_SECOND` INT(11) NULL AFTER `SCORE`;
+        </sql>
+    </changeSet>
+
+    <changeSet id="44" author="tomer">
+        <comment>for already exist practiceResults calculagte the time of the practice base on the time of all its related questions</comment>
+        <sql>
+            UPDATE practice_result pr,
+            (SELECT qr.PRACTICE_RESULT_ID as pr_id, sum(qr.QUESTION_TIME_SECOND) as timeSum from question_result qr, practice_result pr1
+            where qr.PRACTICE_RESULT_ID=pr1.ID GROUP BY qr.PRACTICE_RESULT_ID) totalTime
+            SET pr.TIME_SECOND = totalTime.timeSum WHERE pr.ID=totalTime.pr_id;
+        </sql>
+    </changeSet>
+
+    <changeSet id="45" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`practice_result` CHANGE COLUMN `TIME_SECOND` `TIME_SECOND` INT(11) NOT NULL;
+        </sql>
+    </changeSet>
+
+    <changeSet id="46" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`send_email` CHANGE COLUMN `CONTENT` `CONTENT` MEDIUMBLOB NOT NULL;
+        </sql>
+    </changeSet>
+
+    <changeSet id="47" author="tomer">
+        <comment>hold the calculated statistics for child for specific practice, didn't define FK for child and practice since I want to keep this data also in case child/practice were removed</comment>
+        <sql>
+            CREATE TABLE `practice_statistics_for_child` (
+            `ID` bigint(20) NOT NULL AUTO_INCREMENT,
+            `TIME_PERIOD` VARCHAR(20) DEFAULT NULL,
+            `PRACTICE_ID` bigint(20) NOT NULL,
+            `CHILD_ID` bigint(20) NOT NULL,
+            `AVG_SCORE` int(11) NOT NULL,
+            `AVG_TIME_SECOND` int(11) NOT NULL,
+            `CREATED_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY (`ID`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </sql>
+    </changeSet>
+
+    <changeSet id="48" author="tomer">
+        <comment>add ttsLang column, in some cases we need the user to tell us the TTS lang, for example (11,22 etc.)</comment>
+        <sql>
+            ALTER TABLE `practicer`.`practice` ADD COLUMN `TTS_LANG` VARCHAR(20) NOT NULL DEFAULT 'AUTO' AFTER `USE_TTS`;
+        </sql>
+    </changeSet>
+
+    <changeSet id="49" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`question` ADD COLUMN `TTS_GENERATION_STATE` VARCHAR(20) NOT NULL DEFAULT 'N_A' AFTER `QUESTION_TYPE`;
+        </sql>
+    </changeSet>
+
+    <changeSet id="50" author="tomer">
+        <sql>
+            update `practicer`.`question` set TTS_GENERATION_STATE='DONE' where TTS_URL is not null;
+        </sql>
+    </changeSet>
+
+    <changeSet id="51" author="tomer">
+        <sql>
+            UPDATE practice set TTS_LANG='UNIVERSAL' WHERE TTS_LANG = 'AUTO';
+        </sql>
+    </changeSet>
+
+    <changeSet id="52" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`practice` CHANGE COLUMN `TTS_LANG` `TTS_LANG` VARCHAR(20) NULL ;
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

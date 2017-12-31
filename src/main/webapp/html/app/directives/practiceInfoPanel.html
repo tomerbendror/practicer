@@ -1,0 +1,27 @@
+<div class="col-md-12 practice-info-container" style="padding-left: 0;padding-right: 0">
+    <div style="overflow: initial" class="panel panel-default practice-panel no-bottom-margin border-radius-0 practice-panel editable-panel {{viewMode ? 'view-mode' : ''}}">
+
+        <div class="pull-left" style="margin: 9px 5px 5px 6px;">
+            <div class="btn-group btn-group-xs">
+                <button more-btn type="button" class="btn btn-default dropdown-toggle no-text-at-narrow" data-toggle="dropdown" style="margin-top: 13px">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a data-ng-click="duplicatePractice()"><i class="fa fa-puzzle-piece"></i> שכפול תרגיל</a></li>
+                    <li><a data-ng-click="copyQuestionsToExistPractice()"><i class="fa fa-copy"></i> העתקת השאלות לתרגיל קיים</a></li>
+                    <li ng-show="userIsPracticeCreator"><a data-ng-click="deletePractice()"><i class="fa fa-trash-o"></i> מחק תרגיל</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel-heading white-background" data-ng-click="openPracticePage()" style="cursor: pointer">
+            <div style="display: inline-flex">
+                <div style="padding-top: 7px"><img class="practice-profile-panel-img" ng-src="/wrapkit/images/dummy/{{::practice.questionsType}}.PNG" alt="profile"></div>
+                <div>
+                    <h3 class="panel-title"><strong>{{::practice.name}}</strong><br>
+                        <small class="practice-heading-sub"><span class="practice-small-description-strong">{{::practiceDescription}}</span> ({{::practice.questionCount}} שאלות)<br> נוצר ע"י <span class="practice-small-description-strong">{{practice.creatorFullName}}</span> ב:<span class="practice-small-description-strong">{{$root.formatDate(practice.createdTime, 5)}}</span></small>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

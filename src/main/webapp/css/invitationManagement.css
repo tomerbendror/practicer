@@ -1,0 +1,38 @@
+.signin-wrapper .signin-brand {
+    font-weight: bold;
+}
+
+.invitation-management {
+    padding-bottom: 20px;
+}
+
+.invitation-management .single-invitation {
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.invitation-management .multi-invitation-title {
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.pending-invitations-table tr th {
+    text-align: right;
+    font-size: 16px;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 1px;
+}
+
+.pending-invitations-table tr td {
+    padding: 17px 0 0 0;
+}
+
+.pending-invitations-table .join-col {
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .signin-wrapper {
+        margin: 20px auto 5px;
+    }
+}

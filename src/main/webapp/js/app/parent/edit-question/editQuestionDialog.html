@@ -1,0 +1,50 @@
+<div class="modal-content question-modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">{{::title}}</h4>
+    </div>
+    <div class="modal-body form-horizontal">
+        <div id="edit-question-error-panel" class="alert alert-danger" style="display: none">
+            <p><strong>{{errorMsg}}</strong></p>
+        </div>
+
+        <div class="form-group">
+            <label data-ng-if="questionsType != 'MATH'" class="col-sm-2 control-label" >שאלה</label>
+            <label data-ng-if="questionsType == 'MATH'" class="col-sm-2 control-label" >שאלה
+                <a tooltip="מומלץ לעבור למצב אנגלית במקלדת בעת הזנת שאלות חשבון"><i class="fa fa-question-circle"></i></a>
+            </label>
+            <div class="col-sm-9 input-group input-with-audio-container">
+                <input focus-me id='edit-question-dialog-question_str' data-ng-keypress="questionFieldKeyPress($event)"
+                       ng-style="question.questionType == 'MATH' ? { 'direction':'ltr'} : { 'direction':'inherit'}"
+                       data-ng-blur="onQuestionBlur()" type="text" data-ng-model="question.questionStr"
+                       class="form-control" placeholder="{{::questionStrPlaceHolder}}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-ng-if="!isSingleAnswer" class="col-sm-2 control-label" >תשובות
+                <a tooltip="ניתן להזין מספר תשובות אפשריות. לאחר הזנת תשובה יש ללחוץ על מקש ה-ENTER"><i class="fa fa-question-circle"></i></a>
+            </label>
+
+            <label data-ng-if="isSingleAnswer" class="col-sm-2 control-label" >תשובה</label>
+            <div class="col-sm-9">
+                <tags-input id="edit-question-dialog-answers_input" data-ng-if="!isSingleAnswer"
+                            type="text" ng-model="question.answers" placeholder='הוספה...' max-length="50" max-tags="10"
+                            add-on-paste="true" min-length="1" display-property="answerStr" add-on-comma="false" replace-spaces-with-dashes="false"></tags-input>
+                <input id="edit-question-dialog-math_answer_input" data-ng-if="isSingleAnswer" ng-style="question.questionType == 'MATH' ? { 'direction':'ltr'} : { 'direction':'inherit'}"
+                       type="text" data-ng-model="question.answers[0].answerStr" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">רמז</label>
+            <div class="col-sm-9">
+                <input type="text" data-ng-model="question.hint" class="form-control" placeholder="רמז לשאלה">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="cancel()">ביטול</button>
+        <button class="btn btn-primary" id="edit-question-dialog-done-btn" ng-click="done()"><i class="fa fa-check"></i> סיום</button>
+        <button class="btn btn-primary" id="edit-question-dialog-add-more-btn" ng-if='newQuestionMode' ng-click="addOneMoreQuestion()"><i class="fa fa-plus"></i> סיום ויצירת שאלה נוספת</button>
+    </div>
+</div>

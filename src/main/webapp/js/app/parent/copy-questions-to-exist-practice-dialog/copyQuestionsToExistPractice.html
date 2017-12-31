@@ -1,0 +1,29 @@
+<div class="modal-content question-modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">{{::title}}</h4>
+    </div>
+
+    <div class="modal-body form-horizontal">
+        <div id="edit-question-error-panel" class="alert alert-danger" ng-show="errorMsg != ''">
+            <p><strong>{{errorMsg}}</strong></p>
+        </div>
+
+        <div class="form-group">
+            <label style="text-align:right" class="col-sm-12 control-label">נא לבחור את התרגיל אליו יועתקו השאלות:</label>
+            <br><br>
+            <div class="col-sm-7">
+                <label class="select select-o">
+                    <select ng-options="practice.name for practice in possibleTargetPractices | orderBy: 'name' : false track by practice.id"
+                            data-ng-model="trgPractice">
+                        <option value="" disabled selected hidden>נא לבחור תרגיל...</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="cancel()">ביטול</button>
+        <busy-button data-ng-click="done()" class="btn btn-primary" show-loading="{{inProcess}}" caption="אישור" busy-caption="מעתיק"></busy-button>
+    </div>
+</div>

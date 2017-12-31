@@ -1,0 +1,64 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+ http://www.springframework.org/schema/security
+ http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <!-- Global Security Settings -->
+    <global-method-security pre-post-annotations="enabled" />
+
+    <!-- Authentication Providers for Form Login -->
+    <authentication-manager alias="authenticationManager" erase-credentials="false">
+        <authentication-provider user-service-ref="userDetailsService">
+            <password-encoder ref="passwordEncoder" />
+        </authentication-provider>
+    </authentication-manager>
+
+    <beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <beans:constructor-arg name="strength" value="11" />
+    </beans:bean>
+
+    <beans:bean id="ajaxTimeoutRedirectFilter" class="com.practice.security.AjaxTimeoutRedirectFilter">
+        <beans:property name="customSessionExpiredErrorCode" value="901"/>
+    </beans:bean>
+
+    <http use-expressions="true">
+        <access-denied-handler error-page="/403" />
+
+        <!-- tmp api, do not remove it -->
+        <intercept-url pattern="/tts/jshdfksdjhfiiiure45**" access="permitAll()"/>
+
+        <intercept-url pattern="/jira/**"  access="permitAll()"/>
+
+        <intercept-url pattern="/user/login**"  access="permitAll()"/>
+        <intercept-url pattern="/user/signup**" access="permitAll()"/>
+        <intercept-url pattern="/user/resetPassword**" access="permitAll()"/>
+        <intercept-url pattern="/user/contactUs**" access="permitAll()"/>
+
+        <intercept-url pattern="/user/**"       access="isAuthenticated()"/>
+        <intercept-url pattern="/parent/**"     access="hasRole('parent')"/>
+        <intercept-url pattern="/group/**"      access="hasRole('parent')"/>
+        <intercept-url pattern="/app/parent/**" access="hasRole('parent')"/>
+        <intercept-url pattern="/app/child/**"  access="hasRole('child')"/>
+        <intercept-url pattern="/report/**"     access="isAuthenticated()"/>
+        <intercept-url pattern="/app/**"        access="isAuthenticated()"/>
+        <intercept-url pattern="/translate/**"  access="isAuthenticated()"/>
+        <intercept-url pattern="/tts/**"        access="isAuthenticated()"/>
+        <intercept-url pattern="/practice/**"   access="isAuthenticated()"/>
+        <intercept-url pattern="/**"            access="permitAll()"/>
+
+        <custom-filter ref="ajaxTimeoutRedirectFilter" after="EXCEPTION_TRANSLATION_FILTER"/>
+
+        <form-login password-parameter="password" username-parameter="userName" login-page="/user/login" default-target-url="/app/parent"
+                    authentication-failure-url="/user/login?err=1" always-use-default-target="false"/>
+        <logout logout-url="/user/logout" logout-success-url="/user/login?out=1" delete-cookies="JSESSIONID,userId,child_gender" invalidate-session="true" />
+
+        <session-management invalid-session-url="/user/login?time=1">
+            <concurrency-control max-sessions="1" expired-url="/user/login?time=1" />
+        </session-management>
+    </http>
+
+    <beans:bean id="userDetailsService" class="com.practice.security.UserDetailsServiceImpl" />
+
+</beans:beans>

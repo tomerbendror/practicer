@@ -1,0 +1,25 @@
+<div style="padding: 15px 22.5px;">
+    <div class="row exercise-by-group">
+        <div class="groups-control-panel">
+            <div class="control-buttons">
+                <button data-ng-click="addPractice('MATH')" type="button" class="btn btn-greentur btn-sm" >
+                    <i class="fa fa-plus"></i> תרגול חשבון
+                </button>
+                <button data-ng-click="addPractice('TRANSLATION')" type="button" class="btn btn-greentur btn-sm" >
+                    <i class="fa fa-plus"></i> תרגום מילים
+                </button>
+                <button data-ng-click="addPractice('DICTATION')" type="button" class="btn btn-greentur btn-sm" >
+                    <i class="fa fa-plus"></i> הכתבה
+                </button>
+            </div>
+            <hr>
+        </div>
+
+        <accordion close-others="false">
+            <accordion-group class="group-section" is-open="true" ng-repeat="group in practicesByGroup" heading='{{ ::group.groupId > 0 ? group.groupName : "תרגילים מההורים שלי"}}'>
+                <div x-practice-info-panel id="practice-info-panel-{{practice.id}}" data-ng-repeat="practice in group.practices | orderBy: 'createdTimeMillis' : true" practice="practice" style="padding: 0"></div>
+                <div data-ng-show="group.practices.length == 0" style="padding: 10px"><i class="fa fa-info-circle"></i> לא מוגדרים תרגילים לקבוצה זו</div>
+            </accordion-group>
+        </accordion>
+    </div>
+</div>

@@ -1,0 +1,282 @@
+/*body {
+	transition: 0.5s;
+}
+
+body.open {
+	margin-left: 250px;
+}*/
+
+.almareader-widget {
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	display: block;
+	z-index: 999999999;
+	transition: 0.5s;
+	direction: rtl;
+}
+
+.almareader-autoread-controls {
+	margin-top: 72px;
+	background: #f1efe1;
+	border: 1px solid #67524d;
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	float: left;
+	margin-right: 20px;
+	padding: 5px;
+	-webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.almareader-autoread-controls-title {
+	font-weight: bold;
+}
+
+.almareader-controls {
+	background: #f1efe1;
+	border: 1px solid #67524d;
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	float: left;
+	margin-right: 20px;
+	-webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.almareader-title {
+	display: block;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	background: #f68a3b;
+	color: #fff;
+}
+
+.almareader-title:hover,
+.almareader-title:focus {
+	background: #e97f32;
+	color: #fff;
+}
+
+.almareader-holder {
+	margin: 10px 0;
+	display: none;
+}
+
+.almareader-holder .almareader-tbl {
+	display: table;
+	margin: 0 auto;
+}
+
+.almareader-holder-col {
+	padding: 0 10px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.almareader-mafrid {
+	border-right: 2px solid #cac0b5;
+}
+
+.almareader-widget.open {
+	left: 270px;
+}
+
+.almareader-settings {
+	border: 1px solid #817061;
+	border-radius: 40px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin: 0 2px;
+	font-size: 20px;
+	text-align: center;
+	background-image: url('http://almareader.com/almareaderjs/NI/img/gear.png'); 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #e5e6e5;
+	direction: rtl;
+}
+
+.almareader-btn {
+	display: inline-block;
+	border-radius: 25px;
+	background-color: #e5e6e5;
+	border: 1px solid #817061;
+	margin: 5px;
+	padding: 5px;
+}
+
+#almareader-status {
+	background: #bf0000;
+	color: #fff;
+}
+
+#almareader-status.active {
+	background: #5eab03;
+	color: #fff;
+}
+
+.almareader-copyrights {
+	margin: 5px 10px 0 10px;
+	border-top: 2px solid #cac0b5;
+	padding-top: 5px;
+}
+
+.almareader-copyrights .t1 {
+	color: #de7600;
+	padding-left: 2px;
+}
+
+.almareader-copyrights .t2 {
+	color: #0f0f0e;
+}
+
+.almareader-setting {
+	position: fixed;
+	top: 0;
+	left: -250px;
+	width: 248px;
+	height: 100%;
+	overflow: hidden;
+	background: #f2efe0;
+	border-right: 2px solid #65514c;
+	transition: 0.5s;
+	z-index: 99999999;
+	font-family: arial;
+	direction: rtl;
+	text-align: right;
+}
+
+.settings-container {
+	overflow: auto;
+}
+
+.almareader-setting.open {
+	left: 0;
+}
+
+.almareader-setting fieldset {
+	margin: 15px;
+	padding: 10px;
+	border: 1px solid #65514c;
+}
+
+.almareader-setting legend {
+	margin: 0;
+	border: 0;
+	padding: 0.2em 0.5em;
+	font-size: 0.9em;
+	font-weight: bold;
+	width: auto;
+}
+
+.almareader-setting label {
+	min-width: 25px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.almareader-logo {
+	text-align: center;
+	height: 82px;
+}
+
+.reader-reading {
+	outline: 2px solid #cdcdcd;
+}
+
+/* ============================================================
+  COMMON
+============================================================ */
+.almareader-cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.almareader-cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ============================================================
+  SWITCH 1 - ROUND
+============================================================ */
+input.almareader-cmn-toggle-round + label {
+  padding: 2px;
+  width: 110px;
+  height: 50px;
+  background-color: #dddddd;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  
+}
+input.almareader-cmn-toggle-round + label:before, input.almareader-cmn-toggle-round + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+input.almareader-cmn-toggle-round + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  background-image: url('http://almareader.com/almareaderjs/NI/img/on.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  transition: background 0.4s;
+}
+input.almareader-cmn-toggle-round + label:after {
+  width: 50px;
+  background-color: #f1f1f1;
+  background-image: url('http://almareader.com/almareaderjs/NI/img/off.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: margin 0.4s;
+  -moz-transition: margin 0.4s;
+  -o-transition: margin 0.4s;
+  transition: margin 0.4s;
+}
+input.almareader-cmn-toggle-round:checked + label:after {
+  background-image: url('http://almareader.com/almareaderjs/NI/img/on.png');
+  background-color: #fff;	
+margin-left: 60px;
+}
+input.almareader-cmn-toggle-round:checked + label:before {
+  background-color: #f68a3b;
+  background-image: url('http://almareader.com/almareaderjs/NI/img/off.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+}

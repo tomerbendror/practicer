@@ -1,0 +1,20 @@
+<div class="modal-content question-modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">הגדרת תרגיל חדש</h4>
+    </div>
+    <div class="modal-body form-horizontal">
+        <p>יצרת בהצלחה משתמש עבור הילד הראשון, השלב הבא הינו יצירת תרגיל עבור הילד או עבור קבוצה איתה ניתן לשתף את התרגיל</p>
+        <p>ע"מ ליצור תרגיל חדש יש לבחור בסוג התרגיל אותו אנו מעוניינים ליצור, ישנם שלושה סוגי תרגילים:</p>
+        <div>
+            <ul>
+                <li><strong>תרגול חשבון</strong> - מאפשר להגדיר תרגילי חשבון: חיבור, חיסור, כפל וחילוק כולל שימוש בסוגריים</li>
+                <li><strong>תרגום מילים</strong> - תרגום של מילים מאנגלית לעברית ולהפך, מאפשר לראות ולשמוע את המילה או המשפט</li>
+                <li><strong>הכתבה</strong> - נתמך בשפות אנגלית ועברית, מאפשר שמיעה בלבד של המילה</li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="done()">הבנתי</button>
+        <button ng-if="!$root.isMobileOrTablet" class="btn btn-primary" ng-click="openCreatePracticeHelp()">הסבר לי איך ליצור תרגיל</button>
+    </div>
+</div>

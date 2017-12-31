@@ -1,0 +1,1597 @@
+/* line 1, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-node,
+.jstree-children,
+.jstree-container-ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+/* line 9, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-node {
+  white-space: nowrap;
+}
+
+/* line 13, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-anchor {
+  display: inline-block;
+  color: #3e5771;
+  white-space: nowrap;
+  padding: 0 4px 0 1px;
+  margin: 0;
+  vertical-align: top;
+}
+
+/* line 22, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-anchor:focus {
+  outline: 0;
+}
+
+/* line 26, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-anchor,
+.jstree-anchor:link,
+.jstree-anchor:visited,
+.jstree-anchor:hover,
+.jstree-anchor:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 31, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-icon {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  text-align: center;
+}
+
+/* line 40, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-icon:empty {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  text-align: center;
+}
+
+/* line 49, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-ocl {
+  cursor: pointer;
+}
+
+/* line 53, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-leaf > .jstree-ocl {
+  cursor: default;
+}
+
+/* line 57, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree .jstree-open > .jstree-children {
+  display: block;
+}
+
+/* line 61, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree .jstree-closed > .jstree-children,
+.jstree .jstree-leaf > .jstree-children {
+  display: none;
+}
+
+/* line 65, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-anchor > .jstree-themeicon {
+  margin-right: 2px;
+}
+
+/* line 69, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-no-icons .jstree-themeicon,
+.jstree-anchor > .jstree-themeicon-hidden {
+  display: none;
+}
+
+/* line 73, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-rtl .jstree-anchor {
+  padding: 0 1px 0 4px;
+}
+
+/* line 77, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-rtl .jstree-anchor > .jstree-themeicon {
+  margin-left: 2px;
+  margin-right: 0;
+}
+
+/* line 82, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-rtl .jstree-node {
+  margin-left: 0;
+}
+
+/* line 86, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-rtl .jstree-container-ul > .jstree-node {
+  margin-right: 0;
+}
+
+/* line 90, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-wholerow-ul {
+  position: relative;
+  display: inline-block;
+  min-width: 100%;
+}
+
+/* line 96, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-wholerow-ul .jstree-leaf > .jstree-ocl {
+  cursor: pointer;
+}
+
+/* line 100, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-wholerow-ul .jstree-anchor,
+.jstree-wholerow-ul .jstree-icon {
+  position: relative;
+}
+
+/* line 104, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-wholerow-ul .jstree-wholerow {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 112, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context {
+  display: none;
+}
+
+/* line 117, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context,
+.vakata-context ul {
+  margin: 0;
+  padding: 2px;
+  position: absolute;
+  background: white;
+  border: 1px solid #c6d3e0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+/* line 126, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context ul {
+  list-style: none;
+  left: 100%;
+  margin-top: -2.7em;
+  margin-left: -4px;
+}
+
+/* line 133, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context .vakata-context-right ul {
+  left: auto;
+  right: 100%;
+  margin-left: auto;
+  margin-right: -4px;
+}
+
+/* line 140, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context li {
+  list-style: none;
+  display: inline;
+}
+
+/* line 145, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context li > a {
+  display: block;
+  padding: 0 2em;
+  text-decoration: none;
+  width: auto;
+  color: #3e5771;
+  white-space: nowrap;
+  line-height: 2.4em;
+  border-radius: 1px;
+}
+
+/* line 156, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context li > a:hover {
+  position: relative;
+  background-color: #e7f2fa;
+  box-shadow: 0 0 2px #0a6aa1;
+}
+
+/* line 162, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context li > a.vakata-context-parent {
+  background-image: url(data:image/gif;base64,R0lGODlhCwAHAIAAACgoKP///yH5BAEAAAEALAAAAAALAAcAAAIORI4JlrqN1oMSnmmZDQUAOw==);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* line 168, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context li > a:focus {
+  outline: 0;
+}
+
+/* line 172, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context .vakata-context-hover > a {
+  position: relative;
+  background-color: #e7f2fa;
+  box-shadow: 0 0 2px #0a6aa1;
+}
+
+/* line 179, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context .vakata-context-separator a,
+.vakata-context .vakata-context-separator a:hover {
+  background: #fff;
+  border: 0;
+  border-top: 1px solid #c6d3e0;
+  height: 1px;
+  min-height: 1px;
+  max-height: 1px;
+  padding: 0;
+  margin: 0 0 0 2.4em;
+  border-left: 1px solid #c6d3e0;
+  text-shadow: 0 0 0 transparent;
+  border-radius: 0;
+  box-shadow: 0 0 0 transparent;
+}
+
+/* line 195, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context .vakata-contextmenu-disabled a,
+.vakata-context .vakata-contextmenu-disabled a:hover {
+  color: #a1aab0;
+  background-color: transparent;
+  border: 0;
+  box-shadow: 0 0 0;
+}
+
+/* line 202, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context li > a > i {
+  text-decoration: none;
+  display: inline-block;
+  width: 2.4em;
+  height: 2.4em;
+  background: 0 0;
+  margin: 0 0 0 -2em;
+  vertical-align: top;
+  text-align: center;
+  line-height: 2.4em;
+}
+
+/* line 214, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context li > a > i:empty {
+  width: 2.4em;
+  line-height: 2.4em;
+}
+
+/* line 219, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context li > a .vakata-contextmenu-sep {
+  display: inline-block;
+  width: 1px;
+  height: 2.4em;
+  background: #fff;
+  margin: 0 .5em 0 0;
+  border-left: 1px solid #c6d3e0;
+}
+
+/* line 228, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context .vakata-contextmenu-shortcut {
+  font-size: .8em;
+  color: #a1aab0;
+  opacity: .5;
+  display: none;
+}
+
+/* line 235, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context-rtl ul {
+  left: auto;
+  right: 100%;
+  margin-left: auto;
+  margin-right: -4px;
+}
+
+/* line 242, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context-rtl li > a.vakata-context-parent {
+  background-image: url(data:image/gif;base64,R0lGODlhCwAHAIAAACgoKP///yH5BAEAAAEALAAAAAALAAcAAAINjI+AC7rWHIsPtmoxLAA7);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+/* line 248, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context-rtl .vakata-context-separator > a {
+  margin: 0 2.4em 0 0;
+  border-left: 0;
+  border-right: 1px solid #c6d3e0;
+}
+
+/* line 254, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context-rtl .vakata-context-left ul {
+  right: auto;
+  left: 100%;
+  margin-left: -4px;
+  margin-right: auto;
+}
+
+/* line 261, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context-rtl li > a > i {
+  margin: 0 -2em 0 0;
+}
+
+/* line 265, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.vakata-context-rtl li > a .vakata-contextmenu-sep {
+  margin: 0 0 0 .5em;
+  border-left-color: #fff;
+  background: #c6d3e0;
+}
+
+/* line 271, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  border-right: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* line 287, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd {
+  line-height: 16px;
+  margin: 0;
+  padding: 4px;
+}
+
+/* line 294, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd .jstree-icon,
+#jstree-dnd .jstree-copy {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 2px 0 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 303, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd .jstree-ok {
+  background: #e7faef;
+}
+
+/* line 307, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd .jstree-er {
+  background: #f9e6e4;
+}
+
+/* line 311, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd .jstree-copy {
+  margin: 0 2px;
+}
+
+/* line 315, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-node,
+.jstree-default .jstree-icon {
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/* line 320, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-anchor,
+.jstree-default .jstree-wholerow {
+  transition: background-color .15s,box-shadow .15s;
+}
+
+/* line 324, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-hovered {
+  background: #e7f2fa;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px #caeaf3;
+}
+
+/* line 330, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-clicked {
+  background: #f0f7fc;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px #f0f7fc;
+}
+
+/* line 337, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-no-icons .jstree-anchor > .jstree-themeicon {
+  display: none;
+}
+
+/* line 341, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-disabled {
+  background: 0 0;
+  color: #a1aab0;
+}
+
+/* line 346, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-disabled.jstree-hovered {
+  background: 0 0;
+  box-shadow: none;
+}
+
+/* line 351, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-disabled.jstree-clicked {
+  background: #fbfcfc;
+}
+
+/* line 355, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-disabled > .jstree-icon {
+  opacity: .8;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='jstree-grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#jstree-grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+
+/* line 362, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-search {
+  font-style: italic;
+  color: #e08e0b;
+  font-weight: 700;
+}
+
+/* line 368, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-no-checkboxes .jstree-checkbox {
+  display: none !important;
+}
+
+/* line 372, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-checkbox-no-clicked .jstree-clicked {
+  background: 0 0;
+  box-shadow: none;
+}
+
+/* line 377, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-checkbox-no-clicked .jstree-clicked.jstree-hovered {
+  background: #e7f2fa;
+}
+
+/* line 381, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-checkbox-no-clicked > .jstree-wholerow-ul .jstree-wholerow-clicked {
+  background: 0 0;
+}
+
+/* line 385, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-checkbox-no-clicked > .jstree-wholerow-ul .jstree-wholerow-clicked.jstree-wholerow-hovered {
+  background: #e7f2fa;
+}
+
+/* line 389, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd.jstree-default .jstree-ok,
+#jstree-dnd.jstree-default .jstree-er {
+  background-image: url(../images/jstree/32px.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/* line 395, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd.jstree-default i {
+  background: 0 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 401, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd.jstree-default .jstree-ok {
+  background-position: -9px -71px;
+}
+
+/* line 405, ../../app/styles/scss/dependencies/_jstree.scss */
+
+#jstree-dnd.jstree-default .jstree-er {
+  background-position: -39px -71px;
+}
+
+/* line 409, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default > .jstree-striped {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAkCAMAAAB/qqA+AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMNAMM9s3UAAAAXSURBVHjajcEBAQAAAIKg/H/aCQZ70AUBjAATb6YPDgAAAABJRU5ErkJggg==) left top repeat;
+}
+
+/* line 413, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default > .jstree-wholerow-ul .jstree-hovered,
+.jstree-default > .jstree-wholerow-ul .jstree-clicked {
+  background: 0 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* line 419, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-wholerow-hovered {
+  background: #e7f2fa;
+}
+
+/* line 423, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-wholerow-clicked {
+  background: #f0f7fc;
+}
+
+/* line 427, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-node {
+  min-height: 24px;
+  line-height: 24px;
+  margin-left: 24px;
+  min-width: 24px;
+}
+
+/* line 434, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-anchor {
+  line-height: 24px;
+  height: 24px;
+}
+
+/* line 439, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-icon {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+/* line 445, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-icon:empty {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+/* line 451, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl .jstree-node {
+  margin-right: 24px;
+}
+
+/* line 455, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-wholerow {
+  height: 24px;
+}
+
+/* line 459, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-node,
+.jstree-default .jstree-icon {
+  background-image: url(../images/jstree/32px.png);
+}
+
+/* line 463, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-node {
+  background-position: -292px -4px;
+  background-repeat: repeat-y;
+}
+
+/* line 468, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-last {
+  background: 0 0;
+}
+
+/* line 472, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-open > .jstree-ocl {
+  background-position: -132px -4px;
+}
+
+/* line 476, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-closed > .jstree-ocl {
+  background-position: -100px -4px;
+}
+
+/* line 480, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-leaf > .jstree-ocl {
+  background-position: -68px -4px;
+}
+
+/* line 484, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-themeicon {
+  background-position: -260px -4px;
+}
+
+/* line 488, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default > .jstree-no-dots .jstree-node,
+.jstree-default > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+  background: 0 0;
+}
+
+/* line 492, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default > .jstree-no-dots .jstree-open > .jstree-ocl {
+  background-position: -36px -4px;
+}
+
+/* line 496, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default > .jstree-no-dots .jstree-closed > .jstree-ocl {
+  background-position: -4px -4px;
+}
+
+/* line 500, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-disabled {
+  background: 0 0;
+}
+
+/* line 504, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-disabled.jstree-hovered {
+  background: 0 0;
+}
+
+/* line 508, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-disabled.jstree-clicked {
+  background: #fbfcfc;
+}
+
+/* line 512, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-checkbox {
+  background-position: -164px -4px;
+}
+
+/* line 516, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-checkbox:hover {
+  background-position: -164px -36px;
+}
+
+/* line 520, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-clicked > .jstree-checkbox {
+  background-position: -228px -4px;
+}
+
+/* line 524, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-clicked > .jstree-checkbox:hover {
+  background-position: -228px -36px;
+}
+
+/* line 528, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-anchor > .jstree-undetermined {
+  background-position: -196px -4px;
+}
+
+/* line 532, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-anchor > .jstree-undetermined:hover {
+  background-position: -196px -36px;
+}
+
+/* line 536, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default > .jstree-striped {
+  background-size: auto 48px;
+}
+
+/* line 540, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl .jstree-node {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==);
+  background-position: 100% 1px;
+  background-repeat: repeat-y;
+}
+
+/* line 546, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl .jstree-last {
+  background: 0 0;
+}
+
+/* line 550, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl .jstree-open > .jstree-ocl {
+  background-position: -132px -36px;
+}
+
+/* line 554, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl .jstree-closed > .jstree-ocl {
+  background-position: -100px -36px;
+}
+
+/* line 558, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl .jstree-leaf > .jstree-ocl {
+  background-position: -68px -36px;
+}
+
+/* line 562, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl > .jstree-no-dots .jstree-node,
+.jstree-default.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+  background: 0 0;
+}
+
+/* line 566, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
+  background-position: -36px -36px;
+}
+
+/* line 570, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
+  background-position: -4px -36px;
+}
+
+/* line 574, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-themeicon-custom {
+  background-color: transparent;
+  background-image: none;
+  background-position: 0 0;
+}
+
+/* line 580, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default > .jstree-container-ul .jstree-loading > .jstree-ocl {
+  background: url(../images/jstree/throbber.gif) center center no-repeat;
+}
+
+/* line 584, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-file {
+  background: url(../images/jstree/32px.png) -100px -68px no-repeat;
+}
+
+/* line 588, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default .jstree-folder {
+  background: url(../images/jstree/32px.png) -260px -4px no-repeat;
+}
+
+/* line 592, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl .jstree-node {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==);
+}
+
+/* line 596, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default.jstree-rtl .jstree-last {
+  background: 0 0;
+}
+
+/* line 600, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-node {
+  min-height: 18px;
+  line-height: 18px;
+  margin-left: 18px;
+  min-width: 18px;
+}
+
+/* line 607, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-anchor {
+  line-height: 18px;
+  height: 18px;
+}
+
+/* line 612, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-icon {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+/* line 618, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-icon:empty {
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+/* line 624, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl .jstree-node {
+  margin-right: 18px;
+}
+
+/* line 628, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-wholerow {
+  height: 18px;
+}
+
+/* line 632, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-node,
+.jstree-default-small .jstree-icon {
+  background-image: url(../images/jstree/32px.png);
+}
+
+/* line 636, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-node {
+  background-position: -295px -7px;
+  background-repeat: repeat-y;
+}
+
+/* line 641, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-last {
+  background: 0 0;
+}
+
+/* line 645, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-open > .jstree-ocl {
+  background-position: -135px -7px;
+}
+
+/* line 649, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-closed > .jstree-ocl {
+  background-position: -103px -7px;
+}
+
+/* line 653, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-leaf > .jstree-ocl {
+  background-position: -71px -7px;
+}
+
+/* line 657, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-themeicon {
+  background-position: -263px -7px;
+}
+
+/* line 661, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small > .jstree-no-dots .jstree-node,
+.jstree-default-small > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+  background: 0 0;
+}
+
+/* line 665, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small > .jstree-no-dots .jstree-open > .jstree-ocl {
+  background-position: -39px -7px;
+}
+
+/* line 669, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small > .jstree-no-dots .jstree-closed > .jstree-ocl {
+  background-position: -7px -7px;
+}
+
+/* line 673, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-disabled {
+  background: 0 0;
+}
+
+/* line 677, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-disabled.jstree-hovered {
+  background: 0 0;
+}
+
+/* line 681, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-disabled.jstree-clicked {
+  background: #fbfcfc;
+}
+
+/* line 685, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-checkbox {
+  background-position: -167px -7px;
+}
+
+/* line 689, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-checkbox:hover {
+  background-position: -167px -39px;
+}
+
+/* line 693, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-clicked > .jstree-checkbox {
+  background-position: -231px -7px;
+}
+
+/* line 697, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-clicked > .jstree-checkbox:hover {
+  background-position: -231px -39px;
+}
+
+/* line 701, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-anchor > .jstree-undetermined {
+  background-position: -199px -7px;
+}
+
+/* line 705, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-anchor > .jstree-undetermined:hover {
+  background-position: -199px -39px;
+}
+
+/* line 709, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small > .jstree-striped {
+  background-size: auto 36px;
+}
+
+/* line 713, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl .jstree-node {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==);
+  background-position: 100% 1px;
+  background-repeat: repeat-y;
+}
+
+/* line 719, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl .jstree-last {
+  background: 0 0;
+}
+
+/* line 723, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl .jstree-open > .jstree-ocl {
+  background-position: -135px -39px;
+}
+
+/* line 727, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl .jstree-closed > .jstree-ocl {
+  background-position: -103px -39px;
+}
+
+/* line 731, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl .jstree-leaf > .jstree-ocl {
+  background-position: -71px -39px;
+}
+
+/* line 735, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-node,
+.jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+  background: 0 0;
+}
+
+/* line 739, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
+  background-position: -39px -39px;
+}
+
+/* line 743, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
+  background-position: -7px -39px;
+}
+
+/* line 747, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-themeicon-custom {
+  background-color: transparent;
+  background-image: none;
+  background-position: 0 0;
+}
+
+/* line 753, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small > .jstree-container-ul .jstree-loading > .jstree-ocl {
+  background: url(../images/jstree/throbber.gif) center center no-repeat;
+}
+
+/* line 757, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-file {
+  background: url(../images/jstree/32px.png) -103px -71px no-repeat;
+}
+
+/* line 761, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small .jstree-folder {
+  background: url(../images/jstree/32px.png) -263px -7px no-repeat;
+}
+
+/* line 765, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl .jstree-node {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAACAQMAAABv1h6PAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMHBgAAiABBI4gz9AAAAABJRU5ErkJggg==);
+}
+
+/* line 769, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-small.jstree-rtl .jstree-last {
+  background: 0 0;
+}
+
+/* line 773, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-node {
+  min-height: 32px;
+  line-height: 32px;
+  margin-left: 32px;
+  min-width: 32px;
+}
+
+/* line 780, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-anchor {
+  line-height: 32px;
+  height: 32px;
+}
+
+/* line 785, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-icon {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+/* line 791, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-icon:empty {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+/* line 797, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl .jstree-node {
+  margin-right: 32px;
+}
+
+/* line 801, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-wholerow {
+  height: 32px;
+}
+
+/* line 805, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-node,
+.jstree-default-large .jstree-icon {
+  background-image: url(../images/jstree/32px.png);
+}
+
+/* line 809, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-node {
+  background-position: -288px 0;
+  background-repeat: repeat-y;
+}
+
+/* line 814, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-last {
+  background: 0 0;
+}
+
+/* line 818, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-open > .jstree-ocl {
+  background-position: -128px 0;
+}
+
+/* line 822, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-closed > .jstree-ocl {
+  background-position: -96px 0;
+}
+
+/* line 826, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-leaf > .jstree-ocl {
+  background-position: -64px 0;
+}
+
+/* line 830, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-themeicon {
+  background-position: -256px 0;
+}
+
+/* line 834, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large > .jstree-no-dots .jstree-node,
+.jstree-default-large > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+  background: 0 0;
+}
+
+/* line 838, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large > .jstree-no-dots .jstree-open > .jstree-ocl {
+  background-position: -32px 0;
+}
+
+/* line 842, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large > .jstree-no-dots .jstree-closed > .jstree-ocl {
+  background-position: 0 0;
+}
+
+/* line 846, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-disabled {
+  background: 0 0;
+}
+
+/* line 850, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-disabled.jstree-hovered {
+  background: 0 0;
+}
+
+/* line 854, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-disabled.jstree-clicked {
+  background: #fbfcfc;
+}
+
+/* line 858, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-checkbox {
+  background-position: -160px 0;
+}
+
+/* line 862, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-checkbox:hover {
+  background-position: -160px -32px;
+}
+
+/* line 866, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-clicked > .jstree-checkbox {
+  background-position: -224px 0;
+}
+
+/* line 870, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-clicked > .jstree-checkbox:hover {
+  background-position: -224px -32px;
+}
+
+/* line 874, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-anchor > .jstree-undetermined {
+  background-position: -192px 0;
+}
+
+/* line 878, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-anchor > .jstree-undetermined:hover {
+  background-position: -192px -32px;
+}
+
+/* line 882, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large > .jstree-striped {
+  background-size: auto 64px;
+}
+
+/* line 886, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl .jstree-node {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==);
+  background-position: 100% 1px;
+  background-repeat: repeat-y;
+}
+
+/* line 892, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl .jstree-last {
+  background: 0 0;
+}
+
+/* line 896, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl .jstree-open > .jstree-ocl {
+  background-position: -128px -32px;
+}
+
+/* line 900, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl .jstree-closed > .jstree-ocl {
+  background-position: -96px -32px;
+}
+
+/* line 904, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl .jstree-leaf > .jstree-ocl {
+  background-position: -64px -32px;
+}
+
+/* line 908, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-node,
+.jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-leaf > .jstree-ocl {
+  background: 0 0;
+}
+
+/* line 912, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-open > .jstree-ocl {
+  background-position: -32px -32px;
+}
+
+/* line 916, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl > .jstree-no-dots .jstree-closed > .jstree-ocl {
+  background-position: 0 -32px;
+}
+
+/* line 920, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-themeicon-custom {
+  background-color: transparent;
+  background-image: none;
+  background-position: 0 0;
+}
+
+/* line 926, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large > .jstree-container-ul .jstree-loading > .jstree-ocl {
+  background: url(../images/jstree/throbber.gif) center center no-repeat;
+}
+
+/* line 930, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-file {
+  background: url(../images/jstree/32px.png) -96px -64px no-repeat;
+}
+
+/* line 934, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large .jstree-folder {
+  background: url(../images/jstree/32px.png) -256px 0 no-repeat;
+}
+
+/* line 938, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl .jstree-node {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAACAQMAAAAD0EyKAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjgIIGBgABCgCBvVLXcAAAAABJRU5ErkJggg==);
+}
+
+/* line 942, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default-large.jstree-rtl .jstree-last {
+  background: 0 0;
+}
+
+@media (max-width: 768px) {
+  /* line 947, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-icon {
+    background-image: url(../images/jstree/40px.png);
+  }
+
+  /* line 951, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-node,
+  .jstree-default-responsive .jstree-leaf > .jstree-ocl {
+    background: 0 0;
+  }
+
+  /* line 955, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-node {
+    min-height: 40px;
+    line-height: 40px;
+    margin-left: 40px;
+    min-width: 40px;
+    white-space: nowrap;
+  }
+
+  /* line 963, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-anchor {
+    line-height: 40px;
+    height: 40px;
+  }
+
+  /* line 968, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-icon,
+  .jstree-default-responsive .jstree-icon:empty {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  /* line 974, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive > .jstree-container-ul > .jstree-node {
+    margin-left: 0;
+  }
+
+  /* line 978, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive.jstree-rtl .jstree-node {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+
+  /* line 983, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive.jstree-rtl .jstree-container-ul > .jstree-node {
+    margin-right: 0;
+  }
+
+  /* line 987, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-ocl,
+  .jstree-default-responsive .jstree-themeicon,
+  .jstree-default-responsive .jstree-checkbox {
+    background-size: 120px 200px;
+  }
+
+  /* line 991, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-leaf > .jstree-ocl {
+    background: 0 0;
+  }
+
+  /* line 995, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-open > .jstree-ocl {
+    background-position: 0 0 !important;
+  }
+
+  /* line 999, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-closed > .jstree-ocl {
+    background-position: 0 -40px !important;
+  }
+
+  /* line 1003, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive.jstree-rtl .jstree-closed > .jstree-ocl {
+    background-position: -40px 0 !important;
+  }
+
+  /* line 1007, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-themeicon {
+    background-position: -40px -40px;
+  }
+
+  /* line 1011, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-checkbox,
+  .jstree-default-responsive .jstree-checkbox:hover {
+    background-position: -40px -80px;
+  }
+
+  /* line 1015, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-clicked > .jstree-checkbox,
+  .jstree-default-responsive .jstree-clicked > .jstree-checkbox:hover {
+    background-position: 0 -80px;
+  }
+
+  /* line 1019, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-anchor > .jstree-undetermined,
+  .jstree-default-responsive .jstree-anchor > .jstree-undetermined:hover {
+    background-position: 0 -120px;
+  }
+
+  /* line 1023, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-anchor {
+    font-weight: 700;
+    font-size: 1.1em;
+    text-shadow: 1px 1px #fff;
+  }
+
+  /* line 1029, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive > .jstree-striped {
+    background: 0 0;
+  }
+
+  /* line 1033, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-wholerow {
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(64, 64, 64, 0.2);
+    background: #fbfcfc;
+    height: 40px;
+  }
+
+  /* line 1040, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-wholerow-hovered {
+    background: #fbfcfc;
+  }
+
+  /* line 1044, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-wholerow-clicked {
+    background: #beebff;
+  }
+
+  /* line 1048, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-children .jstree-last > .jstree-wholerow {
+    box-shadow: inset 0 -6px 3px -5px #666;
+  }
+
+  /* line 1052, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-children .jstree-open > .jstree-wholerow {
+    box-shadow: inset 0 6px 3px -5px #666;
+    border-top: 0;
+  }
+
+  /* line 1057, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-children .jstree-open + .jstree-open {
+    box-shadow: none;
+  }
+
+  /* line 1061, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-node,
+  .jstree-default-responsive .jstree-icon,
+  .jstree-default-responsive .jstree-node > .jstree-ocl,
+  .jstree-default-responsive .jstree-themeicon,
+  .jstree-default-responsive .jstree-checkbox {
+    background-image: url(../images/jstree/40px.png);
+    background-size: 120px 200px;
+  }
+
+  /* line 1066, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-node {
+    background-position: -80px 0;
+    background-repeat: repeat-y;
+  }
+
+  /* line 1071, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-last {
+    background: 0 0;
+  }
+
+  /* line 1075, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-leaf > .jstree-ocl {
+    background-position: -40px -120px;
+  }
+
+  /* line 1079, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-last > .jstree-ocl {
+    background-position: -40px -160px;
+  }
+
+  /* line 1083, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-themeicon-custom {
+    background-color: transparent;
+    background-image: none;
+    background-position: 0 0;
+  }
+
+  /* line 1089, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-file {
+    background: url(../images/jstree/40px.png) 0 -160px no-repeat;
+    background-size: 120px 200px;
+  }
+
+  /* line 1094, ../../app/styles/scss/dependencies/_jstree.scss */
+
+  .jstree-default-responsive .jstree-folder {
+    background: url(../images/jstree/40px.png) -40px -40px no-repeat;
+    background-size: 120px 200px;
+  }
+}
+
+/* line 1100, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-default > .jstree-container-ul > .jstree-node {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 1105, ../../app/styles/scss/dependencies/_jstree.scss */
+
+.jstree-open > .jstree-anchor > .fa-folder:before {
+  margin-left: 2px;
+  content: "\f07c";
+}

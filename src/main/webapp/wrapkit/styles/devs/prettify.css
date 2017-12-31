@@ -1,0 +1,132 @@
+/* GOOGLE CODE PRETTIFY */
+
+/* line 2, ../../app/styles/scss/dependencies/_prettify.scss */
+
+.pln {
+  color: #2c3e50;
+}
+
+/* line 6, ../../app/styles/scss/dependencies/_prettify.scss */
+
+pre.prettyprint {
+  border-color: #e7edf2 !important;
+  background-color: #fbfcfc !important;
+  padding: 10px !important;
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+/* line 16, ../../app/styles/scss/dependencies/_prettify.scss */
+
+.pre-scrollable {
+  border-radius: 4px;
+  border: 1px solid #e7edf2;
+}
+
+/* line 20, ../../app/styles/scss/dependencies/_prettify.scss */
+
+.pre-scrollable .prettyprint {
+  border-radius: 4px;
+  border: none;
+  overflow-x: hidden;
+  max-width: initial;
+  width: auto;
+  word-wrap: break-word;
+}
+
+/* line 30, ../../app/styles/scss/dependencies/_prettify.scss */
+
+.panel > .prettyprint,
+pre.prettyprint.no-padding {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+/* line 35, ../../app/styles/scss/dependencies/_prettify.scss */
+
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 40, ../../app/styles/scss/dependencies/_prettify.scss */
+
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: none;
+}
+
+/* line 44, ../../app/styles/scss/dependencies/_prettify.scss */
+
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 {
+  background: #ffffff;
+}
+
+@media screen, print, projection {
+  /* line 49, ../../app/styles/scss/dependencies/_prettify.scss */
+
+  [lang-js] .pln {
+    color: #409ad5;
+  }
+
+  /* line 52, ../../app/styles/scss/dependencies/_prettify.scss */
+
+  .com {
+    color: #a1aab0;
+  }
+
+  /* line 56, ../../app/styles/scss/dependencies/_prettify.scss */
+
+  .lit {
+    color: #c0392b;
+  }
+
+  /* line 60, ../../app/styles/scss/dependencies/_prettify.scss */
+
+  .pun,
+  .opn,
+  .clo {
+    color: #2c3e50;
+  }
+
+  /* line 64, ../../app/styles/scss/dependencies/_prettify.scss */
+
+  .fun {
+    color: red;
+  }
+
+  /* line 68, ../../app/styles/scss/dependencies/_prettify.scss */
+
+  .str,
+  .atv {
+    color: #1e8449;
+  }
+
+  /* line 72, ../../app/styles/scss/dependencies/_prettify.scss */
+
+  .kwd,
+  .tag {
+    color: #8e44ad;
+  }
+
+  /* line 76, ../../app/styles/scss/dependencies/_prettify.scss */
+
+  .typ,
+  .atn,
+  .dec,
+  .var {
+    color: #c87f0a;
+  }
+}

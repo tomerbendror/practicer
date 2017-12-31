@@ -1,0 +1,28 @@
+.input-group.input-group-in, .lead, .btn-primary, .no-account-p, #signupForm{
+    direction: rtl;
+}
+
+.has-feedback .form-control-feedback {
+    left: 0;
+    right: inherit;
+}
+
+.signin-wrapper .signin-brand {
+    font-weight: bold;
+}
+
+.signin-wrapper .signin-brand a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 480px) {
+    .signin-wrapper {
+        margin: 20px auto 5px;
+    }
+}
+
+#signinForm hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

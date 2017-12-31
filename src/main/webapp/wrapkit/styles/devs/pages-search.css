@@ -1,0 +1,80 @@
+/* line 2, ../../app/styles/scss/pages/_search.scss */
+
+.sr-wrapper {
+  padding: 20px 10px;
+}
+
+/* line 5, ../../app/styles/scss/pages/_search.scss */
+
+.search-word {
+  font-weight: bold;
+}
+
+/* line 9, ../../app/styles/scss/pages/_search.scss */
+
+.sr-text {
+  margin-bottom: 20px;
+}
+
+/* line 12, ../../app/styles/scss/pages/_search.scss */
+
+.sr-text .sr-text-heading {
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-weight: normal;
+}
+
+/* line 20, ../../app/styles/scss/pages/_search.scss */
+
+.sr-text .sr-text-url {
+  font-size: 12px;
+  color: #229955;
+}
+
+/* line 26, ../../app/styles/scss/pages/_search.scss */
+
+.sr-media-object {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 31, ../../app/styles/scss/pages/_search.scss */
+
+.sr-media-object .sr-media-resume {
+  font-size: 12px;
+  color: #a1aab0;
+}
+
+/* line 36, ../../app/styles/scss/pages/_search.scss */
+
+.sr-media-object .media-object {
+  width: 200px;
+  height: 133px;
+}
+
+/* line 43, ../../app/styles/scss/pages/_search.scss */
+
+.sr-user {
+  display: block;
+  text-align: center;
+  margin: 0 -10px;
+  list-style: none;
+}
+
+/* line 49, ../../app/styles/scss/pages/_search.scss */
+
+.sr-user > li {
+  display: inline-block;
+  margin: 0 10px 20px;
+  text-align: center;
+  width: 200px;
+}
+
+/* line 56, ../../app/styles/scss/pages/_search.scss */
+
+.sr-user .sr-user-avatar {
+  margin-bottom: 20px;
+}

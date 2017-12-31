@@ -1,0 +1,54 @@
+@media (min-width: 768px) {
+    .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+        float: right;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-group .control-label {
+        text-align: left;
+    }
+}
+
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    float: right;
+}
+
+.nav-tabs>li {
+    float: right;
+}
+
+.nav {
+    padding-right: 0;
+}
+
+.nav-tabs>li>a {
+    margin-left: 2px;
+    margin-right: 0;
+}
+
+.panel.panel-default.question-panel h3 {
+    direction: ltr;
+    text-align: end;
+}
+
+.modal-content {
+    direction: rtl;
+}
+
+.modal-footer .btn+.btn {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+#survicate-box.light .window .input.textarea {
+    direction: rtl;
+}
+
+.inmplayer-position-left_bottom .inmplayer-trigger {
+    left: -23px;
+    bottom: 100px;
+    width: 70px;
+    line-height: 30px;
+    padding-bottom: 10px;
+}

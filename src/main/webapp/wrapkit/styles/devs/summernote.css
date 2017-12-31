@@ -1,0 +1,595 @@
+/* line 1, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor {
+  border: 1px solid #e7edf2;
+}
+
+/* line 4, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.panel-body > .note-editor {
+  border: none;
+  margin: -15px;
+}
+
+/* line 8, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.panel-body > .note-editor + .note-editor {
+  margin-top: 15px;
+}
+
+/* line 11, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dropzone {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  color: #e7f2fa;
+  background-color: white;
+  border: 2px dashed #caeaf3;
+  opacity: .95;
+  pointer-event: none;
+}
+
+/* line 22, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dropzone .note-dropzone-message {
+  display: table-cell;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* line 30, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dropzone.hover {
+  color: #20638f;
+  border: 2px dashed #20638f;
+}
+
+/* line 35, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor.dragover .note-dropzone {
+  display: table;
+}
+
+/* line 39, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor.fullscreen {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: inherit !important;
+  z-index: 1050;
+}
+
+/* line 50, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor.fullscreen .note-editable {
+  background-color: white;
+}
+
+/* line 54, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor.fullscreen .note-resizebar {
+  display: none;
+}
+
+/* line 58, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor.codeview .note-editable {
+  display: none;
+}
+
+/* line 62, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor.codeview .note-codable {
+  display: block;
+}
+
+/* line 66, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar {
+  padding: 0 12px 6px;
+  margin: 0;
+  background-color: #fbfcfc;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 73, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar > .btn-group {
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 0;
+}
+
+/* line 79, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-table .dropdown-menu {
+  min-width: 0;
+  padding: 5px;
+}
+
+/* line 84, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-table .dropdown-menu .note-dimension-picker {
+  font-size: 18px;
+}
+
+/* line 88, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-table .dropdown-menu .note-dimension-picker .note-dimension-picker-mousecatcher {
+  position: absolute !important;
+  z-index: 3;
+  width: 10em;
+  height: 10em;
+  cursor: pointer;
+}
+
+/* line 96, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-table .dropdown-menu .note-dimension-picker .note-dimension-picker-unhighlighted {
+  position: relative !important;
+  z-index: 1;
+  width: 5em;
+  height: 5em;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASAgMAAAAroGbEAAAACVBMVEUAAIj4+Pjp6ekKlAqjAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfYAR0BKhmnaJzPAAAAG0lEQVQI12NgAAOtVatWMTCohoaGUY+EmIkEAEruEzK2J7tvAAAAAElFTkSuQmCC") repeat;
+}
+
+/* line 104, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-table .dropdown-menu .note-dimension-picker .note-dimension-picker-highlighted {
+  position: absolute !important;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASAgMAAAAroGbEAAAACVBMVEUAAIjd6vvD2f9LKLW+AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfYAR0BKwNDEVT0AAAAG0lEQVQI12NgAAOtVatWMTCohoaGUY+EmIkEAEruEzK2J7tvAAAAAElFTkSuQmCC") repeat;
+}
+
+/* line 112, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-style h1,
+.note-editor .note-toolbar .note-style h2,
+.note-editor .note-toolbar .note-style h3,
+.note-editor .note-toolbar .note-style h4,
+.note-editor .note-toolbar .note-style h5,
+.note-editor .note-toolbar .note-style h6,
+.note-editor .note-toolbar .note-style blockquote {
+  margin: 0;
+}
+
+/* line 116, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-color .dropdown-toggle {
+  width: 20px;
+  padding-left: 5px;
+}
+
+/* line 121, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-color .dropdown-menu {
+  min-width: 290px;
+}
+
+/* line 125, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-color .dropdown-menu .btn-group {
+  margin: 0;
+}
+
+/* line 129, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-color .dropdown-menu .btn-group:first-child {
+  margin: 0 5px;
+}
+
+/* line 133, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-color .dropdown-menu .btn-group .note-palette-title {
+  margin: 2px 7px;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e7edf2;
+}
+
+/* line 140, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-color .dropdown-menu .btn-group .note-color-reset {
+  padding: 0 3px;
+  margin: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* line 150, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-color .dropdown-menu .btn-group .note-color-reset:hover {
+  background: #cfd9db;
+}
+
+/* line 154, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-para .dropdown-menu {
+  min-width: 216px;
+  padding: 5px;
+}
+
+/* line 159, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-toolbar .note-para .dropdown-menu > div:first-child {
+  margin-right: 5px;
+}
+
+/* line 163, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-statusbar {
+  background-color: #fbfcfc;
+}
+
+/* line 167, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-statusbar .note-resizebar {
+  width: 100%;
+  height: 8px;
+  cursor: s-resize;
+  border-top: 1px solid #e7edf2;
+}
+
+/* line 174, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-statusbar .note-resizebar .note-icon-bar {
+  width: 20px;
+  margin: 1px auto;
+  border-top: 1px solid #c6d3e0;
+}
+
+/* line 180, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-popover .popover {
+  max-width: none;
+}
+
+/* line 184, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-popover .popover .popover-content {
+  padding: 5px;
+}
+
+/* line 188, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-popover .popover .popover-content a {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* line 197, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-popover .popover .popover-content .btn-group + .btn-group {
+  margin-left: 5px;
+}
+
+/* line 201, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-popover .popover .arrow {
+  left: 20px;
+}
+
+/* line 205, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection {
+  position: absolute;
+  display: none;
+  border: 1px solid black;
+}
+
+/* line 211, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection > div {
+  position: absolute;
+}
+
+/* line 215, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-selection-bg {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  -webkit-opacity: .3;
+  -khtml-opacity: .3;
+  -moz-opacity: .3;
+  opacity: .3;
+  -ms-filter: alpha(opacity=30);
+  filter: alpha(opacity=30);
+}
+
+/* line 227, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-handle {
+  width: 7px;
+  height: 7px;
+  border: 1px solid black;
+}
+
+/* line 233, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-holder {
+  width: 7px;
+  height: 7px;
+  border: 1px solid black;
+}
+
+/* line 239, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-sizing {
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+/* line 246, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-nw {
+  top: -5px;
+  left: -5px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+/* line 253, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-ne {
+  top: -5px;
+  right: -5px;
+  border-bottom: 0;
+  border-left: none;
+}
+
+/* line 260, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-sw {
+  bottom: -5px;
+  left: -5px;
+  border-top: 0;
+  border-right: 0;
+}
+
+/* line 267, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-se {
+  right: -5px;
+  bottom: -5px;
+  cursor: se-resize;
+}
+
+/* line 273, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-handle .note-control-selection .note-control-selection-info {
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  margin: 5px;
+  font-size: 12px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  -webkit-opacity: .7;
+  -khtml-opacity: .7;
+  -moz-opacity: .7;
+  opacity: .7;
+  -ms-filter: alpha(opacity=70);
+  filter: alpha(opacity=70);
+}
+
+/* line 292, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog > div {
+  display: none;
+}
+
+/* line 296, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-image-dialog .note-dropzone {
+  min-height: 100px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  line-height: 4;
+  color: lightgray;
+  text-align: center;
+  border: 4px dashed lightgray;
+}
+
+/* line 306, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog {
+  font-size: 12px;
+  color: #bdc3c7;
+  background: transparent;
+  background-color: #1a242f !important;
+  border: 0;
+  -webkit-opacity: .9;
+  -khtml-opacity: .9;
+  -moz-opacity: .9;
+  opacity: .9;
+  -ms-filter: alpha(opacity=90);
+  filter: alpha(opacity=90);
+}
+
+/* line 320, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog .modal-content {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+/* line 331, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog a {
+  font-size: 12px;
+  color: white;
+}
+
+/* line 336, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog .title {
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border-bottom: white 1px solid;
+}
+
+/* line 344, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog .modal-close {
+  font-size: 14px;
+  color: #f39c12;
+  cursor: pointer;
+}
+
+/* line 350, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog .note-shortcut-layout {
+  width: 100%;
+}
+
+/* line 354, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog .note-shortcut-layout td {
+  vertical-align: top;
+}
+
+/* line 358, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog .note-shortcut {
+  margin-top: 8px;
+}
+
+/* line 362, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog .note-shortcut th {
+  font-size: 13px;
+  color: #f39c12;
+  text-align: left;
+}
+
+/* line 368, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-dialog .note-help-dialog .note-shortcut td:first-child {
+  min-width: 110px;
+  padding-right: 10px;
+  font-family: "Courier New";
+  color: #f39c12;
+  text-align: right;
+}
+
+/* line 376, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-editable {
+  padding: 12px;
+  overflow: auto;
+  outline: 0;
+}
+
+/* line 382, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-editable[contenteditable="false"] {
+  background-color: #f5f7f7;
+}
+
+/* line 386, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-codable {
+  display: none;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 0;
+  font-family: Menlo,Monaco,monospace,sans-serif;
+  font-size: 14px;
+  color: #bdc3c7;
+  background-color: #202d3b;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  resize: none;
+  outline: 0;
+}
+
+/* line 402, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .dropdown-menu {
+  min-width: 90px;
+}
+
+/* line 406, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .dropdown-menu.right {
+  right: 0;
+  left: auto;
+}
+
+/* line 411, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .dropdown-menu.right::before {
+  right: 9px;
+  left: auto !important;
+}
+
+/* line 416, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .dropdown-menu.right::after {
+  right: 10px;
+  left: auto !important;
+}
+
+/* line 421, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .dropdown-menu li a i {
+  color: #20638f;
+  visibility: hidden;
+}
+
+/* line 426, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .dropdown-menu li a.checked i {
+  visibility: visible;
+}
+
+/* line 430, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-fontsize-10 {
+  font-size: 10px;
+}
+
+/* line 434, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-color-palette {
+  line-height: 1;
+}
+
+/* line 438, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-color-palette div .note-color-btn {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #fff;
+}
+
+/* line 446, ../../app/styles/scss/dependencies/_summernote.scss */
+
+.note-editor .note-color-palette div .note-color-btn:hover {
+  border: 1px solid #000;
+}

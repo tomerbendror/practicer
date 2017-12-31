@@ -1,0 +1,56 @@
+/* line 1, ../../app/styles/scss/pages/_error.scss */
+
+.error-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, #ecf0f1 0%, #bdc3c7 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFECF0F1', endColorstr='#FFBDC3C7', GradientType=0);
+}
+
+/* line 8, ../../app/styles/scss/pages/_error.scss */
+
+.error-wrapper > .error-container {
+  border: none;
+}
+
+/* line 12, ../../app/styles/scss/pages/_error.scss */
+
+.error-container {
+  position: relative;
+  margin: 60px auto;
+  max-width: 60%;
+  padding: 20px;
+  border: 1px solid #e7edf2;
+  background-color: #fff;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 21, ../../app/styles/scss/pages/_error.scss */
+
+.error-code {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  cursor: default;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  /* line 33, ../../app/styles/scss/pages/_error.scss */
+
+  .error-container {
+    max-width: 90%;
+  }
+}

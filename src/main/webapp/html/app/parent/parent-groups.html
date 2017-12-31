@@ -1,0 +1,54 @@
+<div style="padding: 15px 22.5px;">
+    <div class="row">
+        <div class="groups-control-panel">
+            <button id="add-group-btn" data-ng-disabled="!enableAddGroupBtn" data-ng-click="addGroup()" type="button" class="btn btn-greentur btn-sm" >
+                <i class="fa fa-plus"></i>  יצירת קבוצה חדשה
+            </button>
+            <hr>
+        </div>
+
+        <div class="col-md-12 group-info-container" id="newGroupPanel"  style="display: none;">
+            <div class="panel panel-default small-margin-bottom">
+                <div class="panel-heading" style="background-color: #20638F">    <!--todo inline style-->
+                    <h3 style="color: white" class="panel-title">יצירת קבוצה</h3>
+                </div><!-- /.panel-heading -->
+                <div class="panel-body panel-body-narrow">
+                    <div data-ng-show="errorMsg" class="alert alert-danger child-info-panel">
+                        <p><strong>{{errorMsg}}</strong></p>
+                    </div>
+                    <div class="row" >
+                        <div class="col-sm-6 col-xs-12 pull-right">
+                            <div class="form-group">
+                                <label class="" for="newGroupNameInput">שם הקבוצה</label>
+                                <input id="newGroupNameInput" data-ng-model="group.name" class="form-control" autocomplete="off">
+                            </div>
+                        </div><!-- /.cols -->
+                        <div class="col-sm-6 col-xs-12 pull-right">
+                            <div class="form-group">
+                                <label class="" for="newGroupDescInput">תאור הקבוצה</label>
+                                <input id="newGroupDescInput" data-ng-model="group.description" class="form-control" placeholder="תאור הקבוצה" autocomplete="off">
+                            </div>
+                        </div><!-- /.cols -->
+                        <div class="col-xs-12 pull-right">
+                            <div class="form-group">
+                                <label class="" >מוזמנים לקבוצה</label>
+                                <tags-input id="newGroupInviteEmails" class="float-right" type="email" ng-model="newGroupInvite" placeholder="הוסף כתובות מייל" max-length="30" max-tags="40" add-on-space="true"
+                                            allowed-tags-pattern="\S+@\S+\.\S+" add-on-paste="true" display-property="email"></tags-input>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group no-mrg-btm pull-left">
+                                <button data-ng-disabled="!enableCreateGroupBtn" data-ng-click="cancelAddGroup()" class="btn btn-default">ביטול</button>
+                                <busy-button data-ng-click="createGroup()" class="btn btn-primary" show-loading="{{!enableCreateGroupBtn}}" caption="יצירת קבוצה" busy-caption="יוצר קבוצה"></busy-button>
+                            </div><!-- /.form-group -->
+                        </div><!-- /.row -->
+                    </div>
+                </div><!-- /.panel-body -->
+            </div>
+        </div>
+
+        <!-- all the groups -->
+        <div x-group-info-panel id="group-info-panel-{{group.id}}" data-ng-repeat="group in groups" group="group"></div>
+        <div data-ng-show="groups.length == 0" style="padding-right: 10px"><i class="fa fa-info-circle"></i> לא מוגדרות קבוצות, ניתן ליצור קבוצות חדשות ולצרף חברים או להצטרף לקבוצות קיימות במידה וקיבלתם הזמנה במייל</div>
+    </div><!-- /.row -->
+</div>

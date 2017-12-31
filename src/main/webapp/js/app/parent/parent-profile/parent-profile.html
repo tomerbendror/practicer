@@ -1,0 +1,78 @@
+<div class="col-md-12 profile-info-container">
+    <div class="panel panel-default">
+        <div class="kit-cover kit-cover-sm ui-corner-top">
+            <img src="/wrapkit/images/dummy/trianglify6.svg" alt="">
+        </div>
+
+        <div class="kit-cover-headline">
+            <a class="kit-avatar center border-white kit-avatar-96" style="position: absolute;">
+                <img ng-src="{{parentProfile.profileImageUrl}}" alt="">
+            </a>
+            <div class="text-center user-profile-full-name">
+                <p data-ng-bind="parentProfile.displayName" class="headline-label" style="font-size: 20px"></p>
+            </div>
+
+            <div id="parent-profile-error-panel" class="alert alert-danger" style="display: none">
+                <p><strong>{{errorMsg}}</strong></p>
+            </div>
+
+            <div class="panel-body panel-body-narrow practice-general-tab">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" >שם פרטי</label>
+                        <div class="col-sm-7">
+                            <input ng-disabled="!editMode" type="text" class="form-control" data-ng-model="parentProfile.firstName">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" >שם משפחה</label>
+                        <div class="col-sm-7">
+                            <input ng-disabled="!editMode" type="text" class="form-control" data-ng-model="parentProfile.lastName">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label" >כתובת דוא"ל</label>
+                        <div class="col-sm-7">
+                            <input ng-disabled="!editMode" style="direction: ltr;" type="text" class="form-control" data-ng-model="parentProfile.email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-4 col-sm-3 control-label">קבלת מייל יומי
+                            <a tooltip="מאפשר לקבל מייל יומי המפרט עבור כל אחד מהילדים את סיכום התרגילים שתרגל"><i class="fa fa-question-circle"></i></a>
+                        </label>
+                        <div class="col-xs-1">
+                            <switch data-ng-model="parentProfile.receiveDailyMail" disabled="!editMode"></switch>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">שעת קבלת מייל יומי</label>
+                        <div class="col-sm-7">
+                            <label class="select select-o">
+                                <select data-ng-disabled="!editMode || !parentProfile.receiveDailyMail" data-ng-model="parentProfile.dailyMailLocalHour">
+                                    <option value="18">18:00</option>
+                                    <option value="19">19:00</option>
+                                    <option value="20">20:00</option>
+                                    <option value="21">21:00</option>
+                                    <option value="22">22:00</option>
+                                    <option value="23">23:00</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12" style="border-top: 1px solid #e7edf2">
+                        <div class="form-group pull-left no-mrg-btm" style="padding-top: 15px">
+                            <button data-ng-click="edit()" data-ng-hide="editMode" class="btn btn-primary"><i class="fa fa-edit"></i>  עריכה</button>
+                            <button data-ng-click="cancel()" data-ng-show="editMode" data-ng-disabled="!saveBtnEnable" class="btn btn-default">ביטול</button>
+                            <busy-button data-ng-click="save()" data-ng-show="editMode" class="btn btn-primary" show-loading="{{!saveBtnEnable}}" caption="שמירה" busy-caption="שומר"></busy-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

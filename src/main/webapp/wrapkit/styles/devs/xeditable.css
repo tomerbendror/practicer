@@ -1,0 +1,821 @@
+/*! X-editable - v1.5.1 
+* In-place editing with Twitter Bootstrap, jQuery UI or pure jQuery
+* http://github.com/vitalets/x-editable
+* Copyright (c) 2013 Vitaliy Potapov; Licensed MIT */
+
+/* line 5, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editableform {
+  margin-bottom: 0;
+  /* overwrites bootstrap margin */
+}
+
+/* line 9, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editableform .control-group {
+  margin-bottom: 0;
+  /* overwrites bootstrap margin */
+  white-space: nowrap;
+  /* prevent wrapping buttons on new line */
+  line-height: 20px;
+  /* overwriting bootstrap line-height. See #133 */
+}
+
+/* 
+  BS3 width:1005 for inputs breaks editable form in popup 
+  See: https://github.com/vitalets/x-editable/issues/393
+*/
+
+/* line 19, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editableform .form-control {
+  width: auto;
+}
+
+/* line 23, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-buttons {
+  display: inline-block;
+  /* should be inline to take effect of parent's white-space: nowrap */
+  vertical-align: top;
+  margin-left: 7px;
+  /* inline-block emulation for IE7*/
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 32, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-buttons.editable-buttons-bottom {
+  display: block;
+  margin-top: 7px;
+  margin-left: 0;
+}
+
+/* line 38, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-input {
+  vertical-align: top;
+  display: inline-block;
+  /* should be inline to take effect of parent's white-space: nowrap */
+  width: auto;
+  /* bootstrap-responsive has width: 100% that breakes layout */
+  white-space: normal;
+  /* reset white-space decalred in parent*/
+  /* display-inline emulation for IE7*/
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 48, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-buttons .editable-cancel {
+  margin-left: 7px;
+}
+
+/*for jquery-ui buttons need set height to look more pretty*/
+
+/* line 53, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-buttons button.ui-button-icon-only {
+  height: 24px;
+  width: 30px;
+}
+
+/* line 58, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editableform-loading {
+  background: url("../images/xeditable/loading.gif") center center no-repeat;
+  height: 25px;
+  width: auto;
+  min-width: 25px;
+}
+
+/* line 65, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-inline .editableform-loading {
+  background-position: left 5px;
+}
+
+/* line 69, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-error-block {
+  max-width: 300px;
+  margin: 5px 0 0 0;
+  width: auto;
+  white-space: normal;
+}
+
+/*add padding for jquery ui*/
+
+/* line 77, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-error-block.ui-state-error {
+  padding: 3px;
+}
+
+/* line 81, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-error {
+  color: red;
+}
+
+/* ---- For specific types ---- */
+
+/* line 87, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editableform .editable-date {
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+/* move datepicker icon to center of add-on button. See https://github.com/vitalets/x-editable/issues/183 */
+
+/* line 94, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-inline .add-on .icon-th {
+  margin-top: 3px;
+  margin-left: 1px;
+}
+
+/* checklist vertical alignment */
+
+/* line 102, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-checklist label input[type="checkbox"],
+.editable-checklist label span {
+  vertical-align: middle;
+  margin: 0;
+}
+
+/* line 107, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-checklist label {
+  white-space: nowrap;
+}
+
+/* set exact width of textarea to fit buttons toolbar */
+
+/* line 112, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-wysihtml5 {
+  width: 566px;
+  height: 250px;
+}
+
+/* clear button shown as link in date inputs */
+
+/* line 118, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-clear {
+  clear: both;
+  font-size: 0.9em;
+  text-decoration: none;
+  text-align: right;
+}
+
+/* IOS-style clear button for text inputs */
+
+/* line 126, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-clear-x {
+  background: url("../images/xeditable/clear.png") center center no-repeat;
+  display: block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  opacity: 0.6;
+  z-index: 100;
+  top: 50%;
+  right: 6px;
+  margin-top: -6px;
+}
+
+/* line 141, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-clear-x:hover {
+  opacity: 1;
+}
+
+/* line 145, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-pre-wrapped {
+  white-space: pre-wrap;
+}
+
+/* line 148, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-container.editable-popup {
+  max-width: none !important;
+  /* without this rule poshytip/tooltip does not stretch */
+}
+
+/* line 152, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-container.popover {
+  width: auto;
+  /* without this rule popover does not stretch */
+}
+
+/* line 156, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-container.editable-inline {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  /* inline-block emulation for IE7*/
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 165, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-container.ui-widget {
+  font-size: inherit;
+  /* jqueryui widget font 1.1em too big, overwrite it */
+  z-index: 1060;
+  /* should be less than select2 dropdown z-index to close dropdown first when click */
+}
+
+/* line 171, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-click,
+a.editable-click,
+a.editable-click:hover {
+  text-decoration: none;
+  border-bottom: dashed 1px #2980b9;
+}
+
+/* line 178, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-click.editable-disabled,
+a.editable-click.editable-disabled,
+a.editable-click.editable-disabled:hover {
+  color: #3e5771;
+  cursor: default;
+  border-bottom: none;
+}
+
+/* line 184, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-empty,
+.editable-empty:hover,
+.editable-empty:focus {
+  font-style: italic;
+  color: #d14233;
+  /* border-bottom: none; */
+  text-decoration: none;
+}
+
+/* line 191, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-unsaved {
+  font-weight: bold;
+}
+
+/* line 195, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-unsaved:after {
+  /*    content: '*'*/
+}
+
+/* line 199, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-bg-transition {
+  transition: background-color 1400ms ease-out;
+}
+
+/*see https://github.com/vitalets/x-editable/issues/139 */
+
+/* line 209, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.form-horizontal .editable {
+  padding-top: 5px;
+  display: inline-block;
+}
+
+/* line 216, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-address {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* line 221, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.editable-address span {
+  width: 70px;
+  display: inline-block;
+}
+
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+/* line 235, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker {
+  padding: 4px;
+  border-radius: 4px;
+  direction: ltr;
+}
+
+/* line 240, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker-inline {
+  width: 220px;
+}
+
+/* line 243, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker.datepicker-rtl {
+  direction: rtl;
+}
+
+/* line 246, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker.datepicker-rtl table tr td span {
+  float: right;
+}
+
+/* line 249, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker-dropdown {
+  top: 0;
+  left: 0;
+}
+
+/* line 253, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker-dropdown:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #e7edf2;
+  border-bottom-color: #e7edf2;
+  position: absolute;
+  top: -7px;
+  left: 6px;
+}
+
+/* line 264, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker-dropdown:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 7px;
+}
+
+/* line 274, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker > div {
+  display: none;
+}
+
+/* line 277, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker.days div.datepicker-days {
+  display: block;
+}
+
+/* line 280, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker.months div.datepicker-months {
+  display: block;
+}
+
+/* line 283, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker.years div.datepicker-years {
+  display: block;
+}
+
+/* line 286, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table {
+  margin: 0;
+}
+
+/* line 290, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker td,
+.datepicker th {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* line 298, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
+  background-color: transparent;
+}
+
+/* line 301, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.day:hover {
+  background: #dde4e6;
+  cursor: pointer;
+}
+
+/* line 306, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #a1aab0;
+}
+
+/* line 310, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+  background: none;
+  color: #a1aab0;
+  cursor: default;
+}
+
+/* line 318, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover {
+  background-color: #fef7ec;
+  border-color: #fde6d4;
+  color: #3e5771;
+}
+
+/* line 342, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today:hover:hover,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today.disabled:hover:hover,
+.datepicker table tr td.today:active,
+.datepicker table tr td.today:hover:active,
+.datepicker table tr td.today.disabled:active,
+.datepicker table tr td.today.disabled:hover:active,
+.datepicker table tr td.today.active,
+.datepicker table tr td.today:hover.active,
+.datepicker table tr td.today.disabled.active,
+.datepicker table tr td.today.disabled:hover.active,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today:hover.disabled,
+.datepicker table tr td.today.disabled.disabled,
+.datepicker table tr td.today.disabled:hover.disabled,
+.datepicker table tr td.today[disabled],
+.datepicker table tr td.today:hover[disabled],
+.datepicker table tr td.today.disabled[disabled],
+.datepicker table tr td.today.disabled:hover[disabled] {
+  background-color: #cfd9db;
+}
+
+/* line 352, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.today:active,
+.datepicker table tr td.today:hover:active,
+.datepicker table tr td.today.disabled:active,
+.datepicker table tr td.today.disabled:hover:active,
+.datepicker table tr td.today.active,
+.datepicker table tr td.today:hover.active,
+.datepicker table tr td.today.disabled.active,
+.datepicker table tr td.today.disabled:hover.active {
+  background-color: #cfd9db;
+}
+
+/* line 355, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.today:hover:hover {
+  color: #3e5771;
+}
+
+/* line 358, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.today.active:hover {
+  color: #e08e0b;
+}
+
+/* line 364, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.range,
+.datepicker table tr td.range:hover,
+.datepicker table tr td.range.disabled,
+.datepicker table tr td.range.disabled:hover {
+  background: #e7f2fa;
+  border-radius: 0;
+}
+
+/* line 371, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.range.today,
+.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:hover {
+  background-color: #e7f2fa;
+  border-color: #caeaf3;
+  border-radius: 0;
+}
+
+/* line 395, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today:hover:hover,
+.datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today.disabled:hover:hover,
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today:hover:active,
+.datepicker table tr td.range.today.disabled:active,
+.datepicker table tr td.range.today.disabled:hover:active,
+.datepicker table tr td.range.today.active,
+.datepicker table tr td.range.today:hover.active,
+.datepicker table tr td.range.today.disabled.active,
+.datepicker table tr td.range.today.disabled:hover.active,
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today:hover.disabled,
+.datepicker table tr td.range.today.disabled.disabled,
+.datepicker table tr td.range.today.disabled:hover.disabled,
+.datepicker table tr td.range.today[disabled],
+.datepicker table tr td.range.today:hover[disabled],
+.datepicker table tr td.range.today.disabled[disabled],
+.datepicker table tr td.range.today.disabled:hover[disabled] {
+  background-color: #e7f2fa;
+}
+
+/* line 405, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today:hover:active,
+.datepicker table tr td.range.today.disabled:active,
+.datepicker table tr td.range.today.disabled:hover:active,
+.datepicker table tr td.range.today.active,
+.datepicker table tr td.range.today:hover.active,
+.datepicker table tr td.range.today.disabled.active,
+.datepicker table tr td.range.today.disabled:hover.active {
+  background-color: #e7f2fa;
+}
+
+/* line 411, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.selected,
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected.disabled,
+.datepicker table tr td.selected.disabled:hover {
+  background-color: #20638f;
+  border-color: #20638f;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 436, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected:hover:hover,
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected.disabled:hover:hover,
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected:hover:active,
+.datepicker table tr td.selected.disabled:active,
+.datepicker table tr td.selected.disabled:hover:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected:hover.active,
+.datepicker table tr td.selected.disabled.active,
+.datepicker table tr td.selected.disabled:hover.active,
+.datepicker table tr td.selected.disabled,
+.datepicker table tr td.selected:hover.disabled,
+.datepicker table tr td.selected.disabled.disabled,
+.datepicker table tr td.selected.disabled:hover.disabled,
+.datepicker table tr td.selected[disabled],
+.datepicker table tr td.selected:hover[disabled],
+.datepicker table tr td.selected.disabled[disabled],
+.datepicker table tr td.selected.disabled:hover[disabled] {
+  background-color: #20638f;
+}
+
+/* line 446, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected:hover:active,
+.datepicker table tr td.selected.disabled:active,
+.datepicker table tr td.selected.disabled:hover:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected:hover.active,
+.datepicker table tr td.selected.disabled.active,
+.datepicker table tr td.selected.disabled:hover.active {
+  background-color: #20638f;
+}
+
+/* line 452, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled:hover {
+  background-color: #20638f;
+  border-color: #20638f;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 477, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active[disabled],
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active.disabled:hover[disabled] {
+  background-color: #20638f;
+}
+
+/* line 487, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active {
+  background-color: #20638f;
+}
+
+/* line 490, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* line 500, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td span:hover {
+  background: #cfd9db;
+}
+
+/* line 504, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+  background: none;
+  color: #a1aab0;
+  cursor: default;
+}
+
+/* line 512, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
+  background-color: #20638f;
+  border-color: #20638f;
+  color: #fff;
+}
+
+/* line 536, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active:hover.disabled,
+.datepicker table tr td span.active.disabled.disabled,
+.datepicker table tr td span.active.disabled:hover.disabled,
+.datepicker table tr td span.active[disabled],
+.datepicker table tr td span.active:hover[disabled],
+.datepicker table tr td span.active.disabled[disabled],
+.datepicker table tr td span.active.disabled:hover[disabled] {
+  background-color: #20638f;
+}
+
+/* line 546, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active {
+  background-color: #20638f;
+}
+
+/* line 550, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker table tr td span.old,
+.datepicker table tr td span.new {
+  color: #a1aab0;
+}
+
+/* line 553, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker th.datepicker-switch {
+  width: 145px;
+}
+
+/* line 557, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker thead tr:first-child th,
+.datepicker tfoot tr th {
+  cursor: pointer;
+}
+
+/* line 561, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker thead tr:first-child th:hover,
+.datepicker tfoot tr th:hover {
+  background: #cfd9db;
+}
+
+/* line 564, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle;
+}
+
+/* line 570, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.datepicker thead tr:first-child th.cw {
+  cursor: default;
+  background-color: transparent;
+}
+
+/* line 575, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 581, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.input-daterange input {
+  text-align: center;
+}
+
+/* line 584, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.input-daterange input:first-child {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+/* line 587, ../../app/styles/scss/dependencies/_xeditable.scss */
+
+.input-daterange input:last-child {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}

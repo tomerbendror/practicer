@@ -1,0 +1,19 @@
+#* @vtlvariable name="userName" type="java.lang.String" *#
+#* @vtlvariable name="baseUrl" type="java.lang.String" *#
+#* @vtlvariable name="key" type="java.lang.String" *#
+#* @vtlvariable name="email" type="java.lang.String" *#
+#* @vtlvariable name="group" type="com.practice.model.ParentsGroup" *#
+
+#define ( $mainTitle )
+    <span>קיבלת הזמנה מ<strong>${userName}</strong> להצטרף לקבוצת הלמידה <b>${group.getName()}</b> באתר <a href='${baseUrl}' target="_blank">Practicer</a></span><br/>
+#end
+
+#define( $content )
+<div style="font-size: 20px;padding-bottom: 30px;padding-top: 20px;">
+    <strong><a style="font-size: 28px;text-decoration: underline;" href="${baseUrl}/app/parent/connectToGroup?key=${key}&groupId=${group.getId()}&email=${email}">להצטרפות לקבוצה</a></strong>
+</div>
+<span style="font-size: 17px;">
+    <a href='${baseUrl}' target="_blank"><strong>Practicer</strong></a> הינו אתר חינמי המאפשר לימוד ותרגול בצורה יחודית, מהנה ובטוחה עבור ילדכם, התרגילים ממוקדים בצרכי ילדכם ונכתבים ע"י חברכם לקבוצה.
+</span><br/>
+#end
+#parse("./simpleMessageTemplate.vm")  

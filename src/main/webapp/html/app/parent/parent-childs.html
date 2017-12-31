@@ -1,0 +1,19 @@
+<div style="padding: 15px 22.5px;">
+    <div class="row">
+        <div class="childs-control-panel">
+            <div class="control-buttons">
+                <button id="add-boy-btn" data-ng-disabled="!enableAddBtn" data-ng-click="addMaleChild()" type="button" class="btn btn-greentur btn-sm" >
+                    <i class="fa fa-male"></i> הוספת ילד
+                </button>
+                <button id="add-girl-btn" data-ng-disabled="!enableAddBtn" data-ng-click="addFemaleChild()" type="button" class="btn btn-greentur btn-sm" >
+                    <i class="fa fa-female"></i> הוספת ילדה
+                </button>
+            </div>
+            <hr>
+        </div>
+
+        <!-- all the childs -->
+        <div class="child-info-panel" x-child-info-panel id="child-info-panel-{{child.id}}" data-ng-repeat="child in childs" child="child"></div>
+        <div data-ng-show="childs.length == 0" style="padding-right: 10px"><i class="fa fa-info-circle"></i>  לא מוגדרים ילדים, להגדרת ילדים יש להשתמש בכפתורים בחלק העליון</div>
+    </div><!-- /.row -->
+</div>

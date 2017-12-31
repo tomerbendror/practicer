@@ -1,0 +1,24 @@
+#* @vtlvariable name="title" type="java.lang.String" *#
+#* @vtlvariable name="baseUrl" type="java.lang.String" *#
+#* @vtlvariable name="profileImgUrl" type="java.lang.String" *#
+#* @vtlvariable name="practiceId" type="long" *#
+
+#define ( $mainTitle )
+<div>
+    <a style="border: 1px solid rgb(206, 206, 206);border-radius: 50px;display: inline-block;padding: 3px;text-align: center;line-height: 0;">
+        <img alt="profile" src="${profileImgUrl}"
+             style="width: 90px;border-radius: 45px;">
+    </a
+</div>
+    ${title}
+    <br><br>
+    <a href="${baseUrl}/app/parent/practice/${practiceId}">לצפייה בתרגיל</a>
+    <br><br>
+#end
+
+#define( $content )
+<span style="font-size: 17px;">
+    <a href='${baseUrl}' target="_blank"><strong>Practicer</strong></a> הינו אתר חינמי המאפשר לימוד ותרגול בצורה יחודית, מהנה ובטוחה עבור ילדכם, התרגילים ממוקדים בצרכי ילדכם ונכתבים ע"י חברכם לקבוצה.
+</span><br/>
+#end
+#parse("./simpleMessageTemplate.vm")

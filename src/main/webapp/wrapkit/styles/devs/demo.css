@@ -1,0 +1,439 @@
+/* line 1, ../../app/styles/demo.scss */
+
+.show-grid {
+  margin-bottom: 15px;
+}
+
+/* line 4, ../../app/styles/demo.scss */
+
+.show-grid [class^=col-] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #FBFCFC;
+  border: 1px solid #dce4ec;
+}
+
+/* line 12, ../../app/styles/demo.scss */
+
+.demo-btn .btn,
+.demo-btn .btn-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 17, ../../app/styles/demo.scss */
+
+.demo-btn .btn-group > .btn,
+.demo-btn .btn-group > .btn-group {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Icon lists */
+
+/* line 24, ../../app/styles/demo.scss */
+
+.demo-icon-lists {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* line 28, ../../app/styles/demo.scss */
+
+.demo-icon-lists li {
+  float: left;
+  width: 25%;
+  height: 115px;
+  font-size: 11px;
+  padding: 10px;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid #dce4ec;
+  background-color: #fff;
+}
+
+/* line 39, ../../app/styles/demo.scss */
+
+.demo-icon-lists-alt li {
+  width: 20%;
+}
+
+/* line 42, ../../app/styles/demo.scss */
+
+.demo-icon-lists li:hover {
+  background-color: #20638F;
+  color: #fff;
+}
+
+/* line 48, ../../app/styles/demo.scss */
+
+.demo-icon-lists .fa,
+.demo-icon-lists .glyphicon,
+.demo-icon-lists .pw {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+/* line 53, ../../app/styles/demo.scss */
+
+.demo-icon-lists-alt .pw {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 42px;
+}
+
+/* line 58, ../../app/styles/demo.scss */
+
+.demo-icon-lists .demo-icon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  /* line 64, ../../app/styles/demo.scss */
+
+  .demo-icon-lists:not(.demo-icon-lists-alt) li {
+    width: 12.5%;
+  }
+
+  /* line 67, ../../app/styles/demo.scss */
+
+  .demo-icon-lists li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* line 72, ../../app/styles/demo.scss */
+
+  .demo-icon-lists-alt .pw {
+    font-size: 28px;
+  }
+}
+
+/* line 76, ../../app/styles/demo.scss */
+
+#font-awesome {
+  padding: 10px 15px 30px;
+  border: 1px solid transparent;
+  margin-top: 10px;
+}
+
+/* line 81, ../../app/styles/demo.scss */
+
+.fontawesome-icon-list .fa-hover {
+  margin: 0 15px;
+  display: block;
+  line-height: 32px;
+  height: 32px;
+  padding-left: 0;
+  border-radius: 4px;
+}
+
+/* line 82, ../../app/styles/demo.scss */
+
+.fontawesome-icon-list .fa-hover .fa {
+  width: 32px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* line 83, ../../app/styles/demo.scss */
+
+.fontawesome-icon-list .fa-hover:hover {
+  background-color: #20638F;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 84, ../../app/styles/demo.scss */
+
+.fontawesome-icon-list .fa-hover:hover .fa {
+  font-size: 28px;
+  vertical-align: -6px;
+}
+
+/* line 86, ../../app/styles/demo.scss */
+
+.iconExamples:before,
+.iconExamples:after {
+  content: " ";
+  display: table;
+}
+
+/* line 87, ../../app/styles/demo.scss */
+
+.iconExamples:after {
+  clear: both;
+}
+
+/* line 88, ../../app/styles/demo.scss */
+
+.iconExamples:before,
+.iconExamples:after {
+  content: " ";
+  display: table;
+}
+
+/* line 89, ../../app/styles/demo.scss */
+
+.iconExamples:after {
+  clear: both;
+}
+
+/* line 90, ../../app/styles/demo.scss */
+
+.iconExamples .example {
+  text-align: center;
+  margin: 10px 3px;
+}
+
+/* line 90, ../../app/styles/demo.scss */
+
+.iconExamples .example:before,
+.iconExamples .example:after {
+  content: " ";
+  display: table;
+}
+
+/* line 91, ../../app/styles/demo.scss */
+
+.iconExamples .example:after {
+  clear: both;
+}
+
+/* line 92, ../../app/styles/demo.scss */
+
+.iconExamples .example:before,
+.iconExamples .example:after {
+  content: " ";
+  display: table;
+}
+
+/* line 93, ../../app/styles/demo.scss */
+
+.iconExamples .example:after {
+  clear: both;
+}
+
+/* line 94, ../../app/styles/demo.scss */
+
+.iconExamples .example .icon {
+  font-size: 20px;
+  float: left;
+  width: 35px;
+}
+
+/* line 95, ../../app/styles/demo.scss */
+
+.iconExamples .example .class {
+  text-align: center;
+  line-height: 28px;
+  float: left;
+  margin-top: 0;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+/* line 98, ../../app/styles/demo.scss */
+
+#dialog-opener {
+  padding: .4em 1em .4em 30px;
+  text-decoration: none;
+  position: relative;
+}
+
+/* line 103, ../../app/styles/demo.scss */
+
+#dialog-opener span.ui-icon {
+  margin: 0 5px 0 0;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -8px;
+  zoom: 1;
+}
+
+/* line 111, ../../app/styles/demo.scss */
+
+.accordion-group {
+  zoom: 1;
+}
+
+/* line 115, ../../app/styles/demo.scss */
+
+ul#icons {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 119, ../../app/styles/demo.scss */
+
+ul#icons li {
+  margin: 2px;
+  position: relative;
+  padding: 4px;
+  cursor: pointer;
+  float: left;
+  list-style: none;
+}
+
+/* line 128, ../../app/styles/demo.scss */
+
+#dialog-opener:hover,
+ul#icons li:hover {
+  background: #ECF0F1;
+}
+
+/* line 132, ../../app/styles/demo.scss */
+
+#slider-horizontal > span {
+  display: block;
+  margin: 20px 15px;
+}
+
+/* line 136, ../../app/styles/demo.scss */
+
+#slider-vertical > span {
+  height: 120px;
+  float: left;
+  margin: 10px 15px;
+}
+
+/* line 143, ../../app/styles/demo.scss */
+
+.draggable {
+  width: 100px;
+  height: 100px;
+  padding: 0.5em;
+  float: left;
+  margin: 0 10px 10px 0;
+  z-index: 1;
+}
+
+/* line 144, ../../app/styles/demo.scss */
+
+#draggable1 {
+  cursor: n-resize;
+}
+
+/* line 145, ../../app/styles/demo.scss */
+
+#draggable2 {
+  cursor: e-resize;
+}
+
+/* line 146, ../../app/styles/demo.scss */
+
+#containment-wrapper {
+  height: 150px;
+  border: 1px solid #dce4ec;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* line 147, ../../app/styles/demo.scss */
+
+#modalDraggable .modal-title {
+  cursor: move;
+}
+
+/* line 149, ../../app/styles/demo.scss */
+
+#droppable,
+#droppable2 {
+  width: 260px;
+  height: 200px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+}
+
+/* line 150, ../../app/styles/demo.scss */
+
+#droppable-inner,
+#droppable2-inner {
+  width: 150px;
+  height: 120px;
+  padding: 0.5em;
+  float: left;
+  margin: 10px;
+}
+
+/* line 152, ../../app/styles/demo.scss */
+
+#resizable {
+  width: 200px;
+  max-width: 100%;
+  height: 170px;
+}
+
+/* line 157, ../../app/styles/demo.scss */
+
+.ui-resizable-helper {
+  border: 1px dotted gray;
+}
+
+/* line 161, ../../app/styles/demo.scss */
+
+#selectable {
+  max-width: 320px;
+}
+
+/* line 164, ../../app/styles/demo.scss */
+
+#selectable > * {
+  cursor: pointer;
+}
+
+/* line 167, ../../app/styles/demo.scss */
+
+#selectable .ui-selected {
+  color: white;
+  background-color: #20638f;
+  border-color: #20638f;
+  border-bottom-color: transparent;
+}
+
+/* line 173, ../../app/styles/demo.scss */
+
+#selectable .ui-selecting {
+  background-color: #FEF7EC;
+}
+
+/* line 178, ../../app/styles/demo.scss */
+
+[data-interaction="sortable"] {
+  min-height: 130px;
+}
+
+/* line 181, ../../app/styles/demo.scss */
+
+[data-interaction="sortable"] .sortable-item {
+  position: relative;
+}
+
+/* line 184, ../../app/styles/demo.scss */
+
+[data-interaction="sortable"] .sortable-handle {
+  cursor: move;
+}
+
+/* line 190, ../../app/styles/demo.scss */
+
+#multiChart .detail .x_label {
+  display: none;
+}
+
+/* line 193, ../../app/styles/demo.scss */
+
+#animationSandbox > h3 {
+  font-size: 6rem;
+  line-height: 1;
+  padding: 40px 0;
+}

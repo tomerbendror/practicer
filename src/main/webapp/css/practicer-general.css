@@ -1,0 +1,23 @@
+.bootbox-body {
+    direction: rtl;
+}
+
+.modal-body {
+    background-color: white;
+}
+
+.bootbox-close-button {
+    float: left;
+}
+
+.toast-message {
+    text-align: right;
+}
+
+.bootbox-body {
+    font-size: 17px;
+}
+
+.modal-footer {
+    text-align: left;
+}
