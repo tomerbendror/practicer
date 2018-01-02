@@ -323,6 +323,12 @@
         </sql>
     </changeSet>
 
+    <changeSet id="28_pre" author="tomer">
+        <sql>
+            ALTER TABLE `practicer`.`group_invitation` ADD COLUMN `INVITATION_KEY` VARCHAR(255) NULL AFTER `INVITE_DATE`;
+        </sql>
+    </changeSet>
+
     <changeSet id="28" author="tomer">
         <sql>
             ALTER TABLE group_invitation add `WAS_USED` bit(1) DEFAULT 0 after INVITATION_KEY;
