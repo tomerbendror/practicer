@@ -325,7 +325,7 @@
 
     <changeSet id="28_pre" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`group_invitation` ADD COLUMN `INVITATION_KEY` VARCHAR(255) NULL AFTER `INVITE_DATE`;
+            ALTER TABLE `group_invitation` ADD COLUMN `INVITATION_KEY` VARCHAR(255) NULL AFTER `INVITE_DATE`;
         </sql>
     </changeSet>
 
@@ -337,7 +337,7 @@
 
     <changeSet id="29" author="tomer">
         <sql>
-            CREATE TABLE `practicer`.`tts_record` (
+            CREATE TABLE `tts_record` (
             `ID` bigint(20) NOT NULL AUTO_INCREMENT,
             `TEXT` VARCHAR(255) NOT NULL ,
             `FILE_MIME_TYPE` VARCHAR(20) NOT NULL,
@@ -351,20 +351,20 @@
 
     <changeSet id="30" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`question` ADD COLUMN `TTS_URL` VARCHAR(500) NULL AFTER `ORDER_INDEX`;
+            ALTER TABLE `question` ADD COLUMN `TTS_URL` VARCHAR(500) NULL AFTER `ORDER_INDEX`;
         </sql>
     </changeSet>
 
     <changeSet id="31" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`tts_record`
+            ALTER TABLE `tts_record`
             ADD COLUMN `TTS_SOURCE` VARCHAR(20) NOT NULL DEFAULT 'ISPEECH_TRIAL' AFTER `LANGUAGE`;
         </sql>
     </changeSet>
 
     <changeSet id="32" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`user_to_group` RENAME TO  `practicer`.`parent_to_group` ;
+            ALTER TABLE `user_to_group` RENAME TO  `parent_to_group` ;
         </sql>
     </changeSet>
 
@@ -456,19 +456,19 @@
 
     <changeSet id="39" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`question_result` ADD COLUMN `QUESTION_SKIPPED` BIT(1) NOT NULL AFTER `SUCCESS`;
+            ALTER TABLE `question_result` ADD COLUMN `QUESTION_SKIPPED` BIT(1) NOT NULL AFTER `SUCCESS`;
         </sql>
     </changeSet>
 
     <changeSet id="40" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`question_result` CHANGE COLUMN `QUESTION_TIME_SECOND` `QUESTION_TIME_SECOND` FLOAT NOT NULL;
+            ALTER TABLE `question_result` CHANGE COLUMN `QUESTION_TIME_SECOND` `QUESTION_TIME_SECOND` FLOAT NOT NULL;
         </sql>
     </changeSet>
 
     <changeSet id="41" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`question_result` ADD COLUMN `WRONG_ANSWERS_COUNT` INT NOT NULL AFTER `WRONG_ANSWERS_STR`;
+            ALTER TABLE `question_result` ADD COLUMN `WRONG_ANSWERS_COUNT` INT NOT NULL AFTER `WRONG_ANSWERS_STR`;
         </sql>
     </changeSet>
 
@@ -490,7 +490,7 @@
 
     <changeSet id="43" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`practice_result` ADD COLUMN `TIME_SECOND` INT(11) NULL AFTER `SCORE`;
+            ALTER TABLE `practice_result` ADD COLUMN `TIME_SECOND` INT(11) NULL AFTER `SCORE`;
         </sql>
     </changeSet>
 
@@ -506,13 +506,13 @@
 
     <changeSet id="45" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`practice_result` CHANGE COLUMN `TIME_SECOND` `TIME_SECOND` INT(11) NOT NULL;
+            ALTER TABLE `practice_result` CHANGE COLUMN `TIME_SECOND` `TIME_SECOND` INT(11) NOT NULL;
         </sql>
     </changeSet>
 
     <changeSet id="46" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`send_email` CHANGE COLUMN `CONTENT` `CONTENT` MEDIUMBLOB NOT NULL;
+            ALTER TABLE `send_email` CHANGE COLUMN `CONTENT` `CONTENT` MEDIUMBLOB NOT NULL;
         </sql>
     </changeSet>
 
@@ -535,19 +535,19 @@
     <changeSet id="48" author="tomer">
         <comment>add ttsLang column, in some cases we need the user to tell us the TTS lang, for example (11,22 etc.)</comment>
         <sql>
-            ALTER TABLE `practicer`.`practice` ADD COLUMN `TTS_LANG` VARCHAR(20) NOT NULL DEFAULT 'AUTO' AFTER `USE_TTS`;
+            ALTER TABLE `practice` ADD COLUMN `TTS_LANG` VARCHAR(20) NOT NULL DEFAULT 'AUTO' AFTER `USE_TTS`;
         </sql>
     </changeSet>
 
     <changeSet id="49" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`question` ADD COLUMN `TTS_GENERATION_STATE` VARCHAR(20) NOT NULL DEFAULT 'N_A' AFTER `QUESTION_TYPE`;
+            ALTER TABLE `question` ADD COLUMN `TTS_GENERATION_STATE` VARCHAR(20) NOT NULL DEFAULT 'N_A' AFTER `QUESTION_TYPE`;
         </sql>
     </changeSet>
 
     <changeSet id="50" author="tomer">
         <sql>
-            update `practicer`.`question` set TTS_GENERATION_STATE='DONE' where TTS_URL is not null;
+            update `question` set TTS_GENERATION_STATE='DONE' where TTS_URL is not null;
         </sql>
     </changeSet>
 
@@ -559,7 +559,7 @@
 
     <changeSet id="52" author="tomer">
         <sql>
-            ALTER TABLE `practicer`.`practice` CHANGE COLUMN `TTS_LANG` `TTS_LANG` VARCHAR(20) NULL ;
+            ALTER TABLE `practice` CHANGE COLUMN `TTS_LANG` `TTS_LANG` VARCHAR(20) NULL ;
         </sql>
     </changeSet>
 
