@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3318975242">
-    <data-source source="LOCAL" name="MySQL - practicer@127.0.0.1" uuid="7904092e-7f8c-44aa-a410-d17632196d0b">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="practicer@localhost" uuid="7ba9c7be-8909-4fb1-9912-9c07549cab27">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1:3306/practicer</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/practicer</jdbc-url>
       <driver-properties>
+        <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries />
     </data-source>
   </component>
 </project>

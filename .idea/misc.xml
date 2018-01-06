@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="EntryPointsManager">
-    <entry_points version="2.0" />
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="org.springframework.transaction.annotation.Transactional" />
-    </list>
-  </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="IdProvider" IDEtalkID="F0A2BA8CBFC7993D8A6B4387F4E7757E" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -17,7 +10,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Tomer.Ben-Dror\AppData\Roaming\Subversion</configuration>
   </component>
 </project>

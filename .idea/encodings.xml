@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+  <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/JiraIssue.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/JiraJsonObj.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/JiraSprint.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/JiraStoryDetails.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/JiraSubtask.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/SprintTimeRemaining.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/TimeEstimation.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/enums" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/freemarker/FreeMarkerConfig.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/full" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/report/PersonTasksSummary.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/practice/jira/report/StoriesForUserSummary.java" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/templates/sprint-report.ftl" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jaudiotagger-2.0.2.jar" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/mp3fenge-1.0.jar" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/angular-cache" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/angularjs/angular_1.3.15" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/images/fb.png" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/images/gp.png" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/images/in.png" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/images/practicer-Logo_50.png" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/images/three-dots.png" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/images/tw.png" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/sound/wrong-answer-2.mp3" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/sound/wrong-answer.mp3" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/wrapkit/images/dummy/DICTATION.PNG" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/wrapkit/images/dummy/MATH.PNG" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/wrapkit/images/dummy/MATH.jpg" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/wrapkit/images/dummy/TRANSLATION.PNG" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/wrapkit/images/dummy/TRANSLATION.jpg" charset="windows-1255" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/wrapkit/images/dummy/group-icon.PNG" charset="windows-1255" />
   </component>
 </project>

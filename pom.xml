@@ -59,18 +59,18 @@
         </repository>
     </repositories>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>eap</id>
-            <url>http://maven.repository.redhat.com/techpreview/all</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    <!--<pluginRepositories>-->
+        <!--<pluginRepository>-->
+            <!--<id>eap</id>-->
+            <!--<url>http://maven.repository.redhat.com/techpreview/all</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+            <!--</releases>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+            <!--</snapshots>-->
+        <!--</pluginRepository>-->
+    <!--</pluginRepositories>-->
 
 
     <dependencies>
@@ -112,7 +112,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
+            <version>2.5.1</version>
         </dependency>
 
         <dependency>
@@ -124,7 +124,7 @@
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>${aspectj.version}</version>
+            <version>1.7.3</version>
         </dependency>
 
         <dependency>
@@ -340,29 +340,29 @@
         </plugins>
     </build>
 
-    <profiles>
-        <profile>
-            <!-- When built in OpenShift the 'openshift' profile will be used when
-                invoking mvn. -->
-            <!-- Use this profile for any OpenShift specific customization your app
-                will need. -->
-            <!-- By default that is to put the resulting archive into the 'webapps'
-                folder. -->
-            <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
-            <id>openshift</id>
-            <build>
-                <finalName>practicer</finalName>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <version>2.4</version>
-                        <configuration>
-                            <outputDirectory>webapps</outputDirectory>
-                            <warName>ROOT</warName>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--&lt;!&ndash; When built in OpenShift the 'openshift' profile will be used when-->
+                <!--invoking mvn. &ndash;&gt;-->
+            <!--&lt;!&ndash; Use this profile for any OpenShift specific customization your app-->
+                <!--will need. &ndash;&gt;-->
+            <!--&lt;!&ndash; By default that is to put the resulting archive into the 'webapps'-->
+                <!--folder. &ndash;&gt;-->
+            <!--&lt;!&ndash; http://maven.apache.org/guides/mini/guide-building-for-different-environments.html &ndash;&gt;-->
+            <!--<id>openshift</id>-->
+            <!--<build>-->
+                <!--<finalName>practicer</finalName>-->
+                <!--<plugins>-->
+                    <!--<plugin>-->
+                        <!--<artifactId>maven-war-plugin</artifactId>-->
+                        <!--<version>2.4</version>-->
+                        <!--<configuration>-->
+                            <!--<outputDirectory>webapps</outputDirectory>-->
+                            <!--<warName>ROOT</warName>-->
+                        <!--</configuration>-->
+                    <!--</plugin>-->
+                <!--</plugins>-->
+            <!--</build>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 </project>
