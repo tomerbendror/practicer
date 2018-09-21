@@ -26,7 +26,7 @@ public class PracticerEnvConfig {
     }
 
     public String getBaseUrl() {
-        return "dev".equalsIgnoreCase(envName) ? "http://local.practicer-practicer.rhcloud.com" : "http://practicer-practicer.rhcloud.com";
+        return "dev".equalsIgnoreCase(envName) ? "http://local.practicer-app.com" : "http://practicer-app.com";
     }
 
     public String getAbsoluteProfileImageUrlOrDefault(ParentUser parent) {
