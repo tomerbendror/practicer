@@ -27,7 +27,7 @@
     margin-bottom: 10px;
 }
 
-.google-login-btn {
+.google-login-btn, .google-login-btn:focus {
     color: #fff;
     border-color: #0c6ebe;
     background-size: 16px 16px;
