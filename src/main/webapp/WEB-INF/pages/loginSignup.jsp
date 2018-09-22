@@ -98,7 +98,7 @@
                 <div class="signin-alt">
                         <%--<a href="/social/login?id=facebook" class="btn btn-sm btn-belpet"><i class="fa fa-facebook"></i></a>--%>
                         <%--<a href="#" class="btn btn-sm btn-info"><i class="fa fa-twitter"></i></a>--%>
-                            <a href="/social/login?id=google" class="btn btn-sm btn-danger btn-block google-login-btn">
+                            <a href="/social/login?id=google" class="btn btn-sm btn-block google-login-btn">
                                 <span class="sign-in-text">כניסה בעזרת חשבון Google</span>
                             </a>
                         <%--<a href="#" class="btn btn-sm btn-silc"><i class="fa fa-github"></i></a>--%>
@@ -125,7 +125,7 @@
                 <div class="signin-alt">
                         <%--<a href="/social/login?id=facebook" class="btn btn-sm btn-belpet"><i class="fa fa-facebook"></i></a>--%>
                         <%--<a href="#" class="btn btn-sm btn-info"><i class="fa fa-twitter"></i></a>--%>
-                    <a href="/social/login?id=google" class="btn btn-sm btn-danger btn-block google-login-btn google-login-btn">
+                    <a href="/social/login?id=google" class="btn btn-sm btn-block google-login-btn google-login-btn">
                         <span class="sign-in-text">כניסה בעזרת חשבון Google</span>
                     </a>
                         <%--<a href="#" class="btn btn-sm btn-silc"><i class="fa fa-github"></i></a>--%>
