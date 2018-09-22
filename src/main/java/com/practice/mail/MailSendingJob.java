@@ -23,7 +23,7 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
  * User: tomer
  */
 public class MailSendingJob {
-    public static final String ENCODING = "UTF-8";
+    private static final String ENCODING = "UTF-8";
 
     @Autowired
     private JavaMailSender mailSender;
@@ -48,7 +48,7 @@ public class MailSendingJob {
             if (isNotBlank(email.getReplyTo())) {
                 helper.setReplyTo(toAddressesAry(email.getReplyTo())[0]);
             }
-            helper.setText(new String(email.getContent(), ENCODING), true);
+            helper.setText(new String(email.getContent()), true);
             mailsToSend.add(message);
 
             email.setStatus(EmailStatus.SENT);
@@ -57,7 +57,7 @@ public class MailSendingJob {
 
         if (!mailsToSend.isEmpty()) {
             // the mails will be send async right after success commit
-            mailSender.send(mailsToSend.toArray(new MimeMessage[mailsToSend.size()]));
+            mailSender.send(mailsToSend.toArray(new MimeMessage[0]));
         }
     }
 
