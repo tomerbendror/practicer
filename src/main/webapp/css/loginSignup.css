@@ -26,3 +26,18 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.google-login-btn {
+    color: #fff;
+    border-color: #0c6ebe;
+    background-size: 16px 16px;
+    background: #4285f4 url(/images/svg/google.svg) no-repeat left 10px center;
+    height: 36px;
+    font-size: 15px;font-weight: 500;
+}
+
+.google-login-btn:hover {
+    color: #fff;
+    background-color: #5496ff;
+    border-color: rgba(0,0,0,0.1);
+}

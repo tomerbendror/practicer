@@ -84,22 +84,24 @@
                     <div class="animated-hue pull-left">
                         <button id="btnSignin" onclick="loginUser();" class="btn btn-primary">התחבר <i class="fa fa-chevron-circle-left"></i></button>
                     </div>
-                    <%--<div class="nice-checkbox nice-checkbox-inline">--%>
+                        <%--<div class="nice-checkbox nice-checkbox-inline">--%>
                         <%--<label for="keepSignin">השאר אותי מחובר</label>--%>
                         <%--<input type="checkbox" name="keepSignin" id="keepSignin" checked="checked">--%>
-                    <%--</div>--%>
+                        <%--</div>--%>
                 </div><!-- /.form-group -->
 
                 <hr>
 
 
                 <p><a href="/user/resetPassword">שכחתי את הסיסמה</a></p>
-                <p class="lead" style="margin-bottom: 10px;">כניסה בעזרת חשבון אחר</p>
+                <%--<p class="lead" style="margin-bottom: 10px;">כניסה בעזרת חשבון אחר</p>--%>
                 <div class="signin-alt">
-                    <a href="/social/login?id=facebook" class="btn btn-sm btn-belpet"><i class="fa fa-facebook"></i></a>
-                    <%--<a href="#" class="btn btn-sm btn-info"><i class="fa fa-twitter"></i></a>--%>
-                    <a href="/social/login?id=google" class="btn btn-sm btn-danger"><i class="fa fa-google-plus"></i></a>
-                    <%--<a href="#" class="btn btn-sm btn-silc"><i class="fa fa-github"></i></a>--%>
+                        <%--<a href="/social/login?id=facebook" class="btn btn-sm btn-belpet"><i class="fa fa-facebook"></i></a>--%>
+                        <%--<a href="#" class="btn btn-sm btn-info"><i class="fa fa-twitter"></i></a>--%>
+                            <a href="/social/login?id=google" class="btn btn-sm btn-danger btn-block google-login-btn">
+                                <span class="sign-in-text">כניסה בעזרת חשבון Google</span>
+                            </a>
+                        <%--<a href="#" class="btn btn-sm btn-silc"><i class="fa fa-github"></i></a>--%>
                 </div>
 
                 <hr>
@@ -121,9 +123,11 @@
                     <p><strong id="signup-error-msg">${errorMsg}</strong></p>
                 </div>
                 <div class="signin-alt">
-                    <a href="/social/login?id=facebook" class="btn btn-sm btn-belpet"><i class="fa fa-facebook"></i></a>
+                        <%--<a href="/social/login?id=facebook" class="btn btn-sm btn-belpet"><i class="fa fa-facebook"></i></a>--%>
                         <%--<a href="#" class="btn btn-sm btn-info"><i class="fa fa-twitter"></i></a>--%>
-                    <a href="/social/login?id=google" class="btn btn-sm btn-danger"><i class="fa fa-google-plus"></i></a>
+                    <a href="/social/login?id=google" class="btn btn-sm btn-danger btn-block google-login-btn google-login-btn">
+                        <span class="sign-in-text">כניסה בעזרת חשבון Google</span>
+                    </a>
                         <%--<a href="#" class="btn btn-sm btn-silc"><i class="fa fa-github"></i></a>--%>
                 </div>
                 <p class="text-muted"><strong>הכנס פרטים אישיים</strong></p>
@@ -144,37 +148,37 @@
 
                 <!--
                 <div class="form-group has-feedback">
-                    <div class="input-group input-group-in">
-                        <span class="input-group-addon"><i class="fa fa-road"></i></span>
-                        <input name="address" id="address" class="form-control" placeholder="Address">
-                        <span class="form-control-feedback"></span>
-                    </div>
+                <div class="input-group input-group-in">
+                <span class="input-group-addon"><i class="fa fa-road"></i></span>
+                <input name="address" id="address" class="form-control" placeholder="Address">
+                <span class="form-control-feedback"></span>
+                </div>
                 </div><!-- /.form-group -->
 
 
                 <!-- <div class="form-group has-feedback">
-                    <div class="input-group input-group-in">
-                        <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
-                        <input name="city" id="city" class="form-control" placeholder="City">
-                        <span class="form-control-feedback"></span>
-                    </div>
+                <div class="input-group input-group-in">
+                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                <input name="city" id="city" class="form-control" placeholder="City">
+                <span class="form-control-feedback"></span>
+                </div>
                 </div><!-- /.form-group -->
                 <!--<div class="form-group has-feedback">
-                    <div class="input-group input-group-in">
-                        <span class="input-group-addon" title="unable to find any Country that match the current query!"><i class="fa fa-flag"></i></span>
-                        <input name="country" id="country" class="form-control" placeholder="Countries">
-                        <span class="form-control-feedback"></span>
-                    </div><!-- /input-group-in -->
+                <div class="input-group input-group-in">
+                <span class="input-group-addon" title="unable to find any Country that match the current query!"><i class="fa fa-flag"></i></span>
+                <input name="country" id="country" class="form-control" placeholder="Countries">
+                <span class="form-control-feedback"></span>
+                </div><!-- /input-group-in -->
                 <!--</div><!-- /.form-group -->
                 <!--<div class="form-group">
-                    <label class="control-label" style="margin-right:15px">Gender</label>
-                    <div class="nice-radio nice-radio-inline">
-                        <input type="radio" name="gender" id="genderMale" value="male" checked="checked">
-                        <label for="genderMale">Male</label>
-                    </div><!-- /.radio -->
+                <label class="control-label" style="margin-right:15px">Gender</label>
+                <div class="nice-radio nice-radio-inline">
+                <input type="radio" name="gender" id="genderMale" value="male" checked="checked">
+                <label for="genderMale">Male</label>
+                </div><!-- /.radio -->
                 <!--<div class="nice-radio nice-radio-inline">
-                    <input type="radio" name="gender" id="genderFemale" value="female">
-                    <label for="genderFemale">Female</label>
+                <input type="radio" name="gender" id="genderFemale" value="female">
+                <label for="genderFemale">Female</label>
                 </div><!-- /.radio -->
                 <!--</div><!-- /.form-group -->
 
